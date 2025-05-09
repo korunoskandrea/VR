@@ -1,4 +1,4 @@
-package com.example.vaje_1.ui.theme
+package com.example.sensorsvr.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

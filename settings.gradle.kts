@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "vaje_1"
+rootProject.name = "SensorsVR"
 include(":app")

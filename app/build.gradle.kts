@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.vaje_1"
+    namespace = "com.example.sensorsvr"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.vaje_1"
+        applicationId = "com.example.sensorsvr"
         minSdk = 24
         targetSdk = 35
         versionCode = 1

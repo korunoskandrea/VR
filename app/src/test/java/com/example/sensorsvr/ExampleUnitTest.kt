@@ -1,4 +1,4 @@
-package com.example.vaje_1
+package com.example.sensorsvr
 
 import org.junit.Test
 
