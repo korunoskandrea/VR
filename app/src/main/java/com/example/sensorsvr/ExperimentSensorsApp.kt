@@ -12,16 +12,24 @@ import androidx.compose.ui.unit.dp
 
 
 @Composable
-fun ExperimentSensorsApp(sensorViewModel: SensorViewModel = viewModel()){
+fun ExperimentSensorsApp(sensorViewModel: SensorViewModel = viewModel()) {
     val data by sensorViewModel.data.collectAsState()
     val context = LocalContext.current
     var experimentName by remember { mutableStateOf("") }
     var description by remember { mutableStateOf("") }
+    var isCollecting by remember { mutableStateOf(false) }
 
-    Column(modifier = Modifier
-        .padding(16.dp)
-        .fillMaxSize()){
+    val lastAccel = data.lastOrNull { it.sensorType == "accelerometer" }
+    val lastGyro = data.lastOrNull { it.sensorType == "gyroscope" }
+
+    Column(
+        modifier = Modifier
+            .padding(16.dp)
+            .fillMaxSize()
+    ) {
         Text("Zajem eksperiementa", style = MaterialTheme.typography.headlineSmall)
+
+        Spacer(modifier = Modifier.height(8.dp))
 
         OutlinedTextField(
             value = experimentName,
@@ -30,6 +38,7 @@ fun ExperimentSensorsApp(sensorViewModel: SensorViewModel = viewModel()){
                 Text("Ime eksperimenta")
             }
         )
+
         OutlinedTextField(
             value = description,
             onValueChange = { description = it },
@@ -47,31 +56,53 @@ fun ExperimentSensorsApp(sensorViewModel: SensorViewModel = viewModel()){
             }) {
                 Text("Zacni zajem")
             }
-        }
+            Spacer(modifier = Modifier.height(8.dp))
 
-        Button(onClick = {
-            sensorViewModel.stopListening()
-            Toast.makeText(context, "Recording stopped", Toast.LENGTH_SHORT).show()
-        }) {
-            Text("Stopiraj zajem")
+            Button(onClick = {
+                sensorViewModel.stopListening()
+                Toast.makeText(context, "Recording stopped", Toast.LENGTH_SHORT).show()
+            }) {
+                Text("Stopiraj zajem")
+            }
+
+            Spacer(modifier = Modifier.height(8.dp))
+
+            Button(onClick = {
+                sensorViewModel.clearData()
+                Toast.makeText(context, "Podatki izbrisani", Toast.LENGTH_SHORT).show()
+            }) {
+                Text("Počisti")
+            }
+
         }
 
         Spacer(modifier = Modifier.height(8.dp))
 
         Button(onClick = {
-            saveToCsv(context, experimentName, sensorViewModel.getRecordedSamples())
+            saveToJson(context, experimentName, sensorViewModel.getRecordedSamples())
         }) {
-            Text("Save in CSV file")
+            Text("Save in JSON file")
         }
+
         Spacer(modifier = Modifier.height(16.dp))
 
-        data.lastOrNull()?.let { sample ->
-            Text("Zadnji vzorec:", style = MaterialTheme.typography.titleMedium)
-            Text("Senzor: ${sample.sensorType}")
-            Text("X: ${sample.x}, Y: ${sample.y}, Z: ${sample.z}")
-            Text("Čas: ${sample.timestamp}")
+        Text("Status: ${if (isCollecting) "Zajem v teku..." else "Zajem ustavljen."}",
+            style = MaterialTheme.typography.labelLarge)
+
+        Spacer(modifier = Modifier.height(16.dp))
+
+        lastAccel?.let {
+            Text(" Pospeškometer:")
+            Text("X: ${it.x}, Y: ${it.y}, Z: ${it.z}")
+            Text("Čas: ${it.timestamp}")
+        }
+
+        Spacer(modifier = Modifier.height(8.dp))
+
+        lastGyro?.let {
+            Text("Žiroskop:")
+            Text("X: ${it.x}, Y: ${it.y}, Z: ${it.z}")
+            Text("Čas: ${it.timestamp}")
         }
     }
-
-
 }

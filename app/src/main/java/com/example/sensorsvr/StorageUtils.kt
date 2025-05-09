@@ -8,6 +8,8 @@ import java.io.FileWriter
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
+import com.google.gson.Gson
+import com.google.gson.GsonBuilder
 
 fun saveToCsv(context: Context, experimentName: String, data: List<SensorData>) {
     try {
@@ -29,6 +31,26 @@ fun saveToCsv(context: Context, experimentName: String, data: List<SensorData>) 
         writer.close()
 
         Toast.makeText(context, "Podatki shranjeni v: ${file.absolutePath}", Toast.LENGTH_LONG).show()
+    } catch (e: Exception) {
+        Toast.makeText(context, "Napaka pri shranjevanju: ${e.message}", Toast.LENGTH_LONG).show()
+    }
+}
+
+fun saveToJson(context: Context, experimentName: String, data: List<SensorData>) {
+    try {
+        val gson: Gson = GsonBuilder().setPrettyPrinting().create()
+        val jsonString = gson.toJson(data)
+
+        val timeStamp = SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault()).format(Date())
+        val fileName = "${experimentName}_$timeStamp.json"
+        // val dir = File(context.getExternalFilesDir(null), "sensor_data")
+        val dir = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS)
+        if (!dir.exists()) dir.mkdirs()
+
+        val file = File(dir, fileName)
+        file.writeText(jsonString)
+
+        Toast.makeText(context, "JSON shranjen v: ${file.absolutePath}", Toast.LENGTH_LONG).show()
     } catch (e: Exception) {
         Toast.makeText(context, "Napaka pri shranjevanju: ${e.message}", Toast.LENGTH_LONG).show()
     }
