@@ -30,9 +30,9 @@ class SensorViewModel(application: Application) : AndroidViewModel(application),
     var lastAnalysisData: List<SensorData> = emptyList()
 
 
-    fun startListening() {
-        sensorManager.registerListener(this, accelerometer, SensorManager.SENSOR_DELAY_NORMAL)// todo vidi so e razlika so game
-        sensorManager.registerListener(this, gyroscope, SensorManager.SENSOR_DELAY_NORMAL)
+    fun startListening(delayMicros: Int = 100_000) {
+        sensorManager.registerListener(this, accelerometer, delayMicros)
+        sensorManager.registerListener(this, gyroscope, delayMicros)
     }
 
     fun stopListening() {

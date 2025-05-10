@@ -1,4 +1,4 @@
-package com.example.sensorsvr.ui.screen
+package com.example.sensorsvr.ui.widgets
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -16,7 +16,7 @@ import androidx.compose.ui.unit.dp
 import com.example.sensorsvr.model.SensorData
 
 @Composable
-fun AllDataScreen (data: List<SensorData>) {
+fun AllDataWidget (data: List<SensorData>) {
     Column(modifier = Modifier
         .fillMaxSize()
         .padding(16.dp)) {

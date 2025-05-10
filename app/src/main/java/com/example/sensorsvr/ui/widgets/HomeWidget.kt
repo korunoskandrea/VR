@@ -1,4 +1,4 @@
-package com.example.sensorsvr.ui.screen
+package com.example.sensorsvr.ui.widgets
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -21,7 +21,7 @@ import androidx.compose.material3.Button
 import com.example.sensorsvr.R
 
 @Composable
-fun HomeScreen(
+fun HomeWidget(
     onRecordClick:() -> Unit,
     onLoadClick:() -> Unit
 ) {

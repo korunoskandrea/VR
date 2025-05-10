@@ -9,11 +9,12 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.sensorsvr.viewModel.SensorViewModel
-import com.example.sensorsvr.ui.screen.AllDataScreen
-import com.example.sensorsvr.ui.screen.AnalysisScreen
-import com.example.sensorsvr.ui.screen.ChartScreen
-import com.example.sensorsvr.ui.screen.ExperimentSensorsApp
-import com.example.sensorsvr.ui.screen.HomeScreen
+import com.example.sensorsvr.ui.widgets.AllDataWidget
+import com.example.sensorsvr.ui.widgets.AnalysisWidget
+import com.example.sensorsvr.ui.widgets.ChartWidget
+import com.example.sensorsvr.ui.widgets.ExperimentSensorsApp
+import com.example.sensorsvr.ui.widgets.HomeWidget
+import com.example.sensorsvr.ui.widgets.RecordDataWidget
 
 @Composable
 fun AppNavigation() {
@@ -21,39 +22,33 @@ fun AppNavigation() {
     val sensorViewModel: SensorViewModel = viewModel()
 
     Scaffold(
-//        bottomBar = {
-//            BottomNavigationBar(navController)
-//        }
     ) { paddingValues ->
         NavHost(navController = navController, startDestination = "home", modifier = Modifier.padding(paddingValues)) {
             composable("home") {
-                HomeScreen(
-                    onRecordClick = { navController.navigate("data") },
+                HomeWidget(
+                    onRecordClick = { navController.navigate("record") },
                     onLoadClick = { navController.navigate("loadHistory") } // placeholder za kasneje
                 )
             }
-            composable("data") {
-                ExperimentSensorsApp(
-                    sensorViewModel = sensorViewModel,
-                    onShowAllData = { navController.navigate("allData") },
-                    onShowChart = { navController.navigate("chart") },
-                    onAnalyze = { username, _ ->
-                        navController.navigate("analysis/${username}")
-                    }
+            composable("record") {
+                RecordDataWidget(
+                    onNavigateToAnalysis = { navController.navigate("analysis/anonimno") },
+                    onNavigateToAllData = { navController.navigate("allData") },
+                    onNavigateToChart = { navController.navigate("chart") }
                 )
             }
 
             composable("allData") {
-                AllDataScreen(sensorViewModel.getRecordedSamples())
+                AllDataWidget(sensorViewModel.getRecordedSamples())
             }
 
             composable("chart") {
-                ChartScreen(sensorViewModel.getRecordedSamples())
+                ChartWidget(sensorViewModel.getRecordedSamples())
             }
 
             composable("analysis/{username}") { backStackEntry ->
                 val username = backStackEntry.arguments?.getString("username") ?: "neznano"
-                AnalysisScreen(username, sensorViewModel.getRecordedSamples())
+                AnalysisWidget(username, sensorViewModel.getRecordedSamples())
             }
         }
     }

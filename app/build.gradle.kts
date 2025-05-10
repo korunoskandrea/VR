@@ -50,6 +50,7 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.2")
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.2")
     implementation("androidx.compose.ui:ui-tooling-preview:1.5.0")
+    implementation(libs.vision.internal.vkp)
     debugImplementation("androidx.compose.ui:ui-tooling:1.5.0")
     implementation("com.google.code.gson:gson:2.10.1")
     implementation("com.github.PhilJay:MPAndroidChart:v3.1.0")

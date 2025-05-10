@@ -1,4 +1,4 @@
-package com.example.sensorsvr.ui.screen
+package com.example.sensorsvr.ui.widgets
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.viewinterop.AndroidView
@@ -19,7 +19,7 @@ import com.github.mikephil.charting.data.LineDataSet
 
 
 @Composable
-fun ChartScreen(data: List<SensorData>) {
+fun ChartWidget(data: List<SensorData>) {
     if (data.isEmpty()) {
         Column(modifier = Modifier
             .fillMaxSize()
