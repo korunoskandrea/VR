@@ -13,6 +13,7 @@ import com.example.sensorsvr.ui.screen.AllDataScreen
 import com.example.sensorsvr.ui.screen.AnalysisScreen
 import com.example.sensorsvr.ui.screen.ChartScreen
 import com.example.sensorsvr.ui.screen.ExperimentSensorsApp
+import com.example.sensorsvr.ui.screen.HomeScreen
 
 @Composable
 fun AppNavigation() {
@@ -20,11 +21,17 @@ fun AppNavigation() {
     val sensorViewModel: SensorViewModel = viewModel()
 
     Scaffold(
-        bottomBar = {
-            BottomNavigationBar(navController)
-        }
-    ) { padding ->
-        NavHost(navController = navController, startDestination = "data") {
+//        bottomBar = {
+//            BottomNavigationBar(navController)
+//        }
+    ) { paddingValues ->
+        NavHost(navController = navController, startDestination = "home", modifier = Modifier.padding(paddingValues)) {
+            composable("home") {
+                HomeScreen(
+                    onRecordClick = { navController.navigate("data") },
+                    onLoadClick = { navController.navigate("loadHistory") } // placeholder za kasneje
+                )
+            }
             composable("data") {
                 ExperimentSensorsApp(
                     sensorViewModel = sensorViewModel,
