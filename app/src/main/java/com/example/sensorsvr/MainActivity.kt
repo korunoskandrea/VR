@@ -21,7 +21,8 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             SensorsVRTheme {
-                ExperimentSensorsApp()
+               // ExperimentSensorsApp()
+                AppNavigation()
             }
         }
     }
