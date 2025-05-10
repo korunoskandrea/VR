@@ -1,4 +1,4 @@
-package com.example.sensorsvr
+package com.example.sensorsvr.ui.screen
 
 
 import android.widget.Toast
@@ -11,14 +11,22 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.compose.ui.unit.dp
+import com.example.sensorsvr.model.SensorData
+import com.example.sensorsvr.viewModel.SensorViewModel
+import com.example.sensorsvr.utils.saveToJson
 
 
 @Composable
-fun ExperimentSensorsApp(sensorViewModel: SensorViewModel = viewModel()) {
+fun ExperimentSensorsApp(
+    sensorViewModel: SensorViewModel = viewModel(),
+    onShowAllData: () -> Unit = {},
+    onShowChart: () -> Unit = {},
+    onAnalyze: (String, List<SensorData>) -> Unit = { _, _ -> }
+) {
     val data by sensorViewModel.data.collectAsState()
     val context = LocalContext.current
     var experimentName by remember { mutableStateOf("") }
-    var description by remember { mutableStateOf("") }
+    var username by remember { mutableStateOf("") }
     var isCollecting by remember { mutableStateOf(false) }
 
     val lastAccel = data.lastOrNull { it.sensorType == "accelerometer" }
@@ -42,10 +50,10 @@ fun ExperimentSensorsApp(sensorViewModel: SensorViewModel = viewModel()) {
         )
 
         OutlinedTextField(
-            value = description,
-            onValueChange = { description = it },
+            value = username,
+            onValueChange = { username = it },
             label = {
-                Text("Opis eksperimenta")
+                Text("Ime uporabnika")
             }
         )
 
@@ -85,6 +93,15 @@ fun ExperimentSensorsApp(sensorViewModel: SensorViewModel = viewModel()) {
         }) {
             Text("Save in JSON file")
         }
+
+        Spacer(modifier = Modifier.height(8.dp))
+
+        Button(onClick = {
+            onAnalyze(username, sensorViewModel.getRecordedSamples())
+        }) {
+            Text("Analysis")
+        }
+
 
         Spacer(modifier = Modifier.height(16.dp))
 

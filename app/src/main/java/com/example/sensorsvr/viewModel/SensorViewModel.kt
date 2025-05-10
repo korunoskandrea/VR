@@ -1,4 +1,4 @@
-package com.example.sensorsvr
+package com.example.sensorsvr.viewModel
 
 import android.app.Application
 import android.content.Context
@@ -7,6 +7,7 @@ import android.hardware.SensorEvent
 import android.hardware.SensorEventListener
 import android.hardware.SensorManager
 import androidx.lifecycle.AndroidViewModel
+import com.example.sensorsvr.model.SensorData
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 
@@ -24,6 +25,10 @@ class SensorViewModel(application: Application) : AndroidViewModel(application),
     private val _data = MutableStateFlow<List<SensorData>>(emptyList())
     val data: StateFlow<List<SensorData>> = _data
     private val recordedData = mutableListOf<SensorData>()
+
+    var lastUserName: String? = null
+    var lastAnalysisData: List<SensorData> = emptyList()
+
 
     fun startListening() {
         sensorManager.registerListener(this, accelerometer, SensorManager.SENSOR_DELAY_NORMAL)// todo vidi so e razlika so game

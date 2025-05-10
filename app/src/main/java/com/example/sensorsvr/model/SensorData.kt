@@ -1,6 +1,4 @@
-package com.example.sensorsvr
-
-import java.sql.Timestamp
+package com.example.sensorsvr.model
 
 data class SensorData(
     val x: Float,

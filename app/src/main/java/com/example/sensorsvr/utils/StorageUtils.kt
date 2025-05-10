@@ -1,8 +1,9 @@
-package com.example.sensorsvr
+package com.example.sensorsvr.utils
 
 import android.content.Context
 import android.os.Environment
 import android.widget.Toast
+import com.example.sensorsvr.model.SensorData
 import java.io.File
 import java.io.FileWriter
 import java.text.SimpleDateFormat

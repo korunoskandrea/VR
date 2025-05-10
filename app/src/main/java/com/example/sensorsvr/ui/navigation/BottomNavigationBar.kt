@@ -1,4 +1,4 @@
-package com.example.sensorsvr
+package com.example.sensorsvr.ui.navigation
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.AccountBox
