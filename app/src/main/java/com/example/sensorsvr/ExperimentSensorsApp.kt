@@ -3,6 +3,8 @@ package com.example.sensorsvr
 
 import android.widget.Toast
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
@@ -103,6 +105,18 @@ fun ExperimentSensorsApp(sensorViewModel: SensorViewModel = viewModel()) {
             Text("Žiroskop:")
             Text("X: ${it.x}, Y: ${it.y}, Z: ${it.z}")
             Text("Čas: ${it.timestamp}")
+        }
+
+        Spacer(modifier = Modifier.height(16.dp))
+
+        Text("All recorded data ",
+            style = MaterialTheme.typography.titleMedium)
+
+        LazyColumn(modifier = Modifier.weight(1f)) {
+            items(data) { sample ->
+                Text("(${sample.sensorType}) X: ${sample.x}, Y: ${sample.y}, Z: ${sample.z} @ ${sample.timestamp}")
+                HorizontalDivider()
+            }
         }
     }
 }
