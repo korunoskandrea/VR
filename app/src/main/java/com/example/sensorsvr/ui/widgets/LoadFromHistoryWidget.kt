@@ -61,7 +61,7 @@ fun LoadFromHistoryWidget(navController: NavController,
     Scaffold(
         bottomBar = {
             if (loadedData.isNotEmpty()) {
-                BottomNavigationBar(navController, username, baseRoute = "history")
+                BottomNavigationBar(navController, listOf())
             }
         }
 

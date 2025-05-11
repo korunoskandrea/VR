@@ -15,6 +15,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import com.example.sensorsvr.R
+import com.example.sensorsvr.model.IconRouteTabItem
 import com.example.sensorsvr.model.SensorData
 import com.example.sensorsvr.ui.navigation.BottomNavigationBar
 
@@ -26,7 +28,15 @@ fun AllDataWidget(
 ) {
     Scaffold(
         bottomBar = {
-            BottomNavigationBar(navController = navController, username = username)
+            BottomNavigationBar(
+                navController = navController,
+                tabs = listOf(
+                    IconRouteTabItem(name = "record", route = "record", icon = R.drawable.screen_record_24dp_000000_fill0_wght400_grad0_opsz24),
+                    IconRouteTabItem(name = "Analysis", route = "analysis/$username", icon = R.drawable.query_stats_24dp_000000_fill0_wght400_grad0_opsz24),
+                    IconRouteTabItem(name = "All Data", route = "allData/$username", icon = R.drawable.menu_24dp_000000_fill0_wght400_grad0_opsz24),
+                    IconRouteTabItem(name = "Graph", route = "chart/$username", icon = R.drawable.bar_chart_24dp_000000_fill0_wght400_grad0_opsz24),
+                )
+            )
         }
     ) { paddingValues ->
         Column(

@@ -30,7 +30,7 @@ fun AppNavigation() {
             composable("home") {
                 HomeWidget(
                     onRecordClick = { navController.navigate("record") },
-                    onLoadClick = { navController.navigate("loadHistory") } // placeholder za kasneje
+                    onLoadClick = { navController.navigate("loadHistory") }
                 )
             }
 
@@ -38,39 +38,39 @@ fun AppNavigation() {
                 LoadFromHistoryWidget(navController = navController, username = "Anonymous")
             }
 
-            composable("history/analysis") {
-                val gson = remember { Gson() }
-                val json = navController.previousBackStackEntry?.savedStateHandle?.get<String>("loadedDataJson")
-                val username = navController.previousBackStackEntry?.savedStateHandle?.get<String>("loadedUsername") ?: "Unknown"
-
-                val type = object : com.google.gson.reflect.TypeToken<List<SensorData>>() {}.type
-                val data = remember(json) { gson.fromJson<List<SensorData>>(json, type) ?: emptyList() }
-
-                AnalysisWidget(navController = navController, username = username, data = data)
-            }
-
-            composable("history/allData") {
-                val gson = remember { Gson() }
-                val json = navController.previousBackStackEntry?.savedStateHandle?.get<String>("loadedDataJson")
-                val username = navController.previousBackStackEntry?.savedStateHandle?.get<String>("loadedUsername") ?: "Unknown"
-
-                val type = object : com.google.gson.reflect.TypeToken<List<SensorData>>() {}.type
-                val data = remember(json) { gson.fromJson<List<SensorData>>(json, type) ?: emptyList() }
-
-                AllDataWidget(navController = navController, username = username, data = data)
-            }
-
-
-            composable("history/chart") {
-                val gson = remember { Gson() }
-                val json = navController.previousBackStackEntry?.savedStateHandle?.get<String>("loadedDataJson")
-                val username = navController.previousBackStackEntry?.savedStateHandle?.get<String>("loadedUsername") ?: "Unknown"
-
-                val type = object : com.google.gson.reflect.TypeToken<List<SensorData>>() {}.type
-                val data = remember(json) { gson.fromJson<List<SensorData>>(json, type) ?: emptyList() }
-
-                ChartWidget(navController = navController, username = username, data = data)
-            }
+//            composable("history/analysis") {
+//                val gson = remember { Gson() }
+//                val json = navController.previousBackStackEntry?.savedStateHandle?.get<String>("loadedDataJson")
+//                val username = navController.previousBackStackEntry?.savedStateHandle?.get<String>("loadedUsername") ?: "Unknown"
+//
+//                val type = object : com.google.gson.reflect.TypeToken<List<SensorData>>() {}.type
+//                val data = remember(json) { gson.fromJson<List<SensorData>>(json, type) ?: emptyList() }
+//
+//                AnalysisWidget(navController = navController, username = username, data = data)
+//            }
+//
+//            composable("history/allData") {
+//                val gson = remember { Gson() }
+//                val json = navController.previousBackStackEntry?.savedStateHandle?.get<String>("loadedDataJson")
+//                val username = navController.previousBackStackEntry?.savedStateHandle?.get<String>("loadedUsername") ?: "Unknown"
+//
+//                val type = object : com.google.gson.reflect.TypeToken<List<SensorData>>() {}.type
+//                val data = remember(json) { gson.fromJson<List<SensorData>>(json, type) ?: emptyList() }
+//
+//                AllDataWidget(navController = navController, username = username, data = data)
+//            }
+//
+//
+//            composable("history/chart") {
+//                val gson = remember { Gson() }
+//                val json = navController.previousBackStackEntry?.savedStateHandle?.get<String>("loadedDataJson")
+//                val username = navController.previousBackStackEntry?.savedStateHandle?.get<String>("loadedUsername") ?: "Unknown"
+//
+//                val type = object : com.google.gson.reflect.TypeToken<List<SensorData>>() {}.type
+//                val data = remember(json) { gson.fromJson<List<SensorData>>(json, type) ?: emptyList() }
+//
+//                ChartWidget(navController = navController, username = username, data = data)
+//            }
 
 
 
@@ -78,30 +78,22 @@ fun AppNavigation() {
                 RecordDataWidget(
                     navController = navController,
                     sensorViewModel = sensorViewModel,
-                    onNavigateToAllData = { navController.navigate("allData") },
-                    onNavigateToChart = { navController.navigate("chart") }
                 )
             }
 
-            composable("allData") {
-                AllDataWidget(
-                    navController = navController,
-                    username = "Anonymous",
-                    data = sensorViewModel.getRecordedSamples()
-                )
+            composable("allData/{username}") { backStackEntry ->
+                val username = backStackEntry.arguments?.getString("username") ?: "Anonymous"
+                AllDataWidget(navController=navController, username = username, data = sensorViewModel.getRecordedSamples())
             }
 
-            composable("chart") {
-                ChartWidget(
-                    navController = navController,
-                    username = "Anonymous",
-                    data = sensorViewModel.getRecordedSamples()
-                )
+            composable("chart/{username}") { backStackEntry ->
+                val username = backStackEntry.arguments?.getString("username") ?: "Anonymous"
+                ChartWidget(navController=navController, username = username, data = sensorViewModel.getRecordedSamples())
             }
 
             composable("analysis/{username}") { backStackEntry ->
-                val username = backStackEntry.arguments?.getString("username") ?: "neznano"
-                AnalysisWidget(navController=navController, username = "Anonymous", data = sensorViewModel.getRecordedSamples())
+                val username = backStackEntry.arguments?.getString("username") ?: "Anonymous"
+                AnalysisWidget(navController=navController, username = username, data = sensorViewModel.getRecordedSamples())
             }
         }
     }

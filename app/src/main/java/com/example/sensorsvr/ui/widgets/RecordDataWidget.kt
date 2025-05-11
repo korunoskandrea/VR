@@ -1,6 +1,8 @@
 package com.example.sensorsvr.ui.widgets
 
+import android.util.Log
 import android.widget.Toast
+import androidx.collection.mutableScatterSetOf
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -15,6 +17,7 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import com.example.sensorsvr.R
+import com.example.sensorsvr.model.IconRouteTabItem
 import com.example.sensorsvr.ui.navigation.BottomNavigationBar
 import com.example.sensorsvr.utils.saveToJson
 import com.example.sensorsvr.viewModel.SensorViewModel
@@ -26,8 +29,6 @@ import java.util.Locale
 fun RecordDataWidget(
     navController: NavController,
     sensorViewModel: SensorViewModel = viewModel(),
-    onNavigateToAllData: () -> Unit,
-    onNavigateToChart: () -> Unit
 ) {
     val context = LocalContext.current
     val data by sensorViewModel.data.collectAsState()
@@ -42,7 +43,15 @@ fun RecordDataWidget(
     Scaffold(
         bottomBar = {
             if (data.isNotEmpty()) {
-                BottomNavigationBar(navController, username, baseRoute = "record")
+                BottomNavigationBar(
+                    navController = navController,
+                    tabs = listOf(
+                        IconRouteTabItem(name = "record", route = "record", icon = R.drawable.screen_record_24dp_000000_fill0_wght400_grad0_opsz24),
+                        IconRouteTabItem(name = "Analysis", route = "analysis/$username", icon = R.drawable.query_stats_24dp_000000_fill0_wght400_grad0_opsz24),
+                        IconRouteTabItem(name = "All Data", route = "allData/$username", icon = R.drawable.menu_24dp_000000_fill0_wght400_grad0_opsz24),
+                        IconRouteTabItem(name = "Graph", route = "chart/$username", icon = R.drawable.bar_chart_24dp_000000_fill0_wght400_grad0_opsz24),
+                    )
+                )
             }
         }
 
