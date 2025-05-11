@@ -19,6 +19,7 @@ import com.example.sensorsvr.model.SensorData
 import com.example.sensorsvr.ui.navigation.BottomNavigationBar
 import com.example.sensorsvr.utils.getBottomNavigationTabs
 import com.example.sensorsvr.viewModel.DataViewModel
+import kotlin.math.sqrt
 
 @Composable
 fun AnalysisWidget(
@@ -48,7 +49,7 @@ fun AnalysisWidget(
                     .padding(paddingValues)
                     .padding(16.dp)
             ) {
-                Text("Ni podatkov za prikaz.")
+                Text("There is no data to be shown.")
             }
         } else {
             Column(
@@ -58,12 +59,12 @@ fun AnalysisWidget(
                     .padding(16.dp)
             ) {
                 Text(
-                    "Analiza za uporabnika: $username",
+                    "Analysis for the user: $username",
                     style = MaterialTheme.typography.headlineSmall
                 )
                 Spacer(modifier = Modifier.height(16.dp))
                 Text(
-                    "Rezultat: $result",
+                    "Result: $result",
                     style = MaterialTheme.typography.bodyLarge
                 )
             }
@@ -73,16 +74,23 @@ fun AnalysisWidget(
 
 fun analyzeMovement(data: List<SensorData>): String {
     val accelData = data.filter { it.sensorType == "accelerometer" }
-    if (accelData.size < 10) return "Premalo podatkov za analizo"
+    val gyroData = data.filter { it.sensorType == "gyroscope" }
 
-    // Izračunamo standardni odklon Z-osi
+    if (accelData.size < 10 || gyroData.size < 10) return "You do not have enough data to analyze the movement."
+
+    // Pospeskometer: standardni odklon Z-osi
     val zValues = accelData.map { it.z }
-    val avg = zValues.average()
-    val stdDev = kotlin.math.sqrt(zValues.map { (it - avg) * (it - avg) }.average())
+    val avgZ = zValues.average()
+    val stdDevZ = kotlin.math.sqrt(zValues.map { (it - avgZ) * (it - avgZ) }.average())
+
+    // Ziroskop: povprecna "rotacijska energija"
+    val gyroMagnitude =
+        gyroData.map { sqrt((it.x * it.x + it.y * it.y + it.z * it.z).toDouble()) }
+    val avgGyro = gyroMagnitude.average()
 
     return when {
-        stdDev > 1.8 -> "Hod po stopnicah navzgor"
-        stdDev > 1.2 -> "Hod po stopnicah navzdol"
-        else -> "Hod po ravnem"
+        stdDevZ > 1.8 && avgGyro > 1.5 -> "Walking up the stairs"
+        stdDevZ > 1.2 && avgGyro > 1.0 -> "Walking down the stairs"
+        else -> "Straight walk"
     }
 }
