@@ -11,7 +11,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.PlayArrow
 import androidx.compose.material3.HorizontalDivider
@@ -21,6 +21,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
+import androidx.compose.material3.VerticalDivider
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -53,6 +54,10 @@ fun RecordDataWidget(
 
     val context = LocalContext.current
     val data by sensorViewModel.data.collectAsState()
+
+    val gyroData = data.filter { it.sensorType == "gyroscope" }
+    val accelData = data.filter { it.sensorType == "accelerometer" }
+    val maxCount = maxOf(gyroData.size, accelData.size)
 
     var recordingName by remember { mutableStateOf("") }
     var username by remember { mutableStateOf("") }
@@ -176,15 +181,56 @@ fun RecordDataWidget(
 
             if (!isRecording && data.isNotEmpty()) {
                 dataViewModel.setData(data)
-                LazyColumn(modifier = Modifier.weight(1f)) {
-                    items(data) { sample ->
-                        val formattedTime = dateFormatter.format(Date(sample.timestamp))
-                        Text("${sample.sensorType} -> X: ${sample.x}, Y: ${sample.y}, Z: ${sample.z} time: ${formattedTime}")
-                        HorizontalDivider()
+                Row(Modifier.fillMaxWidth()) {
+                    Text(
+                        "Gyroscope",
+                        style = MaterialTheme.typography.titleMedium,
+                        modifier = Modifier.weight(1f)
+                    )
+                    Text(
+                        "Accelerometer",
+                        style = MaterialTheme.typography.titleMedium,
+                        modifier = Modifier.weight(1f)
+                    )
+                }
+
+                Spacer(modifier = Modifier.height(8.dp))
+
+                LazyColumn {
+                    itemsIndexed(List(maxCount) { it }) { index, _ ->
+                        Row(
+                            Modifier
+                                .fillMaxWidth()
+                                .padding(vertical = 4.dp)
+                        ) {
+                            val gyro = gyroData.getOrNull(index)
+                            val accel = accelData.getOrNull(index)
+
+                            Column(modifier = Modifier.weight(1f)) {
+                                gyro?.let {
+                                    Text("X: ${"%.5f".format(it.x)}")
+                                    Text("Y: ${"%.5f".format(it.y)}")
+                                    Text("Z: ${"%.5f".format(it.z)}")
+                                    Text("Time: ${dateFormatter.format(Date(it.timestamp))}")
+                                }
+                                HorizontalDivider()
+                            }
+
+                            VerticalDivider()
+                            Column(modifier = Modifier.weight(1f)) {
+                                accel?.let {
+                                    Text("X: ${"%.5f".format(it.x)}")
+                                    Text("Y: ${"%.5f".format(it.y)}")
+                                    Text("Z: ${"%.5f".format(it.z)}")
+                                    Text("Time: ${dateFormatter.format(Date(it.timestamp))}")
+                                }
+                                HorizontalDivider()
+                            }
+                        }
                     }
                 }
-            }
 
+            }
         }
     }
 }
