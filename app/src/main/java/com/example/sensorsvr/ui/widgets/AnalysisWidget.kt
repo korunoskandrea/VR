@@ -3,6 +3,7 @@ package com.example.sensorsvr.ui.widgets
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.MaterialTheme
@@ -15,6 +16,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
+import com.airbnb.lottie.compose.LottieAnimation
+import com.airbnb.lottie.compose.LottieCompositionSpec
+import com.airbnb.lottie.compose.LottieConstants
+import com.airbnb.lottie.compose.animateLottieCompositionAsState
+import com.airbnb.lottie.compose.rememberLottieComposition
+import com.example.sensorsvr.R
 import com.example.sensorsvr.model.SensorData
 import com.example.sensorsvr.ui.navigation.BottomNavigationBar
 import com.example.sensorsvr.utils.getBottomNavigationTabs
@@ -34,6 +41,16 @@ fun AnalysisWidget(
         analyzeMovement(data)
     }
 
+    val animationRes = when (result) {
+        "Walking up the stairs" -> R.raw.up
+        "Walking down the stairs" -> R.raw.down
+        else -> R.raw.walk
+    }
+    val composition by rememberLottieComposition(LottieCompositionSpec.RawRes(animationRes))
+    val progress by animateLottieCompositionAsState(
+        composition = composition,
+        iterations = LottieConstants.IterateForever
+    )
     Scaffold(
         bottomBar = {
             BottomNavigationBar(
@@ -66,6 +83,13 @@ fun AnalysisWidget(
                 Text(
                     "Result: $result",
                     style = MaterialTheme.typography.bodyLarge
+                )
+                Spacer(modifier = Modifier.height(24.dp))
+
+                LottieAnimation(
+                    composition = composition,
+                    progress = { progress },
+                    modifier = Modifier.fillMaxWidth(0.7f)
                 )
             }
         }
