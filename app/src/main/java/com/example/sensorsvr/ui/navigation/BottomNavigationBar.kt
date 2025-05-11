@@ -1,39 +1,83 @@
 package com.example.sensorsvr.ui.navigation
 
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.AccountBox
-import androidx.compose.material.icons.filled.List
-import androidx.compose.material.icons.outlined.Info
-import androidx.compose.material3.Icon
-import androidx.compose.material3.NavigationBar
-import androidx.compose.material3.NavigationBarItem
-import androidx.compose.material3.Text
+import androidx.compose.foundation.layout.size
+import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import androidx.navigation.compose.currentBackStackEntryAsState
+import com.example.sensorsvr.R
 
 @Composable
-fun BottomNavigationBar (navController: NavController) {
+fun BottomNavigationBar(
+    navController: NavController,
+    username: String
+) {
     val currentRoute = navController.currentBackStackEntryAsState().value?.destination?.route
 
     NavigationBar {
         NavigationBarItem(
-            selected = currentRoute == "data",
-            onClick = { navController.navigate("data") },
-            label = { Text("Podatki") },
-            icon = { Icon(Icons.Default.List, contentDescription = null) }
+            selected = currentRoute?.startsWith("record") == true,
+            onClick = {
+                navController.navigate("record")
+            },
+            icon = {
+                Icon(
+                    painter = painterResource(id = R.drawable.screen_record_24dp_000000_fill0_wght400_grad0_opsz24),
+                    contentDescription = "Record data",
+                    modifier = Modifier.size(24.dp)
+                )
+            },
+            label = { Text("Record") }
         )
+
+        NavigationBarItem(
+            selected = currentRoute?.startsWith("analysis") == true,
+            onClick = {
+                if (username.isNotBlank()) {
+                    navController.navigate("analysis/$username")
+                }
+            },
+            icon = {
+                Icon(
+                    painter = painterResource(id = R.drawable.query_stats_24dp_000000_fill0_wght400_grad0_opsz24),
+                    contentDescription = "Analysis",
+                    modifier = Modifier.size(24.dp)
+                )
+            },
+            label = { Text("Analyse") }
+        )
+
         NavigationBarItem(
             selected = currentRoute == "allData",
-            onClick = { navController.navigate("allData") },
-            label = { Text("Vsi Podatki") },
-            icon = { Icon(Icons.Default.AccountBox, contentDescription = null) }
+            onClick = {
+                navController.navigate("allData")
+            },
+            icon = {
+                Icon(
+                    painter = painterResource(id = R.drawable.menu_24dp_000000_fill0_wght400_grad0_opsz24),
+                    contentDescription = "All data",
+                    modifier = Modifier.size(24.dp)
+                )
+            },
+            label = { Text("Display All Data") }
         )
+
         NavigationBarItem(
             selected = currentRoute == "chart",
-            onClick = { navController.navigate("chart") },
-            label = { Text("Graf") },
-            icon = { Icon(Icons.Outlined.Info, contentDescription = null) }
+            onClick = {
+                navController.navigate("chart")
+            },
+            icon = {
+                Icon(
+                    painter = painterResource(id = R.drawable.bar_chart_24dp_000000_fill0_wght400_grad0_opsz24),
+                    contentDescription = "Graphs",
+                    modifier = Modifier.size(24.dp)
+                )
+            },
+            label = { Text("Graphs") }
         )
     }
 }

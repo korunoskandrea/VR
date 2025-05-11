@@ -12,7 +12,6 @@ import com.example.sensorsvr.viewModel.SensorViewModel
 import com.example.sensorsvr.ui.widgets.AllDataWidget
 import com.example.sensorsvr.ui.widgets.AnalysisWidget
 import com.example.sensorsvr.ui.widgets.ChartWidget
-import com.example.sensorsvr.ui.widgets.ExperimentSensorsApp
 import com.example.sensorsvr.ui.widgets.HomeWidget
 import com.example.sensorsvr.ui.widgets.RecordDataWidget
 
@@ -32,23 +31,35 @@ fun AppNavigation() {
             }
             composable("record") {
                 RecordDataWidget(
-                    onNavigateToAnalysis = { navController.navigate("analysis/anonimno") },
+                    navController = navController,
+                    sensorViewModel = sensorViewModel,
+                    onNavigateToAnalysis = { username ->
+                        navController.navigate("analysis/$username")
+                    },
                     onNavigateToAllData = { navController.navigate("allData") },
                     onNavigateToChart = { navController.navigate("chart") }
                 )
             }
 
             composable("allData") {
-                AllDataWidget(sensorViewModel.getRecordedSamples())
+                AllDataWidget(
+                    navController = navController,
+                    username = "Anonymous",
+                    data = sensorViewModel.getRecordedSamples()
+                )
             }
 
             composable("chart") {
-                ChartWidget(sensorViewModel.getRecordedSamples())
+                ChartWidget(
+                    navController = navController,
+                    username = "Anonymous",
+                    data = sensorViewModel.getRecordedSamples()
+                )
             }
 
             composable("analysis/{username}") { backStackEntry ->
                 val username = backStackEntry.arguments?.getString("username") ?: "neznano"
-                AnalysisWidget(username, sensorViewModel.getRecordedSamples())
+                AnalysisWidget(navController=navController, username = "Anonymous", data = sensorViewModel.getRecordedSamples())
             }
         }
     }

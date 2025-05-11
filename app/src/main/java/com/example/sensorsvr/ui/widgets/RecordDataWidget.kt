@@ -1,12 +1,10 @@
 package com.example.sensorsvr.ui.widgets
 
-import android.hardware.SensorManager
 import android.widget.Toast
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.List
 import androidx.compose.material.icons.filled.PlayArrow
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
@@ -15,7 +13,9 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
+import androidx.navigation.NavController
 import com.example.sensorsvr.R
+import com.example.sensorsvr.ui.navigation.BottomNavigationBar
 import com.example.sensorsvr.utils.saveToJson
 import com.example.sensorsvr.viewModel.SensorViewModel
 import java.text.SimpleDateFormat
@@ -24,8 +24,9 @@ import java.util.Locale
 
 @Composable
 fun RecordDataWidget(
+    navController: NavController,
     sensorViewModel: SensorViewModel = viewModel(),
-    onNavigateToAnalysis: () -> Unit,
+    onNavigateToAnalysis: (String) -> Unit,
     onNavigateToAllData: () -> Unit,
     onNavigateToChart: () -> Unit
 ) {
@@ -41,32 +42,11 @@ fun RecordDataWidget(
 
     Scaffold(
         bottomBar = {
-            NavigationBar {
-                NavigationBarItem(selected = false, onClick = onNavigateToAnalysis, icon = {
-                    Icon(
-                        painter = painterResource(id = R.drawable.query_stats_24dp_000000_fill0_wght400_grad0_opsz24),
-                        contentDescription = "Analysis",
-                        modifier = Modifier.size(24.dp)
-                    )
-                }, label = { Text("Analyse") })
-
-                NavigationBarItem(selected = false, onClick = onNavigateToAllData, icon = {
-                    Icon(
-                        painter = painterResource(id = R.drawable.menu_24dp_000000_fill0_wght400_grad0_opsz24),
-                        contentDescription = "All data",
-                        modifier = Modifier.size(24.dp)
-                    )
-                }, label = { Text("Display All Data") })
-
-                NavigationBarItem(selected = false, onClick = onNavigateToChart, icon = {
-                    Icon(
-                        painter = painterResource(id = R.drawable.bar_chart_24dp_000000_fill0_wght400_grad0_opsz24),
-                        contentDescription = "Graphs",
-                        modifier = Modifier.size(24.dp)
-                    )
-                }, label = { Text("Graphs") })
+            if (data.isNotEmpty()) {
+                BottomNavigationBar(navController, username)
             }
         }
+
     ) { paddingValues ->
         Column(
             modifier = Modifier
@@ -82,14 +62,18 @@ fun RecordDataWidget(
                 value = recordingName,
                 onValueChange = { recordingName = it },
                 label = { Text("Recording name") },
-                modifier = Modifier.fillMaxWidth().padding(5.dp)
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(5.dp)
             )
 
             OutlinedTextField(
                 value = username,
                 onValueChange = { username = it },
                 label = { Text("Username") },
-                modifier = Modifier.fillMaxWidth().padding(5.dp, 0.dp)
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(5.dp, 0.dp)
             )
 
             OutlinedTextField(
@@ -100,7 +84,9 @@ fun RecordDataWidget(
                     }
                 },
                 label = { Text("Sampling frequency (Hz)") },
-                modifier = Modifier.fillMaxWidth().padding(5.dp),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(5.dp),
             )
 
             Spacer(modifier = Modifier.height(10.dp))

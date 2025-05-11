@@ -2,26 +2,60 @@ package com.example.sensorsvr.ui.widgets
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
 import com.example.sensorsvr.model.SensorData
+import com.example.sensorsvr.ui.navigation.BottomNavigationBar
 
 @Composable
-fun AnalysisWidget(username: String, data: List<SensorData>) {
+fun AnalysisWidget(
+    navController: NavController,
+    username: String,
+    data: List<SensorData>
+) {
     val result = remember(data) {
         analyzeMovement(data)
     }
 
-    Column(Modifier.padding(16.dp)) {
-        Text("Analiza za uporabnika: $username", style = MaterialTheme.typography.headlineSmall)
-        Spacer(modifier = Modifier.height(16.dp))
-        Text("Rezultat: $result", style = MaterialTheme.typography.bodyLarge)
+    Scaffold(
+        bottomBar = { BottomNavigationBar(navController = navController, username = username) }
+    ) { paddingValues ->
+        if (data.isEmpty()) {
+            Column(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(paddingValues)
+                    .padding(16.dp)
+            ) {
+                Text("Ni podatkov za prikaz.")
+            }
+        } else {
+            Column(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(paddingValues)
+                    .padding(16.dp)
+            ) {
+                Text(
+                    "Analiza za uporabnika: $username",
+                    style = MaterialTheme.typography.headlineSmall
+                )
+                Spacer(modifier = Modifier.height(16.dp))
+                Text(
+                    "Rezultat: $result",
+                    style = MaterialTheme.typography.bodyLarge
+                )
+            }
+        }
     }
 }
 
