@@ -1,15 +1,32 @@
 package com.example.sensorsvr.ui.widgets
 
-import android.util.Log
 import android.widget.Toast
-import androidx.collection.mutableScatterSetOf
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.PlayArrow
-import androidx.compose.material3.*
-import androidx.compose.runtime.*
+import androidx.compose.material3.HorizontalDivider
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.OutlinedTextField
+import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
@@ -17,9 +34,10 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import com.example.sensorsvr.R
-import com.example.sensorsvr.model.IconRouteTabItem
 import com.example.sensorsvr.ui.navigation.BottomNavigationBar
+import com.example.sensorsvr.utils.getBottomNavigationTabs
 import com.example.sensorsvr.utils.saveToJson
+import com.example.sensorsvr.viewModel.DataViewModel
 import com.example.sensorsvr.viewModel.SensorViewModel
 import java.text.SimpleDateFormat
 import java.util.Date
@@ -29,7 +47,10 @@ import java.util.Locale
 fun RecordDataWidget(
     navController: NavController,
     sensorViewModel: SensorViewModel = viewModel(),
+    dataViewModel: DataViewModel = viewModel()
 ) {
+    dataViewModel.setIsHistory(false)
+
     val context = LocalContext.current
     val data by sensorViewModel.data.collectAsState()
 
@@ -45,12 +66,7 @@ fun RecordDataWidget(
             if (data.isNotEmpty()) {
                 BottomNavigationBar(
                     navController = navController,
-                    tabs = listOf(
-                        IconRouteTabItem(name = "record", route = "record", icon = R.drawable.screen_record_24dp_000000_fill0_wght400_grad0_opsz24),
-                        IconRouteTabItem(name = "Analysis", route = "analysis/$username", icon = R.drawable.query_stats_24dp_000000_fill0_wght400_grad0_opsz24),
-                        IconRouteTabItem(name = "All Data", route = "allData/$username", icon = R.drawable.menu_24dp_000000_fill0_wght400_grad0_opsz24),
-                        IconRouteTabItem(name = "Graph", route = "chart/$username", icon = R.drawable.bar_chart_24dp_000000_fill0_wght400_grad0_opsz24),
-                    )
+                    tabs = getBottomNavigationTabs(false)
                 )
             }
         }
@@ -77,7 +93,10 @@ fun RecordDataWidget(
 
             OutlinedTextField(
                 value = username,
-                onValueChange = { username = it },
+                onValueChange = {
+                    username = it;
+                    dataViewModel.setUsername(username)
+                },
                 label = { Text("Username") },
                 modifier = Modifier
                     .fillMaxWidth()
@@ -113,7 +132,11 @@ fun RecordDataWidget(
                     },
                     modifier = Modifier.size(72.dp)
                 ) {
-                    Icon(Icons.Filled.PlayArrow, contentDescription = "Start", tint = MaterialTheme.colorScheme.primary)
+                    Icon(
+                        Icons.Filled.PlayArrow,
+                        contentDescription = "Start",
+                        tint = MaterialTheme.colorScheme.primary
+                    )
                 }
 
                 IconButton(
@@ -133,7 +156,12 @@ fun RecordDataWidget(
 
                 IconButton(
                     onClick = {
-                        saveToJson(context, recordingName, username, sensorViewModel.getRecordedSamples())
+                        saveToJson(
+                            context,
+                            recordingName,
+                            username,
+                            sensorViewModel.getRecordedSamples()
+                        )
                         Toast.makeText(context, "Data is saved", Toast.LENGTH_SHORT).show()
                     },
                     modifier = Modifier.size(72.dp)
@@ -146,7 +174,8 @@ fun RecordDataWidget(
                 }
             }
 
-            if(!isRecording && data.isNotEmpty()){
+            if (!isRecording && data.isNotEmpty()) {
+                dataViewModel.setData(data)
                 LazyColumn(modifier = Modifier.weight(1f)) {
                     items(data) { sample ->
                         val formattedTime = dateFormatter.format(Date(sample.timestamp))

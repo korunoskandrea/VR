@@ -9,35 +9,37 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
-import com.example.sensorsvr.R
-import com.example.sensorsvr.model.IconRouteTabItem
 import com.example.sensorsvr.model.SensorData
 import com.example.sensorsvr.ui.navigation.BottomNavigationBar
+import com.example.sensorsvr.utils.getBottomNavigationTabs
+import com.example.sensorsvr.viewModel.DataViewModel
 
 @Composable
 fun AnalysisWidget(
     navController: NavController,
-    username: String,
-    data: List<SensorData>
+    dataViewModel: DataViewModel = viewModel()
 ) {
+    val isHistory by dataViewModel.isHistory
+    val data by dataViewModel.data
+    val username by dataViewModel.username
+
     val result = remember(data) {
         analyzeMovement(data)
     }
 
     Scaffold(
-        bottomBar = { BottomNavigationBar(
-            navController = navController,
-            tabs = listOf(
-                IconRouteTabItem(name = "record", route = "record", icon = R.drawable.screen_record_24dp_000000_fill0_wght400_grad0_opsz24),
-                IconRouteTabItem(name = "Analysis", route = "analysis/$username", icon = R.drawable.query_stats_24dp_000000_fill0_wght400_grad0_opsz24),
-                IconRouteTabItem(name = "All Data", route = "allData/$username", icon = R.drawable.menu_24dp_000000_fill0_wght400_grad0_opsz24),
-                IconRouteTabItem(name = "Graph", route = "chart/$username", icon = R.drawable.bar_chart_24dp_000000_fill0_wght400_grad0_opsz24),
+        bottomBar = {
+            BottomNavigationBar(
+                navController = navController,
+                tabs = getBottomNavigationTabs(isHistory)
             )
-        ) }
+        }
     ) { paddingValues ->
         if (data.isEmpty()) {
             Column(
