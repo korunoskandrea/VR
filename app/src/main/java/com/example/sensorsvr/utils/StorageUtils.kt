@@ -37,13 +37,13 @@ fun saveToCsv(context: Context, experimentName: String, data: List<SensorData>) 
     }
 }
 
-fun saveToJson(context: Context, experimentName: String, data: List<SensorData>) {
+fun saveToJson(context: Context, experimentName: String, username: String, data: List<SensorData>) {
     try {
         val gson: Gson = GsonBuilder().setPrettyPrinting().create()
         val jsonString = gson.toJson(data)
 
         val timeStamp = SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault()).format(Date())
-        val fileName = "${experimentName}_$timeStamp.json"
+        val fileName = "${experimentName}_${username}_$timeStamp.json"
         // val dir = File(context.getExternalFilesDir(null), "sensor_data")
         val dir = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS)
         if (!dir.exists()) dir.mkdirs()

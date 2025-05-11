@@ -13,31 +13,40 @@ import com.example.sensorsvr.R
 @Composable
 fun BottomNavigationBar(
     navController: NavController,
-    username: String
+    username: String,
+    baseRoute: String = "record",
 ) {
     val currentRoute = navController.currentBackStackEntryAsState().value?.destination?.route
 
     NavigationBar {
-        NavigationBarItem(
-            selected = currentRoute?.startsWith("record") == true,
-            onClick = {
-                navController.navigate("record")
-            },
-            icon = {
-                Icon(
-                    painter = painterResource(id = R.drawable.screen_record_24dp_000000_fill0_wght400_grad0_opsz24),
-                    contentDescription = "Record data",
-                    modifier = Modifier.size(24.dp)
-                )
-            },
-            label = { Text("Record") }
-        )
+        if (baseRoute == "record") {
+            NavigationBarItem(
+                selected = currentRoute == "record",
+                onClick = {
+                    navController.navigate("record") {
+                        popUpTo("record") { inclusive = true }
+                        launchSingleTop = true
+                    }
+                },
+                icon = {
+                    Icon(
+                        painter = painterResource(id = R.drawable.screen_record_24dp_000000_fill0_wght400_grad0_opsz24),
+                        contentDescription = "Record",
+                        modifier = Modifier.size(24.dp)
+                    )
+                },
+                label = { Text("Record") }
+            )
+        }
 
+        // Analyse
         NavigationBarItem(
-            selected = currentRoute?.startsWith("analysis") == true,
+            selected = currentRoute?.startsWith("$baseRoute/analysis") == true,
             onClick = {
                 if (username.isNotBlank()) {
-                    navController.navigate("analysis/$username")
+                    navController.navigate("analysis/${username}") {
+                        launchSingleTop = true
+                    }
                 }
             },
             icon = {
@@ -50,25 +59,31 @@ fun BottomNavigationBar(
             label = { Text("Analyse") }
         )
 
+        // All Data
         NavigationBarItem(
-            selected = currentRoute == "allData",
+            selected = currentRoute == "$baseRoute/allData",
             onClick = {
-                navController.navigate("allData")
+                navController.navigate("$baseRoute/allData") {
+                    launchSingleTop = true
+                }
             },
             icon = {
                 Icon(
                     painter = painterResource(id = R.drawable.menu_24dp_000000_fill0_wght400_grad0_opsz24),
-                    contentDescription = "All data",
+                    contentDescription = "All Data",
                     modifier = Modifier.size(24.dp)
                 )
             },
             label = { Text("Display All Data") }
         )
 
+        // Charts
         NavigationBarItem(
-            selected = currentRoute == "chart",
+            selected = currentRoute == "$baseRoute/chart",
             onClick = {
-                navController.navigate("chart")
+                navController.navigate("$baseRoute/chart") {
+                    launchSingleTop = true
+                }
             },
             icon = {
                 Icon(

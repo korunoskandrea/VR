@@ -26,7 +26,6 @@ import java.util.Locale
 fun RecordDataWidget(
     navController: NavController,
     sensorViewModel: SensorViewModel = viewModel(),
-    onNavigateToAnalysis: (String) -> Unit,
     onNavigateToAllData: () -> Unit,
     onNavigateToChart: () -> Unit
 ) {
@@ -43,7 +42,7 @@ fun RecordDataWidget(
     Scaffold(
         bottomBar = {
             if (data.isNotEmpty()) {
-                BottomNavigationBar(navController, username)
+                BottomNavigationBar(navController, username, baseRoute = "record")
             }
         }
 
@@ -125,7 +124,7 @@ fun RecordDataWidget(
 
                 IconButton(
                     onClick = {
-                        saveToJson(context, recordingName, sensorViewModel.getRecordedSamples())
+                        saveToJson(context, recordingName, username, sensorViewModel.getRecordedSamples())
                         Toast.makeText(context, "Data is saved", Toast.LENGTH_SHORT).show()
                     },
                     modifier = Modifier.size(72.dp)
