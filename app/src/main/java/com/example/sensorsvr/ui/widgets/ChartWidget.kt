@@ -23,7 +23,6 @@ import com.github.mikephil.charting.data.Entry
 import com.github.mikephil.charting.data.LineData
 import com.github.mikephil.charting.data.LineDataSet
 
-
 @Composable
 fun ChartWidget(
     navController: NavController,
@@ -31,7 +30,6 @@ fun ChartWidget(
 ) {
     val isHistory by dataViewModel.isHistory
     val data by dataViewModel.data
-    val username by dataViewModel.username
 
     Scaffold(
         bottomBar = {
@@ -49,43 +47,64 @@ fun ChartWidget(
                     .padding(paddingValues)
                     .padding(16.dp)
             ) {
-                Text("Ni podatkov za prikaz.")
+                Text("There is no data to be shown.")
             }
             return@Scaffold
         }
 
-        val accelData = data.filter { it.sensorType == "accelerometer" } //todo gyros
+        val accelData = data.filter { it.sensorType == "accelerometer" }
+        val gyroData = data.filter { it.sensorType == "gyroscope" }
 
         AndroidView(
             factory = { context ->
                 LineChart(context).apply {
-                    val entriesX = ArrayList<Entry>()
-                    val entriesY = ArrayList<Entry>()
-                    val entriesZ = ArrayList<Entry>()
+                    val accelX = ArrayList<Entry>()
+                    val accelY = ArrayList<Entry>()
+                    val accelZ = ArrayList<Entry>()
+                    val gyroX = ArrayList<Entry>()
+                    val gyroY = ArrayList<Entry>()
+                    val gyroZ = ArrayList<Entry>()
 
                     accelData.forEachIndexed { index, sample ->
-                        entriesX.add(Entry(index.toFloat(), sample.x))
-                        entriesY.add(Entry(index.toFloat(), sample.y))
-                        entriesZ.add(Entry(index.toFloat(), sample.z))
+                        accelX.add(Entry(index.toFloat(), sample.x))
+                        accelY.add(Entry(index.toFloat(), sample.y))
+                        accelZ.add(Entry(index.toFloat(), sample.z))
                     }
 
-                    val dataSetX = LineDataSet(entriesX, "X").apply {
-                        color = Color.RED
-                        setDrawCircles(false)
-                        lineWidth = 2f
-                    }
-                    val dataSetY = LineDataSet(entriesY, "Y").apply {
-                        color = Color.GREEN
-                        setDrawCircles(false)
-                        lineWidth = 2f
-                    }
-                    val dataSetZ = LineDataSet(entriesZ, "Z").apply {
-                        color = Color.BLUE
-                        setDrawCircles(false)
-                        lineWidth = 2f
+                    gyroData.forEachIndexed { index, sample ->
+                        gyroX.add(Entry(index.toFloat(), sample.x))
+                        gyroY.add(Entry(index.toFloat(), sample.y))
+                        gyroZ.add(Entry(index.toFloat(), sample.z))
                     }
 
-                    this.data = LineData(dataSetX, dataSetY, dataSetZ)
+                    val dataSets = listOf(
+                        LineDataSet(accelX, "Accel X").apply {
+                            color = Color.RED
+                            setDrawCircles(false)
+                        },
+                        LineDataSet(accelY, "Accel Y").apply {
+                            color = Color.GREEN
+                            setDrawCircles(false)
+                        },
+                        LineDataSet(accelZ, "Accel Z").apply {
+                            color = Color.BLUE
+                            setDrawCircles(false)
+                        },
+                        LineDataSet(gyroX, "Gyro X").apply {
+                            color = Color.MAGENTA
+                            setDrawCircles(false)
+                        },
+                        LineDataSet(gyroY, "Gyro Y").apply {
+                            color = Color.CYAN
+                            setDrawCircles(false)
+                        },
+                        LineDataSet(gyroZ, "Gyro Z").apply {
+                            color = Color.YELLOW
+                            setDrawCircles(false)
+                        }
+                    )
+
+                    this.data = LineData(dataSets)
 
                     axisRight.isEnabled = false
                     xAxis.position = XAxis.XAxisPosition.BOTTOM
@@ -95,7 +114,7 @@ fun ChartWidget(
                     legend.verticalAlignment = Legend.LegendVerticalAlignment.TOP
                     legend.horizontalAlignment = Legend.LegendHorizontalAlignment.CENTER
 
-                    description.text = "Accelerometer podatki"
+                    description.text = "Data from Accelerometer and Gyroscope"
                     setTouchEnabled(true)
                     isDragEnabled = true
                     setScaleEnabled(true)
