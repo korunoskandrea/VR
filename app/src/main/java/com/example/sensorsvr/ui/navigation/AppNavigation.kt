@@ -12,7 +12,6 @@ import com.example.sensorsvr.ui.widgets.AllDataWidget
 import com.example.sensorsvr.ui.widgets.AnalysisWidget
 import com.example.sensorsvr.ui.widgets.ChartWidget
 import com.example.sensorsvr.ui.widgets.HomeWidget
-import com.example.sensorsvr.ui.widgets.LoadFromHistoryWidget
 import com.example.sensorsvr.ui.widgets.RecordDataWidget
 import com.example.sensorsvr.viewModel.DataViewModel
 import com.example.sensorsvr.viewModel.SensorViewModel
@@ -38,7 +37,8 @@ fun AppNavigation() {
             }
 
             composable("loadHistory") {
-                LoadFromHistoryWidget(navController = navController, dataViewModel)
+                dataViewModel.setIsHistory(true)
+                AllDataWidget(navController = navController, dataViewModel)
             }
 
             composable("analysis") {

@@ -17,6 +17,7 @@ import androidx.compose.ui.viewinterop.AndroidView
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import com.example.sensorsvr.ui.navigation.BottomNavigationBar
+import com.example.sensorsvr.ui.navigation.TopNavBar
 import com.example.sensorsvr.utils.getBottomNavigationTabs
 import com.example.sensorsvr.viewModel.DataViewModel
 import com.github.mikephil.charting.charts.LineChart
@@ -40,6 +41,9 @@ fun ChartWidget(
     val gyroData = data.filter { it.sensorType == "gyroscope" }
 
     Scaffold(
+        topBar = {
+            TopNavBar(navController = navController, dataViewModel)
+        },
         bottomBar = {
             BottomNavigationBar(
                 navController = navController,
@@ -60,7 +64,6 @@ fun ChartWidget(
             return@Scaffold
         }
 
-        // Refresh chart when data changes
         LaunchedEffect(data) {
             chartRef.value?.let { chart ->
                 val accelX = accelData.mapIndexed { i, d -> Entry(i.toFloat(), d.x) }

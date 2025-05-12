@@ -34,6 +34,7 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import com.example.sensorsvr.R
 import com.example.sensorsvr.ui.navigation.BottomNavigationBar
+import com.example.sensorsvr.ui.navigation.TopNavBar
 import com.example.sensorsvr.utils.getBottomNavigationTabs
 import com.example.sensorsvr.utils.saveToJson
 import com.example.sensorsvr.viewModel.DataViewModel
@@ -65,6 +66,9 @@ fun RecordDataWidget(
     val dateFormatter = remember { SimpleDateFormat("HH:mm:ss.SSS", Locale.getDefault()) }
 
     Scaffold(
+        topBar = {
+            TopNavBar(navController = navController)
+        },
         bottomBar = {
             if (data.isNotEmpty()) {
                 BottomNavigationBar(
@@ -81,8 +85,6 @@ fun RecordDataWidget(
                 .padding(paddingValues)
                 .padding(16.dp)
         ) {
-            Text("Record data", style = MaterialTheme.typography.headlineSmall)
-
             Spacer(modifier = Modifier.height(16.dp))
 
             OutlinedTextField(

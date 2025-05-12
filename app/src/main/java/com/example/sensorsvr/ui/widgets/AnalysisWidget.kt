@@ -24,6 +24,7 @@ import com.airbnb.lottie.compose.rememberLottieComposition
 import com.example.sensorsvr.R
 import com.example.sensorsvr.model.SensorData
 import com.example.sensorsvr.ui.navigation.BottomNavigationBar
+import com.example.sensorsvr.ui.navigation.TopNavBar
 import com.example.sensorsvr.utils.getBottomNavigationTabs
 import com.example.sensorsvr.viewModel.DataViewModel
 import kotlin.math.sqrt
@@ -52,6 +53,9 @@ fun AnalysisWidget(
         iterations = LottieConstants.IterateForever
     )
     Scaffold(
+        topBar = {
+            TopNavBar(navController = navController, dataViewModel)
+        },
         bottomBar = {
             BottomNavigationBar(
                 navController = navController,

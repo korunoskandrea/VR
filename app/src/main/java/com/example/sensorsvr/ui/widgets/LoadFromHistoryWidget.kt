@@ -8,9 +8,12 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material3.Button
 import androidx.compose.material3.HorizontalDivider
+import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
@@ -18,12 +21,14 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import com.example.sensorsvr.R
-import com.example.sensorsvr.model.IconRouteTabItem
 import com.example.sensorsvr.ui.navigation.BottomNavigationBar
+import com.example.sensorsvr.ui.navigation.TopNavBar
+import com.example.sensorsvr.utils.getBottomNavigationTabs
 import com.example.sensorsvr.viewModel.DataViewModel
 
 @Composable
@@ -46,28 +51,16 @@ fun LoadFromHistoryWidget(
     )
 
     Scaffold(
+        topBar = {
+            TopNavBar(navController = navController)
+        },
         bottomBar = {
-            BottomNavigationBar(
-                navController = navController,
-                tabs = listOf(
-                    IconRouteTabItem(
-                        name = "Analysis",
-                        route = "analysis",
-                        icon = R.drawable.query_stats_24dp_000000_fill0_wght400_grad0_opsz24
-                    ),
-                    IconRouteTabItem(
-                        name = "All Data",
-                        route = "allData",
-                        icon = R.drawable.menu_24dp_000000_fill0_wght400_grad0_opsz24
-                    ),
-                    IconRouteTabItem(
-                        name = "Graph",
-                        route = "chart",
-                        icon = R.drawable.bar_chart_24dp_000000_fill0_wght400_grad0_opsz24
-                    ),
+            if (data.isNotEmpty()) {
+                BottomNavigationBar(
+                    navController = navController,
+                    tabs = getBottomNavigationTabs(isHistoryWidget = true)
                 )
-            )
-
+            }
         }
 
     ) { paddingValues ->
@@ -77,21 +70,26 @@ fun LoadFromHistoryWidget(
                 .padding(16.dp)
         )
         {
-            Text("Recorded data", style = MaterialTheme.typography.headlineSmall)
             Spacer(modifier = Modifier.height(16.dp))
 
             Button(onClick = {
                 filePickerLauncher.launch(arrayOf("application/json"))
             }) {
-                Text("Choose JSON file")
+                Icon(
+                    painter = painterResource(id = R.drawable.upload_file_24dp_000000_fill0_wght400_grad0_opsz24),
+                    contentDescription = "Record Button Icon",
+                    modifier = Modifier.size(24.dp)
+                )
+                Spacer(modifier = Modifier.width(8.dp))
+                Text("Record data")
             }
 
             Spacer(modifier = Modifier.height(16.dp))
 
             if (data.isNotEmpty()) {
                 Text(
-                    "Recorded data from: {$username}",
-                    style = MaterialTheme.typography.titleMedium
+                    "User: $username",
+                    style = MaterialTheme.typography.headlineSmall
                 )
                 Spacer(modifier = Modifier.height(8.dp))
 

@@ -21,6 +21,7 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import com.example.sensorsvr.ui.navigation.BottomNavigationBar
+import com.example.sensorsvr.ui.navigation.TopNavBar
 import com.example.sensorsvr.utils.getBottomNavigationTabs
 import com.example.sensorsvr.viewModel.DataViewModel
 import java.text.SimpleDateFormat
@@ -42,6 +43,9 @@ fun AllDataWidget(
     val dateFormatter = remember { SimpleDateFormat("HH:mm:ss.SSS", Locale.getDefault()) }
 
     Scaffold(
+        topBar = {
+            TopNavBar(navController = navController, dataViewModel)
+        },
         bottomBar = {
             BottomNavigationBar(
                 navController = navController,
@@ -55,7 +59,6 @@ fun AllDataWidget(
                 .padding(paddingValues)
                 .padding(16.dp)
         ) {
-            Text("Recent recorded data", style = MaterialTheme.typography.headlineSmall)
             Spacer(modifier = Modifier.height(16.dp))
 
             Row(Modifier.fillMaxWidth()) {
