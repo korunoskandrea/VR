@@ -12,8 +12,6 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.itemsIndexed
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.PlayArrow
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -138,9 +136,9 @@ fun RecordDataWidget(
                     modifier = Modifier.size(72.dp)
                 ) {
                     Icon(
-                        Icons.Filled.PlayArrow,
+                        painter = painterResource(id = R.drawable.play_arrow_24dp_000000_fill0_wght400_grad0_opsz24),
                         contentDescription = "Start",
-                        tint = MaterialTheme.colorScheme.primary
+                        modifier = Modifier.size(24.dp)
                     )
                 }
 
@@ -173,6 +171,21 @@ fun RecordDataWidget(
                 ) {
                     Icon(
                         painter = painterResource(id = R.drawable.download_24dp_000000_fill0_wght400_grad0_opsz24),
+                        contentDescription = "Save",
+                        modifier = Modifier.size(24.dp)
+                    )
+                }
+
+                IconButton(
+                    onClick = {
+                        sensorViewModel.clearData()
+                        isRecording = false
+                        Toast.makeText(context, "Recording cleared", Toast.LENGTH_SHORT).show()
+                    },
+                    modifier = Modifier.size(72.dp)
+                ) {
+                    Icon(
+                        painter = painterResource(id = R.drawable.close_24dp_000000_fill0_wght400_grad0_opsz24),
                         contentDescription = "Save",
                         modifier = Modifier.size(24.dp)
                     )

@@ -7,7 +7,10 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.viewinterop.AndroidView
@@ -31,6 +34,11 @@ fun ChartWidget(
     val isHistory by dataViewModel.isHistory
     val data by dataViewModel.data
 
+    val chartRef = remember { mutableStateOf<LineChart?>(null) }
+
+    val accelData = data.filter { it.sensorType == "accelerometer" }
+    val gyroData = data.filter { it.sensorType == "gyroscope" }
+
     Scaffold(
         bottomBar = {
             BottomNavigationBar(
@@ -52,59 +60,46 @@ fun ChartWidget(
             return@Scaffold
         }
 
-        val accelData = data.filter { it.sensorType == "accelerometer" }
-        val gyroData = data.filter { it.sensorType == "gyroscope" }
+        // Refresh chart when data changes
+        LaunchedEffect(data) {
+            chartRef.value?.let { chart ->
+                val accelX = accelData.mapIndexed { i, d -> Entry(i.toFloat(), d.x) }
+                val accelY = accelData.mapIndexed { i, d -> Entry(i.toFloat(), d.y) }
+                val accelZ = accelData.mapIndexed { i, d -> Entry(i.toFloat(), d.z) }
+                val gyroX = gyroData.mapIndexed { i, d -> Entry(i.toFloat(), d.x) }
+                val gyroY = gyroData.mapIndexed { i, d -> Entry(i.toFloat(), d.y) }
+                val gyroZ = gyroData.mapIndexed { i, d -> Entry(i.toFloat(), d.z) }
+
+                val dataSets = listOf(
+                    LineDataSet(accelX, "Accel X").apply {
+                        color = Color.RED; setDrawCircles(false)
+                    },
+                    LineDataSet(accelY, "Accel Y").apply {
+                        color = Color.GREEN; setDrawCircles(false)
+                    },
+                    LineDataSet(accelZ, "Accel Z").apply {
+                        color = Color.BLUE; setDrawCircles(false)
+                    },
+                    LineDataSet(gyroX, "Gyro X").apply {
+                        color = Color.MAGENTA; setDrawCircles(false)
+                    },
+                    LineDataSet(gyroY, "Gyro Y").apply {
+                        color = Color.CYAN; setDrawCircles(false)
+                    },
+                    LineDataSet(gyroZ, "Gyro Z").apply {
+                        color = Color.YELLOW; setDrawCircles(false)
+                    }
+                )
+
+                chart.data = LineData(dataSets)
+                chart.invalidate()
+            }
+        }
 
         AndroidView(
             factory = { context ->
                 LineChart(context).apply {
-                    val accelX = ArrayList<Entry>()
-                    val accelY = ArrayList<Entry>()
-                    val accelZ = ArrayList<Entry>()
-                    val gyroX = ArrayList<Entry>()
-                    val gyroY = ArrayList<Entry>()
-                    val gyroZ = ArrayList<Entry>()
-
-                    accelData.forEachIndexed { index, sample ->
-                        accelX.add(Entry(index.toFloat(), sample.x))
-                        accelY.add(Entry(index.toFloat(), sample.y))
-                        accelZ.add(Entry(index.toFloat(), sample.z))
-                    }
-
-                    gyroData.forEachIndexed { index, sample ->
-                        gyroX.add(Entry(index.toFloat(), sample.x))
-                        gyroY.add(Entry(index.toFloat(), sample.y))
-                        gyroZ.add(Entry(index.toFloat(), sample.z))
-                    }
-
-                    val dataSets = listOf(
-                        LineDataSet(accelX, "Accel X").apply {
-                            color = Color.RED
-                            setDrawCircles(false)
-                        },
-                        LineDataSet(accelY, "Accel Y").apply {
-                            color = Color.GREEN
-                            setDrawCircles(false)
-                        },
-                        LineDataSet(accelZ, "Accel Z").apply {
-                            color = Color.BLUE
-                            setDrawCircles(false)
-                        },
-                        LineDataSet(gyroX, "Gyro X").apply {
-                            color = Color.MAGENTA
-                            setDrawCircles(false)
-                        },
-                        LineDataSet(gyroY, "Gyro Y").apply {
-                            color = Color.CYAN
-                            setDrawCircles(false)
-                        },
-                        LineDataSet(gyroZ, "Gyro Z").apply {
-                            color = Color.YELLOW
-                            setDrawCircles(false)
-                        }
-                    )
-
-                    this.data = LineData(dataSets)
+                    chartRef.value = this
 
                     axisRight.isEnabled = false
                     xAxis.position = XAxis.XAxisPosition.BOTTOM
@@ -114,11 +109,10 @@ fun ChartWidget(
                     legend.verticalAlignment = Legend.LegendVerticalAlignment.TOP
                     legend.horizontalAlignment = Legend.LegendHorizontalAlignment.CENTER
 
-                    description.text = "Data from Accelerometer and Gyroscope"
+                    description.text = "Accelerometer and Gyroscope Data"
                     setTouchEnabled(true)
                     isDragEnabled = true
                     setScaleEnabled(true)
-                    invalidate()
                 }
             },
             modifier = Modifier
