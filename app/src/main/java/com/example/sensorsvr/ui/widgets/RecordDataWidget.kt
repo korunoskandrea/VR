@@ -141,7 +141,8 @@ fun RecordDataWidget(
                             ) {
                                 Icon(
                                     painter = painterResource(id = R.drawable.arrow_drop_down_24dp_000000_fill0_wght400_grad0_opsz24),
-                                    contentDescription = "Show options"
+                                    contentDescription = "Show options",
+                                    tint = MaterialTheme.colorScheme.primary
                                 )
                             }
                         }
@@ -251,6 +252,7 @@ private fun ControlButton(
             painter = painterResource(id = iconRes),
             contentDescription = contentDescription,
             modifier = Modifier.size(32.dp),
+            tint = MaterialTheme.colorScheme.primary
         )
     }
 }

@@ -21,6 +21,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
@@ -63,7 +64,8 @@ fun TopNavBar(navController: NavController, dataViewModel: DataViewModel = viewM
                     style = MaterialTheme.typography.titleLarge,
                     maxLines = 1,
                     overflow = TextOverflow.Ellipsis,
-                    color = MaterialTheme.colorScheme.primary
+                    color = MaterialTheme.colorScheme.primary,
+                    fontWeight = FontWeight.Bold
                 )
             },
             navigationIcon = {
@@ -108,9 +110,9 @@ fun TopNavBar(navController: NavController, dataViewModel: DataViewModel = viewM
                 }
             },
             colors = TopAppBarDefaults.topAppBarColors(
-                containerColor = MaterialTheme.colorScheme.surface,
-                titleContentColor = MaterialTheme.colorScheme.onSurface,
-                actionIconContentColor = MaterialTheme.colorScheme.primary
+                containerColor = MaterialTheme.colorScheme.surfaceVariant, // Matches bottom bar
+                titleContentColor = MaterialTheme.colorScheme.onSurfaceVariant,
+                actionIconContentColor = MaterialTheme.colorScheme.onSurfaceVariant
             )
         )
     }
