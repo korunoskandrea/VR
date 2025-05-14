@@ -21,9 +21,13 @@ class DataViewModel(application: Application) : AndroidViewModel(application) {
     private var _isHistory = mutableStateOf(false)
     val isHistory: State<Boolean> = _isHistory
 
+    private var _trueLabel = mutableStateOf("Unknown")
+    val trueLabel: State<String> = _trueLabel
+
     fun loadFromFile(context: Context, uri: Uri) {
         val name = getFileNameFromUri(context, uri)
         _username.value = extractUsernameFromFileName(name)
+        _trueLabel.value = extractMovementTypeFromFileName(name)
         _data.value = readJsonFromUri(context, uri)
     }
 
@@ -54,12 +58,24 @@ class DataViewModel(application: Application) : AndroidViewModel(application) {
         return if (parts.size >= 2) parts[1] else "Anonymous"
     }
 
+    private fun extractMovementTypeFromFileName(fileName: String): String {
+        val parts = fileName.removeSuffix(".json").split("_")
+        return when {
+            parts.size >= 3 -> parts[2]
+            else -> "Unknown"
+        }
+    }
+
     fun setIsHistory(isHistory: Boolean) {
         _isHistory.value = isHistory
     }
 
     fun setUsername(username: String) {
         _username.value = username
+    }
+
+    fun setTrueLabel(movementType: String) {
+        _trueLabel.value = movementType
     }
 
     fun addData(data: SensorData) {
