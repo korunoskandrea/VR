@@ -1,14 +1,16 @@
 package com.example.sensorsvr.ui.widgets
 
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.material3.HorizontalDivider
+import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
@@ -20,6 +22,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
+import com.example.sensorsvr.model.SensorData
 import com.example.sensorsvr.ui.navigation.BottomNavigationBar
 import com.example.sensorsvr.ui.navigation.TopNavBar
 import com.example.sensorsvr.utils.getBottomNavigationTabs
@@ -43,9 +46,7 @@ fun AllDataWidget(
     val dateFormatter = remember { SimpleDateFormat("HH:mm:ss.SSS", Locale.getDefault()) }
 
     Scaffold(
-        topBar = {
-            TopNavBar(navController = navController, dataViewModel)
-        },
+        topBar = { TopNavBar(navController = navController, dataViewModel) },
         bottomBar = {
             BottomNavigationBar(
                 navController = navController,
@@ -57,57 +58,110 @@ fun AllDataWidget(
             modifier = Modifier
                 .fillMaxSize()
                 .padding(paddingValues)
-                .padding(16.dp)
         ) {
-            Spacer(modifier = Modifier.height(16.dp))
-
-            Row(Modifier.fillMaxWidth()) {
+            // Header Section
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 16.dp, vertical = 8.dp),
+                horizontalArrangement = Arrangement.SpaceEvenly
+            ) {
                 Text(
-                    "Gyroscope",
+                    "GYROSCOPE",
                     style = MaterialTheme.typography.titleMedium,
-                    modifier = Modifier.weight(1f)
+                    modifier = Modifier.weight(1f),
+                    color = MaterialTheme.colorScheme.primary
                 )
                 Text(
-                    "Accelerometer",
+                    "ACCELEROMETER",
                     style = MaterialTheme.typography.titleMedium,
-                    modifier = Modifier.weight(1f)
+                    modifier = Modifier.weight(1f),
+                    color = MaterialTheme.colorScheme.primary
                 )
             }
 
-            Spacer(modifier = Modifier.height(8.dp))
-
-            LazyColumn {
+            LazyColumn(
+                modifier = Modifier.padding(horizontal = 8.dp)
+            ) {
                 items(maxCount) { index ->
-                    Row(
-                        Modifier
+                    Card(
+                        modifier = Modifier
                             .fillMaxWidth()
-                            .padding(vertical = 4.dp)
+                            .padding(vertical = 4.dp, horizontal = 8.dp),
+                        elevation = CardDefaults.cardElevation(2.dp)
                     ) {
-                        val gyro = gyroData.getOrNull(index)
-                        val accel = accelData.getOrNull(index)
+                        Row(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .padding(8.dp)
+                        ) {
+                            SensorDataColumn(
+                                data = gyroData.getOrNull(index),
+                                dateFormatter = dateFormatter,
+                                modifier = Modifier.weight(1f)
+                            )
 
-                        Column(modifier = Modifier.weight(1f)) {
-                            gyro?.let {
-                                Text("X: ${"%.5f".format(it.x)}")
-                                Text("Y: ${"%.5f".format(it.y)}")
-                                Text("Z: ${"%.5f".format(it.z)}")
-                                Text("Time: ${dateFormatter.format(Date(it.timestamp))}")
-                            }
-                            HorizontalDivider()
-                        }
-                        VerticalDivider()
-                        Column(modifier = Modifier.weight(1f)) {
-                            accel?.let {
-                                Text("X: ${"%.5f".format(it.x)}")
-                                Text("Y: ${"%.5f".format(it.y)}")
-                                Text("Z: ${"%.5f".format(it.z)}")
-                                Text("Time: ${dateFormatter.format(Date(it.timestamp))}")
-                            }
-                            HorizontalDivider()
+                            VerticalDivider(
+                                modifier = Modifier
+                                    .height(120.dp)
+                                    .padding(horizontal = 8.dp),
+                                thickness = 1.dp,
+                                color = MaterialTheme.colorScheme.outlineVariant
+                            )
+
+                            SensorDataColumn(
+                                data = accelData.getOrNull(index),
+                                dateFormatter = dateFormatter,
+                                modifier = Modifier.weight(1f)
+                            )
                         }
                     }
                 }
             }
         }
+    }
+}
+
+@Composable
+private fun SensorDataColumn(
+    data: SensorData?,
+    dateFormatter: SimpleDateFormat,
+    modifier: Modifier = Modifier
+) {
+    Column(
+        modifier = modifier.padding(4.dp),
+        verticalArrangement = Arrangement.spacedBy(4.dp)
+    ) {
+        data?.let {
+            SensorValueRow(label = "X:", value = "%.5f".format(it.x))
+            SensorValueRow(label = "Y:", value = "%.5f".format(it.y))
+            SensorValueRow(label = "Z:", value = "%.5f".format(it.z))
+            Text(
+                "Time: ${dateFormatter.format(Date(it.timestamp))}",
+                style = MaterialTheme.typography.bodySmall,
+                color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.7f)
+            )
+        } ?: run {
+            Text(
+                "No data",
+                style = MaterialTheme.typography.bodySmall,
+                color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.5f)
+            )
+        }
+    }
+}
+
+@Composable
+private fun SensorValueRow(label: String, value: String) {
+    Row {
+        Text(
+            text = label,
+            style = MaterialTheme.typography.bodyMedium,
+            modifier = Modifier.width(32.dp)
+        )
+        Text(
+            text = value,
+            style = MaterialTheme.typography.bodyMedium
+        )
     }
 }

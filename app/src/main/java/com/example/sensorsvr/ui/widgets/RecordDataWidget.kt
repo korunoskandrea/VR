@@ -250,7 +250,7 @@ private fun ControlButton(
         Icon(
             painter = painterResource(id = iconRes),
             contentDescription = contentDescription,
-            modifier = Modifier.size(32.dp)
+            modifier = Modifier.size(32.dp),
         )
     }
 }
@@ -271,11 +271,13 @@ private fun SensorDataDisplay(
                 "Gyroscope",
                 style = MaterialTheme.typography.titleMedium,
                 modifier = Modifier.weight(1f),
+                color = MaterialTheme.colorScheme.primary
             )
             Text(
                 "Accelerometer",
                 style = MaterialTheme.typography.titleMedium,
                 modifier = Modifier.weight(1f),
+                color = MaterialTheme.colorScheme.primary
             )
         }
 
