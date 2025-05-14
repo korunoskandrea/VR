@@ -27,7 +27,7 @@ import com.airbnb.lottie.compose.LottieConstants
 import com.airbnb.lottie.compose.animateLottieCompositionAsState
 import com.airbnb.lottie.compose.rememberLottieComposition
 import com.example.sensorsvr.R
-import com.example.sensorsvr.model.PredictionResult
+import com.example.sensorsvr.model.PredictionResultData
 import com.example.sensorsvr.model.SensorData
 import com.example.sensorsvr.model.StatsData
 import com.example.sensorsvr.ui.navigation.BottomNavigationBar
@@ -58,7 +58,7 @@ fun AnalysisWidget(
 
     val result = remember(data) { analyzeMovement(data) }
     val isCorrect = result == trueLabel
-    val testResults = remember { listOf(PredictionResult(trueLabel, result)) }
+    val testResults = remember { listOf(PredictionResultData(trueLabel, result)) }
     val accuracy = calculateAccuracy(testResults)
     val matrix = calculateConfusionMatrix(testResults)
 
