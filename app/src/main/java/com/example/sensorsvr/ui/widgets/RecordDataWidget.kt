@@ -2,16 +2,17 @@ package com.example.sensorsvr.ui.widgets
 
 import android.widget.Toast
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.itemsIndexed
+import androidx.compose.material3.DropdownMenu
+import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -33,6 +34,7 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import com.example.sensorsvr.R
+import com.example.sensorsvr.model.SensorData
 import com.example.sensorsvr.ui.navigation.BottomNavigationBar
 import com.example.sensorsvr.ui.navigation.TopNavBar
 import com.example.sensorsvr.utils.getBottomNavigationTabs
@@ -65,10 +67,12 @@ fun RecordDataWidget(
 
     val dateFormatter = remember { SimpleDateFormat("HH:mm:ss.SSS", Locale.getDefault()) }
 
+    var selectedMovement by remember { mutableStateOf("Straight") }
+    var expanded by remember { mutableStateOf(false) }
+    val movementOptions = listOf("Straight", "Up", "Down")
+
     Scaffold(
-        topBar = {
-            TopNavBar(navController = navController)
-        },
+        topBar = { TopNavBar(navController = navController) },
         bottomBar = {
             if (data.isNotEmpty()) {
                 BottomNavigationBar(
@@ -77,175 +81,248 @@ fun RecordDataWidget(
                 )
             }
         }
-
     ) { paddingValues ->
         Column(
             modifier = Modifier
                 .fillMaxSize()
                 .padding(paddingValues)
-                .padding(16.dp)
+                .padding(horizontal = 16.dp)
         ) {
-            Spacer(modifier = Modifier.height(16.dp))
-
-            OutlinedTextField(
-                value = recordingName,
-                onValueChange = { recordingName = it },
-                label = { Text("Recording name") },
+            Column(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(5.dp)
-            )
+                    .padding(vertical = 8.dp)
+            ) {
+                OutlinedTextField(
+                    value = recordingName,
+                    onValueChange = { recordingName = it },
+                    label = { Text("Recording Name") },
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(bottom = 8.dp)
+                )
 
-            OutlinedTextField(
-                value = username,
-                onValueChange = {
-                    username = it;
-                    dataViewModel.setUsername(username)
-                },
-                label = { Text("Username") },
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(5.dp, 0.dp)
-            )
+                OutlinedTextField(
+                    value = username,
+                    onValueChange = {
+                        username = it
+                        dataViewModel.setUsername(username)
+                    },
+                    label = { Text("Username") },
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(bottom = 8.dp)
+                )
 
-            OutlinedTextField(
-                value = sampleFrequency,
-                onValueChange = { newValue ->
-                    if (newValue.all { it.isDigit() }) {
-                        sampleFrequency = newValue
+                OutlinedTextField(
+                    value = sampleFrequency,
+                    onValueChange = { newValue ->
+                        if (newValue.all { it.isDigit() }) {
+                            sampleFrequency = newValue
+                        }
+                    },
+                    label = { Text("Sampling Frequency (Hz)") },
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(bottom = 8.dp)
+                )
+
+                Box(modifier = Modifier.fillMaxWidth()) {
+                    OutlinedTextField(
+                        value = selectedMovement,
+                        onValueChange = { },
+                        label = { Text("Movement Type") },
+                        modifier = Modifier.fillMaxWidth(),
+                        readOnly = true,
+                        trailingIcon = {
+                            IconButton(
+                                onClick = { expanded = !expanded },
+                                modifier = Modifier.size(24.dp)
+                            ) {
+                                Icon(
+                                    painter = painterResource(id = R.drawable.arrow_drop_down_24dp_000000_fill0_wght400_grad0_opsz24),
+                                    contentDescription = "Show options"
+                                )
+                            }
+                        }
+                    )
+                    DropdownMenu(
+                        expanded = expanded,
+                        onDismissRequest = { expanded = false },
+                        modifier = Modifier.fillMaxWidth()
+                    ) {
+                        movementOptions.forEach { option ->
+                            DropdownMenuItem(
+                                text = {
+                                    Text(
+                                        text = option,
+                                        modifier = Modifier.padding(vertical = 4.dp)
+                                    )
+                                },
+                                onClick = {
+                                    selectedMovement = option
+                                    expanded = false
+                                }
+                            )
+                        }
                     }
-                },
-                label = { Text("Sampling frequency (Hz)") },
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(5.dp),
-            )
-
-            Spacer(modifier = Modifier.height(10.dp))
+                }
+            }
 
             Row(
-                modifier = Modifier.fillMaxWidth(),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(vertical = 16.dp),
                 horizontalArrangement = Arrangement.SpaceEvenly
             ) {
-                IconButton(
+                ControlButton(
+                    iconRes = R.drawable.play_arrow_24dp_000000_fill0_wght400_grad0_opsz24,
+                    contentDescription = "Start",
                     onClick = {
                         val hz = sampleFrequency.toIntOrNull() ?: 10
                         val delayMicros = 1_000_000 / hz
                         sensorViewModel.startListening(delayMicros)
                         isRecording = true
                         Toast.makeText(context, "Recording started", Toast.LENGTH_SHORT).show()
-                    },
-                    modifier = Modifier.size(72.dp)
-                ) {
-                    Icon(
-                        painter = painterResource(id = R.drawable.play_arrow_24dp_000000_fill0_wght400_grad0_opsz24),
-                        contentDescription = "Start",
-                        modifier = Modifier.size(24.dp)
-                    )
-                }
+                    }
+                )
 
-                IconButton(
+                ControlButton(
+                    iconRes = R.drawable.stop_24dp_000000_fill0_wght400_grad0_opsz24,
+                    contentDescription = "Stop",
                     onClick = {
                         sensorViewModel.stopListening()
                         isRecording = false
                         Toast.makeText(context, "Recording stopped", Toast.LENGTH_SHORT).show()
-                    },
-                    modifier = Modifier.size(72.dp)
-                ) {
-                    Icon(
-                        painter = painterResource(id = R.drawable.stop_24dp_000000_fill0_wght400_grad0_opsz24),
-                        contentDescription = "Stop",
-                        modifier = Modifier.size(24.dp)
-                    )
-                }
+                    }
+                )
 
-                IconButton(
+                ControlButton(
+                    iconRes = R.drawable.download_24dp_000000_fill0_wght400_grad0_opsz24,
+                    contentDescription = "Save",
                     onClick = {
+                        dataViewModel.setTrueLabel(selectedMovement)
                         saveToJson(
                             context,
                             recordingName,
                             username,
+                            selectedMovement,
                             sensorViewModel.getRecordedSamples()
                         )
                         Toast.makeText(context, "Data is saved", Toast.LENGTH_SHORT).show()
-                    },
-                    modifier = Modifier.size(72.dp)
-                ) {
-                    Icon(
-                        painter = painterResource(id = R.drawable.download_24dp_000000_fill0_wght400_grad0_opsz24),
-                        contentDescription = "Save",
-                        modifier = Modifier.size(24.dp)
-                    )
-                }
+                    }
+                )
 
-                IconButton(
+                ControlButton(
+                    iconRes = R.drawable.close_24dp_000000_fill0_wght400_grad0_opsz24,
+                    contentDescription = "Clear",
                     onClick = {
                         sensorViewModel.clearData()
                         isRecording = false
                         Toast.makeText(context, "Recording cleared", Toast.LENGTH_SHORT).show()
-                    },
-                    modifier = Modifier.size(72.dp)
-                ) {
-                    Icon(
-                        painter = painterResource(id = R.drawable.close_24dp_000000_fill0_wght400_grad0_opsz24),
-                        contentDescription = "Save",
-                        modifier = Modifier.size(24.dp)
-                    )
-                }
+                    }
+                )
             }
 
             if (!isRecording && data.isNotEmpty()) {
                 dataViewModel.setData(data)
-                Row(Modifier.fillMaxWidth()) {
-                    Text(
-                        "Gyroscope",
-                        style = MaterialTheme.typography.titleMedium,
-                        modifier = Modifier.weight(1f)
-                    )
-                    Text(
-                        "Accelerometer",
-                        style = MaterialTheme.typography.titleMedium,
-                        modifier = Modifier.weight(1f)
-                    )
-                }
-
-                Spacer(modifier = Modifier.height(8.dp))
-
-                LazyColumn {
-                    itemsIndexed(List(maxCount) { it }) { index, _ ->
-                        Row(
-                            Modifier
-                                .fillMaxWidth()
-                                .padding(vertical = 4.dp)
-                        ) {
-                            val gyro = gyroData.getOrNull(index)
-                            val accel = accelData.getOrNull(index)
-
-                            Column(modifier = Modifier.weight(1f)) {
-                                gyro?.let {
-                                    Text("X: ${"%.5f".format(it.x)}")
-                                    Text("Y: ${"%.5f".format(it.y)}")
-                                    Text("Z: ${"%.5f".format(it.z)}")
-                                    Text("Time: ${dateFormatter.format(Date(it.timestamp))}")
-                                }
-                                HorizontalDivider()
-                            }
-
-                            VerticalDivider()
-                            Column(modifier = Modifier.weight(1f)) {
-                                accel?.let {
-                                    Text("X: ${"%.5f".format(it.x)}")
-                                    Text("Y: ${"%.5f".format(it.y)}")
-                                    Text("Z: ${"%.5f".format(it.z)}")
-                                    Text("Time: ${dateFormatter.format(Date(it.timestamp))}")
-                                }
-                                HorizontalDivider()
-                            }
-                        }
-                    }
-                }
-
+                SensorDataDisplay(
+                    gyroData = gyroData,
+                    accelData = accelData,
+                    maxCount = maxCount,
+                    dateFormatter = dateFormatter
+                )
             }
+        }
+    }
+}
+
+@Composable
+private fun ControlButton(
+    iconRes: Int,
+    contentDescription: String,
+    onClick: () -> Unit
+) {
+    IconButton(
+        onClick = onClick,
+        modifier = Modifier.size(64.dp)
+    ) {
+        Icon(
+            painter = painterResource(id = iconRes),
+            contentDescription = contentDescription,
+            modifier = Modifier.size(32.dp)
+        )
+    }
+}
+
+@Composable
+private fun SensorDataDisplay(
+    gyroData: List<SensorData>,
+    accelData: List<SensorData>,
+    maxCount: Int,
+    dateFormatter: SimpleDateFormat
+) {
+    Column(modifier = Modifier.padding(8.dp)) {
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.SpaceEvenly
+        ) {
+            Text(
+                "Gyroscope",
+                style = MaterialTheme.typography.titleMedium,
+                modifier = Modifier.weight(1f),
+            )
+            Text(
+                "Accelerometer",
+                style = MaterialTheme.typography.titleMedium,
+                modifier = Modifier.weight(1f),
+            )
+        }
+
+        LazyColumn {
+            itemsIndexed(List(maxCount) { it }) { index, _ ->
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(vertical = 4.dp)
+                ) {
+                    val gyro = gyroData.getOrNull(index)
+                    val accel = accelData.getOrNull(index)
+
+                    SensorDataColumn(
+                        data = gyro,
+                        dateFormatter = dateFormatter,
+                        modifier = Modifier.weight(1f)
+                    )
+
+                    VerticalDivider(thickness = 1.dp)
+
+                    SensorDataColumn(
+                        data = accel,
+                        dateFormatter = dateFormatter,
+                        modifier = Modifier.weight(1f)
+                    )
+                }
+                if (index < maxCount - 1) {
+                    HorizontalDivider(thickness = 1.dp)
+                }
+            }
+        }
+    }
+}
+
+@Composable
+private fun SensorDataColumn(
+    data: SensorData?,
+    dateFormatter: SimpleDateFormat,
+    modifier: Modifier = Modifier
+) {
+    Column(modifier = modifier.padding(horizontal = 8.dp)) {
+        data?.let {
+            Text("X: ${"%.5f".format(it.x)}")
+            Text("Y: ${"%.5f".format(it.y)}")
+            Text("Z: ${"%.5f".format(it.z)}")
+            Text("Time: ${dateFormatter.format(Date(it.timestamp))}")
         }
     }
 }
