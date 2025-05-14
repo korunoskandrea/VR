@@ -23,6 +23,7 @@ import com.airbnb.lottie.compose.animateLottieCompositionAsState
 import com.airbnb.lottie.compose.rememberLottieComposition
 import com.example.sensorsvr.R
 import com.example.sensorsvr.model.SensorData
+import com.example.sensorsvr.model.Stats
 import com.example.sensorsvr.ui.navigation.BottomNavigationBar
 import com.example.sensorsvr.ui.navigation.TopNavBar
 import com.example.sensorsvr.utils.getBottomNavigationTabs
@@ -37,6 +38,9 @@ fun AnalysisWidget(
     val isHistory by dataViewModel.isHistory
     val data by dataViewModel.data
     val username by dataViewModel.username
+
+    val accelData = remember(data) { data.filter { it.sensorType == "accelerometer" } }
+    val gyroData = remember(data) { data.filter { it.sensorType == "gyroscope" } }
 
     val result = remember(data) {
         analyzeMovement(data)
@@ -80,7 +84,7 @@ fun AnalysisWidget(
                     .padding(16.dp)
             ) {
                 Text(
-                    "Analysis for the user: $username",
+                    "User: $username",
                     style = MaterialTheme.typography.headlineSmall
                 )
                 Spacer(modifier = Modifier.height(16.dp))
@@ -89,7 +93,21 @@ fun AnalysisWidget(
                     style = MaterialTheme.typography.bodyLarge
                 )
                 Spacer(modifier = Modifier.height(24.dp))
+                val accelStats = computeStats(accelData.map { it.z.toDouble() })
+                val gyroStats = computeStats(gyroData.map {
+                    sqrt((it.x * it.x + it.y * it.y + it.z * it.z).toDouble())
+                })
+                Column {
+                    Text("Accelerometer Z-axis stats:")
+                    Text("Min: %.2f, Max: %.2f".format(accelStats.min, accelStats.max))
+                    Text("Avg: %.2f, StdDev: %.2f".format(accelStats.avg, accelStats.stdDev))
 
+                    Spacer(modifier = Modifier.height(12.dp))
+
+                    Text("Gyroscope magnitude stats:")
+                    Text("Min: %.2f, Max: %.2f".format(gyroStats.min, gyroStats.max))
+                    Text("Avg: %.2f, StdDev: %.2f".format(gyroStats.avg, gyroStats.stdDev))
+                }
                 LottieAnimation(
                     composition = composition,
                     progress = { progress },
@@ -121,4 +139,15 @@ fun analyzeMovement(data: List<SensorData>): String {
         stdDevZ > 1.2 && avgGyro > 1.0 -> "Walking down the stairs"
         else -> "Straight walk"
     }
+}
+
+fun computeStats(values: List<Double>): Stats {
+    val avg = values.average()
+    val stdDev = sqrt(values.map { (it - avg) * (it - avg) }.average())
+    return Stats(
+        min = values.minOrNull() ?: 0.0,
+        max = values.maxOrNull() ?: 0.0,
+        avg = avg,
+        stdDev = stdDev
+    )
 }
