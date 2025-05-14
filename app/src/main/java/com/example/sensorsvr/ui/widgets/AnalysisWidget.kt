@@ -34,6 +34,7 @@ import com.example.sensorsvr.ui.navigation.BottomNavigationBar
 import com.example.sensorsvr.ui.navigation.TopNavBar
 import com.example.sensorsvr.utils.calculateAccuracy
 import com.example.sensorsvr.utils.calculateConfusionMatrix
+import com.example.sensorsvr.utils.calculatePrecision
 import com.example.sensorsvr.utils.getBottomNavigationTabs
 import com.example.sensorsvr.viewModel.DataViewModel
 import kotlin.math.pow
@@ -141,6 +142,8 @@ private fun AnalysisContent(
         item { Spacer(modifier = Modifier.height(16.dp)) }
         item { AccuracyCard(accuracy) }
         item { Spacer(modifier = Modifier.height(16.dp)) }
+        item { PrecisionCard(trueLabel, result) }  // New precision card
+        item { Spacer(modifier = Modifier.height(16.dp)) }
         item { ConfusionMatrixCard(matrix) }
         item { Spacer(modifier = Modifier.height(16.dp)) }
         item { SensorStatsSection(accelData, gyroData) }
@@ -198,8 +201,25 @@ private fun ConfusionMatrixCard(matrix: Map<Pair<String, String>, Int>) {
             )
             Spacer(modifier = Modifier.height(8.dp))
             matrix.forEach { (key, count) ->
-                Text("True: ${key.first}, Predicted: ${key.second} → $count")
+                Text("True: ${key.first}, Predicted: ${key.second} ")
             }
+        }
+    }
+}
+
+@Composable
+private fun PrecisionCard(trueLabel: String, predictedLabel: String) {
+    val testResults = listOf(PredictionResultData(trueLabel, predictedLabel))
+    val precision = calculatePrecision(predictedLabel, testResults)
+
+    Card(modifier = Modifier.fillMaxWidth(), elevation = CardDefaults.cardElevation(2.dp)) {
+        Column(modifier = Modifier.padding(16.dp)) {
+            Text(
+                text = "Precision",
+                style = MaterialTheme.typography.titleLarge,
+            )
+            Spacer(modifier = Modifier.height(8.dp))
+            Text("For '${predictedLabel}': ${"%.1f".format(precision * 100)}%")
         }
     }
 }

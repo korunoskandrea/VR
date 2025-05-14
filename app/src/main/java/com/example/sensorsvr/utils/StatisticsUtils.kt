@@ -13,12 +13,13 @@ fun calculateConfusionMatrix(results: List<PredictionResultData>): Map<Pair<Stri
 }
 
 fun calculateAccuracy(results: List<PredictionResultData>): Double {
-    return (results.count() { it.trueLabel == it.predictedLabel }.toDouble()) / results.size
+    require(results.isNotEmpty()) { "Cannot calculate accuracy for empty results" }
+    return results.count { it.trueLabel == it.predictedLabel }.toDouble() / results.size
 }
 
 fun calculatePrecision(label: String, results: List<PredictionResultData>): Double {
-    val tp = results.count() { it.predictedLabel == label && it.trueLabel == label }
-    val fp = results.count() { it.predictedLabel == label && it.trueLabel != label }
+    val tp = results.count { it.predictedLabel == label && it.trueLabel == label }
+    val fp = results.count { it.predictedLabel == label && it.trueLabel != label }
 
     return if (tp + fp == 0) 0.0 else tp.toDouble() / (tp + fp)
 }
