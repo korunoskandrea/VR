@@ -1,8 +1,8 @@
 package com.example.sensorsvr.utils
 
-import com.example.sensorsvr.model.PredictionResult
+import com.example.sensorsvr.model.PredictionResultData
 
-fun calculateConfusionMatrix(results: List<PredictionResult>): Map<Pair<String, String>, Int> {
+fun calculateConfusionMatrix(results: List<PredictionResultData>): Map<Pair<String, String>, Int> {
     val matrix = mutableMapOf<Pair<String, String>, Int>()
 
     for (res in results) {
@@ -12,11 +12,11 @@ fun calculateConfusionMatrix(results: List<PredictionResult>): Map<Pair<String, 
     return matrix
 }
 
-fun calculateAccuracy(results: List<PredictionResult>): Double {
+fun calculateAccuracy(results: List<PredictionResultData>): Double {
     return (results.count() { it.trueLabel == it.predictedLabel }.toDouble()) / results.size
 }
 
-fun calculatePrecision(label: String, results: List<PredictionResult>): Double {
+fun calculatePrecision(label: String, results: List<PredictionResultData>): Double {
     val tp = results.count() { it.predictedLabel == label && it.trueLabel == label }
     val fp = results.count() { it.predictedLabel == label && it.trueLabel != label }
 
