@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
@@ -156,7 +157,7 @@ private fun UserHeader(username: String) {
 
 @Composable
 private fun PredictionResultCard(trueLabel: String, result: String, isCorrect: Boolean) {
-    Card(modifier = Modifier.fillMaxWidth()) {
+    Card(modifier = Modifier.fillMaxWidth(), elevation = CardDefaults.cardElevation(2.dp)) {
         Column(modifier = Modifier.padding(16.dp)) {
             Text(
                 text = "Movement Analysis",
@@ -175,7 +176,7 @@ private fun PredictionResultCard(trueLabel: String, result: String, isCorrect: B
 
 @Composable
 private fun AccuracyCard(accuracy: Double) {
-    Card(modifier = Modifier.fillMaxWidth()) {
+    Card(modifier = Modifier.fillMaxWidth(), elevation = CardDefaults.cardElevation(2.dp)) {
         Column(modifier = Modifier.padding(16.dp)) {
             Text(
                 text = "Model Performance",
@@ -189,7 +190,7 @@ private fun AccuracyCard(accuracy: Double) {
 
 @Composable
 private fun ConfusionMatrixCard(matrix: Map<Pair<String, String>, Int>) {
-    Card(modifier = Modifier.fillMaxWidth()) {
+    Card(modifier = Modifier.fillMaxWidth(), elevation = CardDefaults.cardElevation(2.dp)) {
         Column(modifier = Modifier.padding(16.dp)) {
             Text(
                 text = "Confusion Matrix",
@@ -210,7 +211,7 @@ private fun SensorStatsSection(accelData: List<SensorData>, gyroData: List<Senso
         sqrt((it.x * it.x + it.y * it.y + it.z * it.z).toDouble())
     })
 
-    Card(modifier = Modifier.fillMaxWidth()) {
+    Card(modifier = Modifier.fillMaxWidth(), elevation = CardDefaults.cardElevation(2.dp)) {
         Column(modifier = Modifier.padding(16.dp)) {
             Text(
                 text = "Sensor Statistics",
