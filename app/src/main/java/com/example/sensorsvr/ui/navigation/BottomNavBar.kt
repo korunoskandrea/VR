@@ -41,14 +41,16 @@ fun BottomNavigationBar(
                     Icon(
                         painter = painterResource(id = tabItem.icon),
                         contentDescription = tabItem.name,
-                        modifier = Modifier.size(24.dp)
+                        modifier = Modifier.size(24.dp),
+                        tint = MaterialTheme.colorScheme.primary
                     )
                 },
                 label = {
                     Text(
                         text = tabItem.name,
                         style = MaterialTheme.typography.labelSmall,
-                        maxLines = 1
+                        maxLines = 1,
+                        color = MaterialTheme.colorScheme.primary
                     )
                 },
                 colors = NavigationBarItemDefaults.colors(
