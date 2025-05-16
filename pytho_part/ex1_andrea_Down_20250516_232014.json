@@ -1,0 +1,7002 @@
+[
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 0,
+    "x": 0.0,
+    "y": 0.0,
+    "z": 9.8647
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 0,
+    "x": 0.0,
+    "y": 0.0,
+    "z": 0.0
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 20,
+    "x": 0.03364,
+    "y": 0.02502,
+    "z": 9.82485
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 20,
+    "x": 0.00698,
+    "y": 0.00716,
+    "z": 0.01223
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 40,
+    "x": 0.06538,
+    "y": 0.04783,
+    "z": 9.86832
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 40,
+    "x": 0.01374,
+    "y": 0.01372,
+    "z": 0.02349
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 60,
+    "x": 0.09328,
+    "y": 0.06883,
+    "z": 9.97511
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 60,
+    "x": 0.01986,
+    "y": 0.01981,
+    "z": 0.03347
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 80,
+    "x": 0.11692,
+    "y": 0.08466,
+    "z": 10.1462
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 80,
+    "x": 0.02517,
+    "y": 0.02449,
+    "z": 0.04015
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 100,
+    "x": 0.13491,
+    "y": 0.0947,
+    "z": 10.07193
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 100,
+    "x": 0.02939,
+    "y": 0.0278,
+    "z": 0.04428
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 120,
+    "x": 0.14553,
+    "y": 0.10066,
+    "z": 10.24115
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 120,
+    "x": 0.03258,
+    "y": 0.02949,
+    "z": 0.04511
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 140,
+    "x": 0.15121,
+    "y": 0.09894,
+    "z": 10.22555
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 140,
+    "x": 0.03435,
+    "y": 0.02964,
+    "z": 0.04216
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 160,
+    "x": 0.14544,
+    "y": 0.09029,
+    "z": 10.19013
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 160,
+    "x": 0.03521,
+    "y": 0.02817,
+    "z": 0.03573
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 180,
+    "x": 0.13314,
+    "y": 0.0777,
+    "z": 10.19204
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 180,
+    "x": 0.03389,
+    "y": 0.02495,
+    "z": 0.02734
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 200,
+    "x": 0.1146,
+    "y": 0.05931,
+    "z": 9.96486
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 200,
+    "x": 0.0319,
+    "y": 0.02041,
+    "z": 0.01648
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 220,
+    "x": 0.09114,
+    "y": 0.03689,
+    "z": 10.02023
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 220,
+    "x": 0.02789,
+    "y": 0.01467,
+    "z": 0.00455
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 240,
+    "x": 0.06216,
+    "y": 0.01253,
+    "z": 9.83755
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 240,
+    "x": 0.02352,
+    "y": 0.00815,
+    "z": -0.00793
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 260,
+    "x": 0.02968,
+    "y": -0.0126,
+    "z": 9.87792
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 260,
+    "x": 0.0176,
+    "y": 0.00114,
+    "z": -0.01963
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 280,
+    "x": -0.00375,
+    "y": -0.03673,
+    "z": 9.66162
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 280,
+    "x": 0.01119,
+    "y": -0.00604,
+    "z": -0.02979
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 300,
+    "x": -0.03708,
+    "y": -0.0593,
+    "z": 9.57318
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 300,
+    "x": 0.00442,
+    "y": -0.01278,
+    "z": -0.0383
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 320,
+    "x": -0.06889,
+    "y": -0.07704,
+    "z": 9.64128
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 320,
+    "x": -0.00264,
+    "y": -0.01898,
+    "z": -0.04272
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 340,
+    "x": -0.09677,
+    "y": -0.08973,
+    "z": 9.53784
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 340,
+    "x": -0.00954,
+    "y": -0.024,
+    "z": -0.04524
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 360,
+    "x": -0.11998,
+    "y": -0.09897,
+    "z": 9.45506
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 360,
+    "x": -0.01614,
+    "y": -0.02757,
+    "z": -0.04378
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 380,
+    "x": -0.13769,
+    "y": -0.09944,
+    "z": 9.41235
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 380,
+    "x": -0.02186,
+    "y": -0.02951,
+    "z": -0.03896
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 400,
+    "x": -0.14684,
+    "y": -0.09601,
+    "z": 9.47444
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 400,
+    "x": -0.02712,
+    "y": -0.03002,
+    "z": -0.03052
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 420,
+    "x": -0.14895,
+    "y": -0.08477,
+    "z": 9.50505
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 420,
+    "x": -0.03072,
+    "y": -0.02842,
+    "z": -0.02086
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 440,
+    "x": -0.1451,
+    "y": -0.06791,
+    "z": 9.55196
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 440,
+    "x": -0.03383,
+    "y": -0.02551,
+    "z": -0.00904
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 460,
+    "x": -0.13151,
+    "y": -0.04845,
+    "z": 9.59224
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 460,
+    "x": -0.03515,
+    "y": -0.02155,
+    "z": 0.0034
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 480,
+    "x": -0.11363,
+    "y": -0.02481,
+    "z": 9.55379
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 480,
+    "x": -0.0346,
+    "y": -0.01582,
+    "z": 0.01543
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 500,
+    "x": -0.08808,
+    "y": -0.0,
+    "z": 9.73489
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 500,
+    "x": -0.03354,
+    "y": -0.0092,
+    "z": 0.02625
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 520,
+    "x": -0.05813,
+    "y": 0.02473,
+    "z": 9.7583
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 520,
+    "x": -0.03035,
+    "y": -0.00227,
+    "z": 0.03529
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 540,
+    "x": -0.02641,
+    "y": 0.04828,
+    "z": 9.90336
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 540,
+    "x": -0.0265,
+    "y": 0.00484,
+    "z": 0.04183
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 560,
+    "x": 0.00752,
+    "y": 0.06872,
+    "z": 9.8887
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 560,
+    "x": -0.02139,
+    "y": 0.01184,
+    "z": 0.04471
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 580,
+    "x": 0.04058,
+    "y": 0.08524,
+    "z": 9.99475
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 580,
+    "x": -0.01541,
+    "y": 0.018,
+    "z": 0.04452
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 600,
+    "x": 0.07166,
+    "y": 0.09506,
+    "z": 10.03076
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 600,
+    "x": -0.00872,
+    "y": 0.02291,
+    "z": 0.04038
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 620,
+    "x": 0.10052,
+    "y": 0.09993,
+    "z": 10.08286
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 620,
+    "x": -0.00174,
+    "y": 0.02673,
+    "z": 0.03411
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 640,
+    "x": 0.12216,
+    "y": 0.09879,
+    "z": 10.04197
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 640,
+    "x": 0.00528,
+    "y": 0.02953,
+    "z": 0.02442
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 660,
+    "x": 0.13919,
+    "y": 0.09088,
+    "z": 10.12493
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 660,
+    "x": 0.01198,
+    "y": 0.03003,
+    "z": 0.01345
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 680,
+    "x": 0.1468,
+    "y": 0.07746,
+    "z": 10.09607
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 680,
+    "x": 0.0184,
+    "y": 0.02924,
+    "z": 0.00113
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 700,
+    "x": 0.15018,
+    "y": 0.05924,
+    "z": 10.03316
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 700,
+    "x": 0.02407,
+    "y": 0.02635,
+    "z": -0.01129
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 720,
+    "x": 0.14437,
+    "y": 0.03699,
+    "z": 10.05947
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 720,
+    "x": 0.02838,
+    "y": 0.02229,
+    "z": -0.02253
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 740,
+    "x": 0.12936,
+    "y": 0.01253,
+    "z": 9.91975
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 740,
+    "x": 0.03189,
+    "y": 0.01658,
+    "z": -0.03224
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 760,
+    "x": 0.11006,
+    "y": -0.01252,
+    "z": 9.8802
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 760,
+    "x": 0.03452,
+    "y": 0.01034,
+    "z": -0.03942
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 780,
+    "x": 0.08506,
+    "y": -0.03703,
+    "z": 9.92023
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 780,
+    "x": 0.03494,
+    "y": 0.00339,
+    "z": -0.04387
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 800,
+    "x": 0.05481,
+    "y": -0.05843,
+    "z": 9.76908
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 800,
+    "x": 0.0347,
+    "y": -0.00373,
+    "z": -0.04536
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 820,
+    "x": 0.02252,
+    "y": -0.07771,
+    "z": 9.6025
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 820,
+    "x": 0.03242,
+    "y": -0.01077,
+    "z": -0.04214
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 840,
+    "x": -0.01132,
+    "y": -0.08978,
+    "z": 9.56439
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 840,
+    "x": 0.02919,
+    "y": -0.01691,
+    "z": -0.03699
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 860,
+    "x": -0.04439,
+    "y": -0.0977,
+    "z": 9.52532
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 860,
+    "x": 0.02474,
+    "y": -0.02252,
+    "z": -0.02812
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 880,
+    "x": -0.0756,
+    "y": -0.09984,
+    "z": 9.40991
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 880,
+    "x": 0.01903,
+    "y": -0.02667,
+    "z": -0.01766
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 900,
+    "x": -0.10272,
+    "y": -0.09495,
+    "z": 9.4304
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 900,
+    "x": 0.01287,
+    "y": -0.02891,
+    "z": -0.00566
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 920,
+    "x": -0.12542,
+    "y": -0.08414,
+    "z": 9.43098
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 920,
+    "x": 0.00608,
+    "y": -0.02998,
+    "z": 0.00678
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 940,
+    "x": -0.13958,
+    "y": -0.06855,
+    "z": 9.42198
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 940,
+    "x": -0.00089,
+    "y": -0.0294,
+    "z": 0.01881
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 960,
+    "x": -0.14796,
+    "y": -0.04823,
+    "z": 9.51225
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 960,
+    "x": -0.00787,
+    "y": -0.02656,
+    "z": 0.02884
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 980,
+    "x": -0.15044,
+    "y": -0.02495,
+    "z": 9.5644
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 980,
+    "x": -0.01464,
+    "y": -0.02272,
+    "z": 0.03773
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 1000,
+    "x": -0.14221,
+    "y": -0.0,
+    "z": 9.54772
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 1000,
+    "x": -0.0204,
+    "y": -0.01765,
+    "z": 0.04288
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 1020,
+    "x": -0.12877,
+    "y": 0.02481,
+    "z": 9.71444
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 1020,
+    "x": -0.02569,
+    "y": -0.01147,
+    "z": 0.04475
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 1040,
+    "x": -0.10873,
+    "y": 0.04769,
+    "z": 9.72343
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 1040,
+    "x": -0.02985,
+    "y": -0.00454,
+    "z": 0.04334
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 1060,
+    "x": -0.08195,
+    "y": 0.06847,
+    "z": 9.80896
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 1060,
+    "x": -0.0327,
+    "y": 0.00266,
+    "z": 0.03941
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 1080,
+    "x": -0.0514,
+    "y": 0.08427,
+    "z": 9.8977
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 1080,
+    "x": -0.03483,
+    "y": 0.00961,
+    "z": 0.03192
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 1100,
+    "x": -0.0189,
+    "y": 0.0943,
+    "z": 9.91736
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 1100,
+    "x": -0.03489,
+    "y": 0.01603,
+    "z": 0.02179
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 1120,
+    "x": 0.01507,
+    "y": 0.09969,
+    "z": 10.02427
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 1120,
+    "x": -0.03394,
+    "y": 0.02144,
+    "z": 0.01008
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 1140,
+    "x": 0.04809,
+    "y": 0.09864,
+    "z": 10.00499
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 1140,
+    "x": -0.03149,
+    "y": 0.02569,
+    "z": -0.00225
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 1160,
+    "x": 0.07851,
+    "y": 0.09111,
+    "z": 10.08506
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 1160,
+    "x": -0.02778,
+    "y": 0.02877,
+    "z": -0.01441
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 1180,
+    "x": 0.10444,
+    "y": 0.07669,
+    "z": 10.20097
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 1180,
+    "x": -0.02263,
+    "y": 0.02981,
+    "z": -0.02576
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 1200,
+    "x": 0.12608,
+    "y": 0.05896,
+    "z": 10.13189
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 1200,
+    "x": -0.01669,
+    "y": 0.02965,
+    "z": -0.03451
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 1220,
+    "x": 0.14023,
+    "y": 0.03699,
+    "z": 10.08953
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 1220,
+    "x": -0.01047,
+    "y": 0.02746,
+    "z": -0.04093
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 1240,
+    "x": 0.1481,
+    "y": 0.01266,
+    "z": 10.11073
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 1240,
+    "x": -0.00353,
+    "y": 0.0238,
+    "z": -0.04469
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 1260,
+    "x": 0.1487,
+    "y": -0.01254,
+    "z": 10.07154
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 1260,
+    "x": 0.0035,
+    "y": 0.01871,
+    "z": -0.04467
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 1280,
+    "x": 0.14196,
+    "y": -0.03696,
+    "z": 9.87109
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 1280,
+    "x": 0.01039,
+    "y": 0.01233,
+    "z": -0.04117
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 1300,
+    "x": 0.12716,
+    "y": -0.05929,
+    "z": 9.79523
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 1300,
+    "x": 0.01682,
+    "y": 0.00567,
+    "z": -0.03458
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 1320,
+    "x": 0.1053,
+    "y": -0.07649,
+    "z": 9.73475
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 1320,
+    "x": 0.02267,
+    "y": -0.00151,
+    "z": -0.02578
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 1340,
+    "x": 0.07955,
+    "y": -0.09024,
+    "z": 9.75333
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 1340,
+    "x": 0.02768,
+    "y": -0.00853,
+    "z": -0.01458
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 1360,
+    "x": 0.04787,
+    "y": -0.0981,
+    "z": 9.67347
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 1360,
+    "x": 0.03122,
+    "y": -0.01521,
+    "z": -0.00224
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 1380,
+    "x": 0.01494,
+    "y": -0.09953,
+    "z": 9.53419
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 1380,
+    "x": 0.03381,
+    "y": -0.02089,
+    "z": 0.0101
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 1400,
+    "x": -0.01883,
+    "y": -0.09445,
+    "z": 9.44518
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 1400,
+    "x": 0.0347,
+    "y": -0.02517,
+    "z": 0.02166
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 1420,
+    "x": -0.052,
+    "y": -0.08485,
+    "z": 9.46386
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 1420,
+    "x": 0.03471,
+    "y": -0.02827,
+    "z": 0.03141
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 1440,
+    "x": -0.08176,
+    "y": -0.06903,
+    "z": 9.46271
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 1440,
+    "x": 0.03308,
+    "y": -0.03002,
+    "z": 0.03951
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 1460,
+    "x": -0.1084,
+    "y": -0.0486,
+    "z": 9.50036
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 1460,
+    "x": 0.02995,
+    "y": -0.02977,
+    "z": 0.04341
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 1480,
+    "x": -0.12939,
+    "y": -0.02462,
+    "z": 9.45871
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 1480,
+    "x": 0.02589,
+    "y": -0.02783,
+    "z": 0.04532
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 1500,
+    "x": -0.1431,
+    "y": -0.0,
+    "z": 9.478
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 1500,
+    "x": 0.02068,
+    "y": -0.02433,
+    "z": 0.04277
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 1520,
+    "x": -0.14913,
+    "y": 0.02495,
+    "z": 9.62102
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 1520,
+    "x": 0.01449,
+    "y": -0.01949,
+    "z": 0.03723
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 1540,
+    "x": -0.15002,
+    "y": 0.04799,
+    "z": 9.72315
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 1540,
+    "x": 0.00785,
+    "y": -0.01347,
+    "z": 0.02888
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 1560,
+    "x": -0.14014,
+    "y": 0.06846,
+    "z": 9.69263
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 1560,
+    "x": 0.00088,
+    "y": -0.00667,
+    "z": 0.01872
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 1580,
+    "x": -0.12345,
+    "y": 0.08483,
+    "z": 9.83467
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 1580,
+    "x": -0.00612,
+    "y": 0.00038,
+    "z": 0.0068
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 1600,
+    "x": -0.10265,
+    "y": 0.09469,
+    "z": 9.9097
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 1600,
+    "x": -0.01284,
+    "y": 0.00743,
+    "z": -0.00565
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 1620,
+    "x": -0.07603,
+    "y": 0.09892,
+    "z": 9.94086
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 1620,
+    "x": -0.01914,
+    "y": 0.01423,
+    "z": -0.01755
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 1640,
+    "x": -0.04495,
+    "y": 0.09731,
+    "z": 9.95927
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 1640,
+    "x": -0.0245,
+    "y": 0.02001,
+    "z": -0.02837
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 1660,
+    "x": -0.01126,
+    "y": 0.09133,
+    "z": 10.10339
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 1660,
+    "x": -0.02882,
+    "y": 0.02477,
+    "z": -0.03667
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 1680,
+    "x": 0.02263,
+    "y": 0.0768,
+    "z": 10.02597
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 1680,
+    "x": -0.03211,
+    "y": 0.0282,
+    "z": -0.04269
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 1700,
+    "x": 0.05521,
+    "y": 0.05898,
+    "z": 10.23986
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 1700,
+    "x": -0.03417,
+    "y": 0.02968,
+    "z": -0.04456
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 1720,
+    "x": 0.085,
+    "y": 0.03684,
+    "z": 10.0774
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 1720,
+    "x": -0.03498,
+    "y": 0.0297,
+    "z": -0.04371
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 1740,
+    "x": 0.11096,
+    "y": 0.01257,
+    "z": 10.22811
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 1740,
+    "x": -0.03425,
+    "y": 0.02814,
+    "z": -0.03935
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 1760,
+    "x": 0.13121,
+    "y": -0.0126,
+    "z": 10.01442
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 1760,
+    "x": -0.03229,
+    "y": 0.0247,
+    "z": -0.03269
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 1780,
+    "x": 0.1442,
+    "y": -0.03649,
+    "z": 9.99885
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 1780,
+    "x": -0.02883,
+    "y": 0.02034,
+    "z": -0.02268
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 1800,
+    "x": 0.14971,
+    "y": -0.05859,
+    "z": 9.92848
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 1800,
+    "x": -0.02411,
+    "y": 0.01431,
+    "z": -0.01129
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 1820,
+    "x": 0.14851,
+    "y": -0.07746,
+    "z": 9.97386
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 1820,
+    "x": -0.01827,
+    "y": 0.00781,
+    "z": 0.00114
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 1840,
+    "x": 0.13908,
+    "y": -0.08968,
+    "z": 9.81336
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 1840,
+    "x": -0.01206,
+    "y": 0.00075,
+    "z": 0.01325
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 1860,
+    "x": 0.12181,
+    "y": -0.09843,
+    "z": 9.74511
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 1860,
+    "x": -0.00524,
+    "y": -0.00639,
+    "z": 0.02438
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 1880,
+    "x": 0.09974,
+    "y": -0.09962,
+    "z": 9.62853
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 1880,
+    "x": 0.00177,
+    "y": -0.01317,
+    "z": 0.03408
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 1900,
+    "x": 0.07183,
+    "y": -0.09535,
+    "z": 9.57605
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 1900,
+    "x": 0.00871,
+    "y": -0.01911,
+    "z": 0.04106
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 1920,
+    "x": 0.04088,
+    "y": -0.08361,
+    "z": 9.54878
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 1920,
+    "x": 0.01533,
+    "y": -0.02414,
+    "z": 0.0447
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 1940,
+    "x": 0.00759,
+    "y": -0.06804,
+    "z": 9.44243
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 1940,
+    "x": 0.02148,
+    "y": -0.0278,
+    "z": 0.04441
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 1960,
+    "x": -0.02644,
+    "y": -0.04864,
+    "z": 9.39664
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 1960,
+    "x": 0.02619,
+    "y": -0.02932,
+    "z": 0.04177
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 1980,
+    "x": -0.05883,
+    "y": -0.02465,
+    "z": 9.42361
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 1980,
+    "x": 0.03026,
+    "y": -0.02992,
+    "z": 0.03544
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 2000,
+    "x": -0.08868,
+    "y": -0.0,
+    "z": 9.49015
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 2000,
+    "x": 0.03297,
+    "y": -0.0284,
+    "z": 0.02636
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 2020,
+    "x": -0.11322,
+    "y": 0.02487,
+    "z": 9.47331
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 2020,
+    "x": 0.03471,
+    "y": -0.02555,
+    "z": 0.01566
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 2040,
+    "x": -0.13182,
+    "y": 0.04794,
+    "z": 9.58747
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 2040,
+    "x": 0.03496,
+    "y": -0.02122,
+    "z": 0.00337
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 2060,
+    "x": -0.1445,
+    "y": 0.06848,
+    "z": 9.62282
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 2060,
+    "x": 0.03369,
+    "y": -0.0155,
+    "z": -0.00894
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 2080,
+    "x": -0.14932,
+    "y": 0.08414,
+    "z": 9.67669
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 2080,
+    "x": 0.03067,
+    "y": -0.00895,
+    "z": -0.02066
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 2100,
+    "x": -0.14729,
+    "y": 0.09457,
+    "z": 9.81832
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 2100,
+    "x": 0.02689,
+    "y": -0.00187,
+    "z": -0.03103
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 2120,
+    "x": -0.13698,
+    "y": 0.09979,
+    "z": 9.79983
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 2120,
+    "x": 0.02203,
+    "y": 0.00523,
+    "z": -0.03861
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 2140,
+    "x": -0.11906,
+    "y": 0.09834,
+    "z": 9.89699
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 2140,
+    "x": 0.01618,
+    "y": 0.01208,
+    "z": -0.04362
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 2160,
+    "x": -0.09649,
+    "y": 0.08978,
+    "z": 9.98578
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 2160,
+    "x": 0.00948,
+    "y": 0.01824,
+    "z": -0.0448
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 2180,
+    "x": -0.06857,
+    "y": 0.07748,
+    "z": 10.01544
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 2180,
+    "x": 0.00263,
+    "y": 0.02332,
+    "z": -0.04294
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 2200,
+    "x": -0.03743,
+    "y": 0.0592,
+    "z": 10.18058
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 2200,
+    "x": -0.00434,
+    "y": 0.02735,
+    "z": -0.03803
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 2220,
+    "x": -0.00377,
+    "y": 0.03689,
+    "z": 10.12208
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 2220,
+    "x": -0.01114,
+    "y": 0.02915,
+    "z": -0.03023
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 2240,
+    "x": 0.03017,
+    "y": 0.01261,
+    "z": 10.12278
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 2240,
+    "x": -0.01766,
+    "y": 0.0299,
+    "z": -0.01976
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 2260,
+    "x": 0.06238,
+    "y": -0.0126,
+    "z": 10.2044
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 2260,
+    "x": -0.02312,
+    "y": 0.0286,
+    "z": -0.00783
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 2280,
+    "x": 0.09147,
+    "y": -0.03672,
+    "z": 10.00895
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 2280,
+    "x": -0.02826,
+    "y": 0.02623,
+    "z": 0.00455
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 2300,
+    "x": 0.11452,
+    "y": -0.05874,
+    "z": 10.0043
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 2300,
+    "x": -0.03139,
+    "y": 0.02181,
+    "z": 0.01648
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 2320,
+    "x": 0.13368,
+    "y": -0.07745,
+    "z": 9.97894
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 2320,
+    "x": -0.0341,
+    "y": 0.01654,
+    "z": 0.02729
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 2340,
+    "x": 0.14584,
+    "y": -0.08977,
+    "z": 9.98864
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 2340,
+    "x": -0.03494,
+    "y": 0.0099,
+    "z": 0.03589
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 2360,
+    "x": 0.14916,
+    "y": -0.09757,
+    "z": 9.81813
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 2360,
+    "x": -0.03459,
+    "y": 0.00302,
+    "z": 0.04232
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 2380,
+    "x": 0.14729,
+    "y": -0.09981,
+    "z": 9.83221
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 2380,
+    "x": -0.03251,
+    "y": -0.00417,
+    "z": 0.04524
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 2400,
+    "x": 0.13455,
+    "y": -0.09515,
+    "z": 9.67143
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 2400,
+    "x": -0.02976,
+    "y": -0.011,
+    "z": 0.04411
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 2420,
+    "x": 0.11815,
+    "y": -0.08362,
+    "z": 9.51647
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 2420,
+    "x": -0.02511,
+    "y": -0.01745,
+    "z": 0.04041
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 2440,
+    "x": 0.09498,
+    "y": -0.06796,
+    "z": 9.53147
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 2440,
+    "x": -0.02001,
+    "y": -0.02278,
+    "z": 0.03324
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 2460,
+    "x": 0.0661,
+    "y": -0.04855,
+    "z": 9.58191
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 2460,
+    "x": -0.01358,
+    "y": -0.02649,
+    "z": 0.02354
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 2480,
+    "x": 0.03346,
+    "y": -0.0248,
+    "z": 9.47498
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 2480,
+    "x": -0.00697,
+    "y": -0.02936,
+    "z": 0.0124
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 2500,
+    "x": 0.0,
+    "y": -0.0,
+    "z": 9.44076
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 2500,
+    "x": -0.0,
+    "y": -0.02988,
+    "z": -0.0
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 2520,
+    "x": -0.03355,
+    "y": 0.02493,
+    "z": 9.55263
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 2520,
+    "x": 0.00694,
+    "y": -0.02924,
+    "z": -0.01236
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 2540,
+    "x": -0.06493,
+    "y": 0.04851,
+    "z": 9.52465
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 2540,
+    "x": 0.01379,
+    "y": -0.02662,
+    "z": -0.02352
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 2560,
+    "x": -0.09363,
+    "y": 0.06783,
+    "z": 9.59275
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 2560,
+    "x": 0.01982,
+    "y": -0.02272,
+    "z": -0.03331
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 2580,
+    "x": -0.11739,
+    "y": 0.08512,
+    "z": 9.59896
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 2580,
+    "x": 0.02536,
+    "y": -0.01736,
+    "z": -0.04006
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 2600,
+    "x": -0.13561,
+    "y": 0.09487,
+    "z": 9.6998
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 2600,
+    "x": 0.02955,
+    "y": -0.011,
+    "z": -0.04379
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 2620,
+    "x": -0.14575,
+    "y": 0.09991,
+    "z": 9.65738
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 2620,
+    "x": 0.03251,
+    "y": -0.00411,
+    "z": -0.04527
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 2640,
+    "x": -0.15081,
+    "y": 0.09917,
+    "z": 9.89602
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 2640,
+    "x": 0.03449,
+    "y": 0.00302,
+    "z": -0.04218
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 2660,
+    "x": -0.14468,
+    "y": 0.0913,
+    "z": 9.96421
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 2660,
+    "x": 0.03518,
+    "y": 0.00999,
+    "z": -0.03609
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 2680,
+    "x": -0.13397,
+    "y": 0.07689,
+    "z": 9.96313
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 2680,
+    "x": 0.03372,
+    "y": 0.01655,
+    "z": -0.02724
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 2700,
+    "x": -0.11484,
+    "y": 0.05902,
+    "z": 10.11467
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 2700,
+    "x": 0.03191,
+    "y": 0.02165,
+    "z": -0.01661
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 2720,
+    "x": -0.09055,
+    "y": 0.03662,
+    "z": 10.1258
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 2720,
+    "x": 0.02821,
+    "y": 0.02589,
+    "z": -0.00453
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 2740,
+    "x": -0.06214,
+    "y": 0.01257,
+    "z": 10.05041
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 2740,
+    "x": 0.02348,
+    "y": 0.02871,
+    "z": 0.00789
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 2760,
+    "x": -0.02986,
+    "y": -0.01251,
+    "z": 10.0798
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 2760,
+    "x": 0.01758,
+    "y": 0.03003,
+    "z": 0.01949
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 2780,
+    "x": 0.00374,
+    "y": -0.03672,
+    "z": 10.14595
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 2780,
+    "x": 0.01115,
+    "y": 0.02934,
+    "z": 0.03007
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 2800,
+    "x": 0.03718,
+    "y": -0.05889,
+    "z": 10.0452
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 2800,
+    "x": 0.0044,
+    "y": 0.02712,
+    "z": 0.03829
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 2820,
+    "x": 0.06918,
+    "y": -0.07776,
+    "z": 10.15753
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 2820,
+    "x": -0.00266,
+    "y": 0.02326,
+    "z": 0.04353
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 2840,
+    "x": 0.09657,
+    "y": -0.09056,
+    "z": 10.02695
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 2840,
+    "x": -0.00946,
+    "y": 0.01829,
+    "z": 0.04523
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 2860,
+    "x": 0.11985,
+    "y": -0.09901,
+    "z": 9.91067
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 2860,
+    "x": -0.01609,
+    "y": 0.01201,
+    "z": 0.04354
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 2880,
+    "x": 0.13851,
+    "y": -0.10064,
+    "z": 9.86953
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 2880,
+    "x": -0.02202,
+    "y": 0.00521,
+    "z": 0.03866
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 2900,
+    "x": 0.14673,
+    "y": -0.09459,
+    "z": 9.84272
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 2900,
+    "x": -0.02711,
+    "y": -0.00188,
+    "z": 0.03066
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 2920,
+    "x": 0.15075,
+    "y": -0.08473,
+    "z": 9.74384
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 2920,
+    "x": -0.03094,
+    "y": -0.00892,
+    "z": 0.02051
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 2940,
+    "x": 0.14404,
+    "y": -0.06814,
+    "z": 9.53171
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 2940,
+    "x": -0.03326,
+    "y": -0.01542,
+    "z": 0.00905
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 2960,
+    "x": 0.13246,
+    "y": -0.04861,
+    "z": 9.61151
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 2960,
+    "x": -0.03453,
+    "y": -0.02103,
+    "z": -0.00342
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 2980,
+    "x": 0.11275,
+    "y": -0.02511,
+    "z": 9.57913
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 2980,
+    "x": -0.0348,
+    "y": -0.02545,
+    "z": -0.01537
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 3000,
+    "x": 0.08834,
+    "y": -0.0,
+    "z": 9.51379
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 3000,
+    "x": -0.03345,
+    "y": -0.02871,
+    "z": -0.02656
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 3020,
+    "x": 0.05852,
+    "y": 0.02511,
+    "z": 9.37573
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 3020,
+    "x": -0.0302,
+    "y": -0.02964,
+    "z": -0.03549
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 3040,
+    "x": 0.02609,
+    "y": 0.04832,
+    "z": 9.49766
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 3040,
+    "x": -0.02665,
+    "y": -0.0294,
+    "z": -0.04161
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 3060,
+    "x": -0.0076,
+    "y": 0.06825,
+    "z": 9.42851
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 3060,
+    "x": -0.02125,
+    "y": -0.02754,
+    "z": -0.04488
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 3080,
+    "x": -0.04114,
+    "y": 0.08433,
+    "z": 9.49843
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 3080,
+    "x": -0.01534,
+    "y": -0.02388,
+    "z": -0.04452
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 3100,
+    "x": -0.0721,
+    "y": 0.0952,
+    "z": 9.6466
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 3100,
+    "x": -0.00879,
+    "y": -0.01905,
+    "z": -0.04036
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 3120,
+    "x": -0.10033,
+    "y": 0.09999,
+    "z": 9.64117
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 3120,
+    "x": -0.00176,
+    "y": -0.01304,
+    "z": -0.03413
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 3140,
+    "x": -0.12207,
+    "y": 0.09734,
+    "z": 9.63745
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 3140,
+    "x": 0.00523,
+    "y": -0.00636,
+    "z": -0.02451
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 3160,
+    "x": -0.13963,
+    "y": 0.08998,
+    "z": 9.8522
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 3160,
+    "x": 0.01209,
+    "y": 0.00076,
+    "z": -0.01335
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 3180,
+    "x": -0.14857,
+    "y": 0.07735,
+    "z": 9.9522
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 3180,
+    "x": 0.01822,
+    "y": 0.0079,
+    "z": -0.00113
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 3200,
+    "x": -0.15014,
+    "y": 0.05822,
+    "z": 10.05812
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 3200,
+    "x": 0.02414,
+    "y": 0.0144,
+    "z": 0.0113
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 3220,
+    "x": -0.14239,
+    "y": 0.03697,
+    "z": 9.99252
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 3220,
+    "x": 0.02846,
+    "y": 0.02008,
+    "z": 0.02275
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 3240,
+    "x": -0.13056,
+    "y": 0.01259,
+    "z": 10.16467
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 3240,
+    "x": 0.03216,
+    "y": 0.02489,
+    "z": 0.03223
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 3260,
+    "x": -0.11056,
+    "y": -0.0125,
+    "z": 10.18032
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 3260,
+    "x": 0.0345,
+    "y": 0.02802,
+    "z": 0.0394
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 3280,
+    "x": -0.0854,
+    "y": -0.03688,
+    "z": 10.12545
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 3280,
+    "x": 0.03502,
+    "y": 0.0301,
+    "z": 0.04392
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 3300,
+    "x": -0.05542,
+    "y": -0.05907,
+    "z": 10.07034
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 3300,
+    "x": 0.03446,
+    "y": 0.02959,
+    "z": 0.04472
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 3320,
+    "x": -0.02233,
+    "y": -0.07648,
+    "z": 10.07802
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 3320,
+    "x": 0.03219,
+    "y": 0.02798,
+    "z": 0.04215
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 3340,
+    "x": 0.01128,
+    "y": -0.08986,
+    "z": 9.99661
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 3340,
+    "x": 0.02896,
+    "y": 0.02473,
+    "z": 0.03657
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 3360,
+    "x": 0.04471,
+    "y": -0.09745,
+    "z": 9.93714
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 3360,
+    "x": 0.02459,
+    "y": 0.01991,
+    "z": 0.02848
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 3380,
+    "x": 0.07618,
+    "y": -0.1004,
+    "z": 9.92934
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 3380,
+    "x": 0.0192,
+    "y": 0.01404,
+    "z": 0.01745
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 3400,
+    "x": 0.10276,
+    "y": -0.09517,
+    "z": 9.85699
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 3400,
+    "x": 0.0129,
+    "y": 0.0074,
+    "z": 0.00567
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 3420,
+    "x": 0.12553,
+    "y": -0.08442,
+    "z": 9.76594
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 3420,
+    "x": 0.00619,
+    "y": 0.00038,
+    "z": -0.0068
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 3440,
+    "x": 0.1388,
+    "y": -0.06878,
+    "z": 9.78371
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 3440,
+    "x": -0.00089,
+    "y": -0.00678,
+    "z": -0.01848
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 3460,
+    "x": 0.14879,
+    "y": -0.04815,
+    "z": 9.71403
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 3460,
+    "x": -0.00784,
+    "y": -0.01347,
+    "z": -0.02913
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 3480,
+    "x": 0.14859,
+    "y": -0.02483,
+    "z": 9.61259
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 3480,
+    "x": -0.01456,
+    "y": -0.01947,
+    "z": -0.03772
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 3500,
+    "x": 0.1431,
+    "y": -0.0,
+    "z": 9.43455
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 3500,
+    "x": -0.02076,
+    "y": -0.02439,
+    "z": -0.04246
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 3520,
+    "x": 0.12975,
+    "y": 0.02475,
+    "z": 9.51528
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 3520,
+    "x": -0.02562,
+    "y": -0.02753,
+    "z": -0.0453
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 3540,
+    "x": 0.10841,
+    "y": 0.04836,
+    "z": 9.43144
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 3540,
+    "x": -0.02985,
+    "y": -0.02979,
+    "z": -0.04381
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 3560,
+    "x": 0.08267,
+    "y": 0.06824,
+    "z": 9.46894
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 3560,
+    "x": -0.03303,
+    "y": -0.0296,
+    "z": -0.03888
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 3580,
+    "x": 0.052,
+    "y": 0.0841,
+    "z": 9.49734
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 3580,
+    "x": -0.03477,
+    "y": -0.02832,
+    "z": -0.03165
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 3600,
+    "x": 0.01887,
+    "y": 0.09572,
+    "z": 9.51111
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 3600,
+    "x": -0.03526,
+    "y": -0.02516,
+    "z": -0.02172
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 3620,
+    "x": -0.01506,
+    "y": 0.10024,
+    "z": 9.52397
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 3620,
+    "x": -0.0339,
+    "y": -0.02088,
+    "z": -0.01006
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 3640,
+    "x": -0.04785,
+    "y": 0.09733,
+    "z": 9.53209
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 3640,
+    "x": -0.03116,
+    "y": -0.01512,
+    "z": 0.00224
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 3660,
+    "x": -0.07861,
+    "y": 0.09089,
+    "z": 9.62692
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 3660,
+    "x": -0.02748,
+    "y": -0.00851,
+    "z": 0.0144
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 3680,
+    "x": -0.10539,
+    "y": 0.07683,
+    "z": 9.76732
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 3680,
+    "x": -0.02248,
+    "y": -0.00151,
+    "z": 0.02535
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 3700,
+    "x": -0.12612,
+    "y": 0.05931,
+    "z": 9.83106
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 3700,
+    "x": -0.01677,
+    "y": 0.00563,
+    "z": 0.03489
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 3720,
+    "x": -0.14062,
+    "y": 0.03711,
+    "z": 10.0021
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 3720,
+    "x": -0.01049,
+    "y": 0.01241,
+    "z": 0.0413
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 3740,
+    "x": -0.14931,
+    "y": 0.01252,
+    "z": 9.9206
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 3740,
+    "x": -0.00351,
+    "y": 0.01843,
+    "z": 0.0443
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 3760,
+    "x": -0.14776,
+    "y": -0.01261,
+    "z": 10.13403
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 3760,
+    "x": 0.00348,
+    "y": 0.02373,
+    "z": 0.0446
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 3780,
+    "x": -0.14009,
+    "y": -0.03718,
+    "z": 10.06204
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 3780,
+    "x": 0.0104,
+    "y": 0.02712,
+    "z": 0.0415
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 3800,
+    "x": -0.12691,
+    "y": -0.05918,
+    "z": 10.14104
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 3800,
+    "x": 0.01674,
+    "y": 0.0292,
+    "z": 0.03495
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 3820,
+    "x": -0.10484,
+    "y": -0.07727,
+    "z": 10.24913
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 3820,
+    "x": 0.02279,
+    "y": 0.02968,
+    "z": 0.02528
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 3840,
+    "x": -0.0784,
+    "y": -0.09062,
+    "z": 10.20699
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 3840,
+    "x": 0.02728,
+    "y": 0.02869,
+    "z": 0.0144
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 3860,
+    "x": -0.04821,
+    "y": -0.09855,
+    "z": 10.09719
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 3860,
+    "x": 0.03135,
+    "y": 0.02592,
+    "z": 0.00228
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 3880,
+    "x": -0.015,
+    "y": -0.09986,
+    "z": 10.04561
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 3880,
+    "x": 0.0339,
+    "y": 0.02146,
+    "z": -0.01011
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 3900,
+    "x": 0.01874,
+    "y": -0.09556,
+    "z": 9.9994
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 3900,
+    "x": 0.03471,
+    "y": 0.01607,
+    "z": -0.02182
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 3920,
+    "x": 0.05191,
+    "y": -0.08399,
+    "z": 9.9431
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 3920,
+    "x": 0.0346,
+    "y": 0.00972,
+    "z": -0.03145
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 3940,
+    "x": 0.08199,
+    "y": -0.06844,
+    "z": 9.84128
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 3940,
+    "x": 0.03291,
+    "y": 0.00262,
+    "z": -0.03951
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 3960,
+    "x": 0.10806,
+    "y": -0.04854,
+    "z": 9.77368
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 3960,
+    "x": 0.03023,
+    "y": -0.00453,
+    "z": -0.04406
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 3980,
+    "x": 0.12822,
+    "y": -0.02492,
+    "z": 9.71949
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 3980,
+    "x": 0.02579,
+    "y": -0.01145,
+    "z": -0.04454
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 4000,
+    "x": 0.14207,
+    "y": -0.0,
+    "z": 9.58861
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 4000,
+    "x": 0.02064,
+    "y": -0.01747,
+    "z": -0.04265
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 4020,
+    "x": 0.14818,
+    "y": 0.0248,
+    "z": 9.49212
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 4020,
+    "x": 0.01454,
+    "y": -0.02309,
+    "z": -0.03733
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 4040,
+    "x": 0.14973,
+    "y": 0.04852,
+    "z": 9.51874
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 4040,
+    "x": 0.00779,
+    "y": -0.02676,
+    "z": -0.02926
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 4060,
+    "x": 0.14029,
+    "y": 0.06864,
+    "z": 9.41758
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 4060,
+    "x": 0.00087,
+    "y": -0.02934,
+    "z": -0.01871
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 4080,
+    "x": 0.12488,
+    "y": 0.08517,
+    "z": 9.49502
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 4080,
+    "x": -0.00612,
+    "y": -0.02996,
+    "z": -0.00682
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 4100,
+    "x": 0.10368,
+    "y": 0.09437,
+    "z": 9.40247
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 4100,
+    "x": -0.01293,
+    "y": -0.02891,
+    "z": 0.00568
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 4120,
+    "x": 0.07626,
+    "y": 0.0998,
+    "z": 9.48476
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 4120,
+    "x": -0.0192,
+    "y": -0.02646,
+    "z": 0.01747
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 4140,
+    "x": 0.04419,
+    "y": 0.09917,
+    "z": 9.57141
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 4140,
+    "x": -0.02472,
+    "y": -0.02236,
+    "z": 0.02806
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 4160,
+    "x": 0.01126,
+    "y": 0.08993,
+    "z": 9.6309
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 4160,
+    "x": -0.02923,
+    "y": -0.01705,
+    "z": 0.03704
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 4180,
+    "x": -0.02272,
+    "y": 0.07664,
+    "z": 9.68069
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 4180,
+    "x": -0.03236,
+    "y": -0.01062,
+    "z": 0.0423
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 4200,
+    "x": -0.05551,
+    "y": 0.05929,
+    "z": 9.66382
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 4200,
+    "x": -0.03404,
+    "y": -0.00376,
+    "z": 0.04525
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 4220,
+    "x": -0.08572,
+    "y": 0.03657,
+    "z": 9.83115
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 4220,
+    "x": -0.03512,
+    "y": 0.00336,
+    "z": 0.04406
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 4240,
+    "x": -0.11168,
+    "y": 0.01251,
+    "z": 9.87106
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 4240,
+    "x": -0.03423,
+    "y": 0.01032,
+    "z": 0.04008
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 4260,
+    "x": -0.13024,
+    "y": -0.01265,
+    "z": 10.08385
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 4260,
+    "x": -0.03181,
+    "y": 0.01659,
+    "z": 0.03268
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 4280,
+    "x": -0.14336,
+    "y": -0.03674,
+    "z": 10.04624
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 4280,
+    "x": -0.02884,
+    "y": 0.02223,
+    "z": 0.02262
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 4300,
+    "x": -0.15065,
+    "y": -0.05859,
+    "z": 10.18523
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 4300,
+    "x": -0.02402,
+    "y": 0.02609,
+    "z": 0.01115
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 4320,
+    "x": -0.14893,
+    "y": -0.07653,
+    "z": 10.12276
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 4320,
+    "x": -0.01852,
+    "y": 0.02884,
+    "z": -0.00112
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 4340,
+    "x": -0.13886,
+    "y": -0.09042,
+    "z": 10.12211
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 4340,
+    "x": -0.01207,
+    "y": 0.02981,
+    "z": -0.01333
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 4360,
+    "x": -0.12148,
+    "y": -0.09881,
+    "z": 10.13929
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 4360,
+    "x": -0.00529,
+    "y": 0.02937,
+    "z": -0.02464
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 4380,
+    "x": -0.09956,
+    "y": -0.09994,
+    "z": 10.02177
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 4380,
+    "x": 0.00176,
+    "y": 0.02703,
+    "z": -0.03419
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 4400,
+    "x": -0.07217,
+    "y": -0.0951,
+    "z": 10.14688
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 4400,
+    "x": 0.00862,
+    "y": 0.02329,
+    "z": -0.04062
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 4420,
+    "x": -0.04117,
+    "y": -0.08367,
+    "z": 10.04697
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 4420,
+    "x": 0.01532,
+    "y": 0.01776,
+    "z": -0.04437
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 4440,
+    "x": -0.00757,
+    "y": -0.06867,
+    "z": 9.94273
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 4440,
+    "x": 0.02143,
+    "y": 0.01178,
+    "z": -0.04479
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 4460,
+    "x": 0.02639,
+    "y": -0.04859,
+    "z": 9.81724
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 4460,
+    "x": 0.02659,
+    "y": 0.00492,
+    "z": -0.04177
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 4480,
+    "x": 0.0584,
+    "y": -0.02469,
+    "z": 9.71264
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 4480,
+    "x": 0.0307,
+    "y": -0.00226,
+    "z": -0.03506
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 4500,
+    "x": 0.089,
+    "y": -0.0,
+    "z": 9.60644
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 4500,
+    "x": 0.03315,
+    "y": -0.00935,
+    "z": -0.02619
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 4520,
+    "x": 0.1142,
+    "y": 0.02466,
+    "z": 9.60568
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 4520,
+    "x": 0.03489,
+    "y": -0.01562,
+    "z": -0.01554
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 4540,
+    "x": 0.13247,
+    "y": 0.04816,
+    "z": 9.63879
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 4540,
+    "x": 0.03488,
+    "y": -0.02114,
+    "z": -0.00341
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 4560,
+    "x": 0.14606,
+    "y": 0.06823,
+    "z": 9.42313
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 4560,
+    "x": 0.03373,
+    "y": -0.02564,
+    "z": 0.00903
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 4580,
+    "x": 0.14854,
+    "y": 0.08513,
+    "z": 9.40556
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 4580,
+    "x": 0.03059,
+    "y": -0.02888,
+    "z": 0.02051
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 4600,
+    "x": 0.14864,
+    "y": 0.09421,
+    "z": 9.45881
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 4600,
+    "x": 0.02678,
+    "y": -0.03003,
+    "z": 0.03103
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 4620,
+    "x": 0.13748,
+    "y": 0.09974,
+    "z": 9.4057
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 4620,
+    "x": 0.02195,
+    "y": -0.02962,
+    "z": 0.0388
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 4640,
+    "x": 0.12103,
+    "y": 0.09795,
+    "z": 9.52385
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 4640,
+    "x": 0.01608,
+    "y": -0.02762,
+    "z": 0.04363
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 4660,
+    "x": 0.09792,
+    "y": 0.09066,
+    "z": 9.45892
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 4660,
+    "x": 0.00958,
+    "y": -0.02387,
+    "z": 0.04464
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 4680,
+    "x": 0.06868,
+    "y": 0.07672,
+    "z": 9.50925
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 4680,
+    "x": 0.00265,
+    "y": -0.01892,
+    "z": 0.04307
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 4700,
+    "x": 0.03736,
+    "y": 0.05924,
+    "z": 9.62989
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 4700,
+    "x": -0.00439,
+    "y": -0.01283,
+    "z": 0.03815
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 4720,
+    "x": 0.00378,
+    "y": 0.03716,
+    "z": 9.81622
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 4720,
+    "x": -0.01127,
+    "y": -0.00598,
+    "z": 0.03016
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 4740,
+    "x": -0.02977,
+    "y": 0.01245,
+    "z": 9.75045
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 4740,
+    "x": -0.01779,
+    "y": 0.00112,
+    "z": 0.01986
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 4760,
+    "x": -0.06161,
+    "y": -0.01255,
+    "z": 9.98678
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 4760,
+    "x": -0.02324,
+    "y": 0.00819,
+    "z": 0.0079
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 4780,
+    "x": -0.09149,
+    "y": -0.03661,
+    "z": 9.94865
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 4780,
+    "x": -0.02811,
+    "y": 0.01485,
+    "z": -0.00455
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 4800,
+    "x": -0.11527,
+    "y": -0.05912,
+    "z": 10.11019
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 4800,
+    "x": -0.03157,
+    "y": 0.02073,
+    "z": -0.01673
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 4820,
+    "x": -0.13456,
+    "y": -0.07781,
+    "z": 10.03509
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 4820,
+    "x": -0.0338,
+    "y": 0.0249,
+    "z": -0.02724
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 4840,
+    "x": -0.14498,
+    "y": -0.091,
+    "z": 10.17184
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 4840,
+    "x": -0.03503,
+    "y": 0.02819,
+    "z": -0.03588
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 4860,
+    "x": -0.15083,
+    "y": -0.0975,
+    "z": 10.14401
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 4860,
+    "x": -0.0348,
+    "y": 0.03003,
+    "z": -0.04243
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 4880,
+    "x": -0.14652,
+    "y": -0.09987,
+    "z": 10.20701
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 4880,
+    "x": -0.03288,
+    "y": 0.02969,
+    "z": -0.04515
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 4900,
+    "x": -0.13587,
+    "y": -0.09577,
+    "z": 10.13594
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 4900,
+    "x": -0.02959,
+    "y": 0.02802,
+    "z": -0.04394
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 4920,
+    "x": -0.11729,
+    "y": -0.08386,
+    "z": 10.13166
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 4920,
+    "x": -0.02527,
+    "y": 0.02463,
+    "z": -0.04057
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 4940,
+    "x": -0.09344,
+    "y": -0.06897,
+    "z": 10.05951
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 4940,
+    "x": -0.02004,
+    "y": 0.01985,
+    "z": -0.03347
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 4960,
+    "x": -0.06589,
+    "y": -0.04784,
+    "z": 9.97262
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 4960,
+    "x": -0.01376,
+    "y": 0.01368,
+    "z": -0.02363
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 4980,
+    "x": -0.03362,
+    "y": -0.02494,
+    "z": 9.83817
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 4980,
+    "x": -0.00699,
+    "y": 0.00703,
+    "z": -0.01238
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 5000,
+    "x": -0.0,
+    "y": -0.0,
+    "z": 9.77797
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 5000,
+    "x": -0.0,
+    "y": -0.0,
+    "z": 0.0
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 5020,
+    "x": 0.03369,
+    "y": 0.02485,
+    "z": 9.79616
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 5020,
+    "x": 0.00695,
+    "y": -0.00707,
+    "z": 0.01238
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 5040,
+    "x": 0.06513,
+    "y": 0.04845,
+    "z": 9.63649
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 5040,
+    "x": 0.01374,
+    "y": -0.01382,
+    "z": 0.02359
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 5060,
+    "x": 0.09432,
+    "y": 0.06878,
+    "z": 9.60663
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 5060,
+    "x": 0.01994,
+    "y": -0.01978,
+    "z": 0.03294
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 5080,
+    "x": 0.11723,
+    "y": 0.08446,
+    "z": 9.58431
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 5080,
+    "x": 0.02516,
+    "y": -0.02459,
+    "z": 0.04033
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 5100,
+    "x": 0.13443,
+    "y": 0.09473,
+    "z": 9.40538
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 5100,
+    "x": 0.02935,
+    "y": -0.02801,
+    "z": 0.0438
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 5120,
+    "x": 0.1452,
+    "y": 0.0995,
+    "z": 9.37411
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 5120,
+    "x": 0.03297,
+    "y": -0.02962,
+    "z": 0.04493
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 5140,
+    "x": 0.15114,
+    "y": 0.09778,
+    "z": 9.35796
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 5140,
+    "x": 0.03429,
+    "y": -0.02957,
+    "z": 0.04222
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 5160,
+    "x": 0.14582,
+    "y": 0.0908,
+    "z": 9.38993
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 5160,
+    "x": 0.03498,
+    "y": -0.02814,
+    "z": 0.03575
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 5180,
+    "x": 0.13378,
+    "y": 0.07706,
+    "z": 9.42641
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 5180,
+    "x": 0.03385,
+    "y": -0.02491,
+    "z": 0.02716
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 5200,
+    "x": 0.11579,
+    "y": 0.05882,
+    "z": 9.49332
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 5200,
+    "x": 0.03154,
+    "y": -0.0205,
+    "z": 0.01658
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 5220,
+    "x": 0.0909,
+    "y": 0.03678,
+    "z": 9.65817
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 5220,
+    "x": 0.02779,
+    "y": -0.01492,
+    "z": 0.00448
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 5240,
+    "x": 0.06163,
+    "y": 0.0126,
+    "z": 9.79376
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 5240,
+    "x": 0.02346,
+    "y": -0.00825,
+    "z": -0.00791
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 5260,
+    "x": 0.02987,
+    "y": -0.01264,
+    "z": 9.87422
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 5260,
+    "x": 0.0178,
+    "y": -0.00113,
+    "z": -0.0196
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 5280,
+    "x": -0.00379,
+    "y": -0.03669,
+    "z": 9.84381
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 5280,
+    "x": 0.01124,
+    "y": 0.00597,
+    "z": -0.03001
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 5300,
+    "x": -0.03766,
+    "y": -0.05899,
+    "z": 9.98173
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 5300,
+    "x": 0.0044,
+    "y": 0.01266,
+    "z": -0.03836
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 5320,
+    "x": -0.06886,
+    "y": -0.07678,
+    "z": 9.98897
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 5320,
+    "x": -0.00263,
+    "y": 0.01882,
+    "z": -0.04294
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 5340,
+    "x": -0.09712,
+    "y": -0.0911,
+    "z": 9.99382
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 5340,
+    "x": -0.00947,
+    "y": 0.02388,
+    "z": -0.0449
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 5360,
+    "x": -0.12047,
+    "y": -0.09825,
+    "z": 10.08475
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 5360,
+    "x": -0.01618,
+    "y": 0.0272,
+    "z": -0.04358
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 5380,
+    "x": -0.13684,
+    "y": -0.10031,
+    "z": 10.15774
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 5380,
+    "x": -0.02183,
+    "y": 0.0294,
+    "z": -0.03882
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 5400,
+    "x": -0.14864,
+    "y": -0.09495,
+    "z": 10.20779
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 5400,
+    "x": -0.02696,
+    "y": 0.0302,
+    "z": -0.03061
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 5420,
+    "x": -0.15024,
+    "y": -0.08483,
+    "z": 10.0498
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 5420,
+    "x": -0.03071,
+    "y": 0.02839,
+    "z": -0.02068
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 5440,
+    "x": -0.14437,
+    "y": -0.06811,
+    "z": 10.12546
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 5440,
+    "x": -0.03358,
+    "y": 0.02575,
+    "z": -0.00893
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 5460,
+    "x": -0.13248,
+    "y": -0.04834,
+    "z": 10.01687
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 5460,
+    "x": -0.03512,
+    "y": 0.02139,
+    "z": 0.00338
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 5480,
+    "x": -0.11276,
+    "y": -0.02468,
+    "z": 10.05828
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 5480,
+    "x": -0.03476,
+    "y": 0.01562,
+    "z": 0.01555
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 5500,
+    "x": -0.08775,
+    "y": 0.0,
+    "z": 9.9166
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 5500,
+    "x": -0.03323,
+    "y": 0.00928,
+    "z": 0.02636
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 5520,
+    "x": -0.05888,
+    "y": 0.02467,
+    "z": 9.90224
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 5520,
+    "x": -0.03051,
+    "y": 0.00226,
+    "z": 0.03506
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 5540,
+    "x": -0.02605,
+    "y": 0.04823,
+    "z": 9.80351
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 5540,
+    "x": -0.0264,
+    "y": -0.00493,
+    "z": 0.04148
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 5560,
+    "x": 0.00753,
+    "y": 0.06914,
+    "z": 9.72279
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 5560,
+    "x": -0.02107,
+    "y": -0.01178,
+    "z": 0.04502
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 5580,
+    "x": 0.0412,
+    "y": 0.08394,
+    "z": 9.60751
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 5580,
+    "x": -0.01521,
+    "y": -0.0181,
+    "z": 0.0442
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 5600,
+    "x": 0.0728,
+    "y": 0.09457,
+    "z": 9.48404
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 5600,
+    "x": -0.00878,
+    "y": -0.02292,
+    "z": 0.04104
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 5620,
+    "x": 0.10062,
+    "y": 0.09958,
+    "z": 9.45008
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 5620,
+    "x": -0.00176,
+    "y": -0.02693,
+    "z": 0.03381
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 5640,
+    "x": 0.12302,
+    "y": 0.09892,
+    "z": 9.41113
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 5640,
+    "x": 0.00526,
+    "y": -0.02905,
+    "z": 0.02463
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 5660,
+    "x": 0.13811,
+    "y": 0.08958,
+    "z": 9.49088
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 5660,
+    "x": 0.01206,
+    "y": -0.03011,
+    "z": 0.01343
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 5680,
+    "x": 0.14793,
+    "y": 0.07666,
+    "z": 9.48155
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 5680,
+    "x": 0.01827,
+    "y": -0.02925,
+    "z": 0.00114
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 5700,
+    "x": 0.15054,
+    "y": 0.05842,
+    "z": 9.50448
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 5700,
+    "x": 0.02383,
+    "y": -0.02637,
+    "z": -0.0113
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 5720,
+    "x": 0.14456,
+    "y": 0.03696,
+    "z": 9.45227
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 5720,
+    "x": 0.0285,
+    "y": -0.02192,
+    "z": -0.02274
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 5740,
+    "x": 0.13124,
+    "y": 0.01245,
+    "z": 9.65453
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 5740,
+    "x": 0.03213,
+    "y": -0.01655,
+    "z": -0.03235
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 5760,
+    "x": 0.1103,
+    "y": -0.01244,
+    "z": 9.76157
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 5760,
+    "x": 0.03448,
+    "y": -0.01032,
+    "z": -0.03959
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 5780,
+    "x": 0.08534,
+    "y": -0.0368,
+    "z": 9.70498
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 5780,
+    "x": 0.03515,
+    "y": -0.00337,
+    "z": -0.04378
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 5800,
+    "x": 0.05556,
+    "y": -0.05893,
+    "z": 9.86049
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 5800,
+    "x": 0.03469,
+    "y": 0.00373,
+    "z": -0.04454
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 5820,
+    "x": 0.02244,
+    "y": -0.07738,
+    "z": 9.88892
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 5820,
+    "x": 0.03224,
+    "y": 0.0106,
+    "z": -0.04257
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 5840,
+    "x": -0.0112,
+    "y": -0.0904,
+    "z": 9.90464
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 5840,
+    "x": 0.02912,
+    "y": 0.01718,
+    "z": -0.0371
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 5860,
+    "x": -0.04452,
+    "y": -0.09829,
+    "z": 10.01779
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 5860,
+    "x": 0.02442,
+    "y": 0.02248,
+    "z": -0.02808
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 5880,
+    "x": -0.07541,
+    "y": -0.09907,
+    "z": 10.15891
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 5880,
+    "x": 0.01916,
+    "y": 0.02651,
+    "z": -0.01753
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 5900,
+    "x": -0.10368,
+    "y": -0.09491,
+    "z": 10.20196
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 5900,
+    "x": 0.01281,
+    "y": 0.02919,
+    "z": -0.0056
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 5920,
+    "x": -0.12501,
+    "y": -0.08513,
+    "z": 10.12563
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 5920,
+    "x": 0.00611,
+    "y": 0.03024,
+    "z": 0.00678
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 5940,
+    "x": -0.14122,
+    "y": -0.06799,
+    "z": 10.07926
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 5940,
+    "x": -0.00088,
+    "y": 0.02912,
+    "z": 0.01862
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 5960,
+    "x": -0.148,
+    "y": -0.0482,
+    "z": 10.06936
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 5960,
+    "x": -0.0078,
+    "y": 0.02686,
+    "z": 0.02904
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 5980,
+    "x": -0.14996,
+    "y": -0.02483,
+    "z": 10.00964
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 5980,
+    "x": -0.01441,
+    "y": 0.0227,
+    "z": 0.03739
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 6000,
+    "x": -0.14374,
+    "y": -0.0,
+    "z": 10.01782
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 6000,
+    "x": -0.02038,
+    "y": 0.01747,
+    "z": 0.04277
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 6020,
+    "x": -0.12976,
+    "y": 0.02465,
+    "z": 9.98714
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 6020,
+    "x": -0.02581,
+    "y": 0.01133,
+    "z": 0.045
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 6040,
+    "x": -0.10849,
+    "y": 0.04847,
+    "z": 9.89918
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 6040,
+    "x": -0.03026,
+    "y": 0.00449,
+    "z": 0.04386
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 6060,
+    "x": -0.08226,
+    "y": 0.06789,
+    "z": 9.82235
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 6060,
+    "x": -0.03269,
+    "y": -0.00261,
+    "z": 0.03916
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 6080,
+    "x": -0.05146,
+    "y": 0.08511,
+    "z": 9.69534
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 6080,
+    "x": -0.03451,
+    "y": -0.0097,
+    "z": 0.03179
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 6100,
+    "x": -0.01882,
+    "y": 0.09484,
+    "z": 9.56599
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 6100,
+    "x": -0.03467,
+    "y": -0.01594,
+    "z": 0.02189
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 6120,
+    "x": 0.01512,
+    "y": 0.1005,
+    "z": 9.60208
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 6120,
+    "x": -0.03365,
+    "y": -0.02161,
+    "z": 0.01014
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 6140,
+    "x": 0.04806,
+    "y": 0.09835,
+    "z": 9.49559
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 6140,
+    "x": -0.03101,
+    "y": -0.02613,
+    "z": -0.00224
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 6160,
+    "x": 0.07936,
+    "y": 0.08979,
+    "z": 9.55801
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 6160,
+    "x": -0.02727,
+    "y": -0.02901,
+    "z": -0.01454
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 6180,
+    "x": 0.10524,
+    "y": 0.07647,
+    "z": 9.38493
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 6180,
+    "x": -0.02266,
+    "y": -0.02973,
+    "z": -0.02537
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 6200,
+    "x": 0.12759,
+    "y": 0.05827,
+    "z": 9.52679
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 6200,
+    "x": -0.01678,
+    "y": -0.02968,
+    "z": -0.03444
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 6220,
+    "x": 0.1418,
+    "y": 0.03662,
+    "z": 9.51535
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 6220,
+    "x": -0.01048,
+    "y": -0.02724,
+    "z": -0.04098
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 6240,
+    "x": 0.14783,
+    "y": 0.0125,
+    "z": 9.54027
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 6240,
+    "x": -0.00348,
+    "y": -0.02372,
+    "z": -0.04427
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 6260,
+    "x": 0.14868,
+    "y": -0.0125,
+    "z": 9.57683
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 6260,
+    "x": 0.0035,
+    "y": -0.01844,
+    "z": -0.04414
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 6280,
+    "x": 0.14074,
+    "y": -0.03688,
+    "z": 9.65595
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 6280,
+    "x": 0.01045,
+    "y": -0.01248,
+    "z": -0.04116
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 6300,
+    "x": 0.12748,
+    "y": -0.05835,
+    "z": 9.68254
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 6300,
+    "x": 0.01676,
+    "y": -0.00566,
+    "z": -0.03472
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 6320,
+    "x": 0.10474,
+    "y": -0.07681,
+    "z": 9.82069
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 6320,
+    "x": 0.02284,
+    "y": 0.00151,
+    "z": -0.02568
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 6340,
+    "x": 0.07948,
+    "y": -0.09128,
+    "z": 9.9857
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 6340,
+    "x": 0.02739,
+    "y": 0.00851,
+    "z": -0.0145
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 6360,
+    "x": 0.04859,
+    "y": -0.09898,
+    "z": 10.00935
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 6360,
+    "x": 0.03148,
+    "y": 0.01506,
+    "z": -0.00224
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 6380,
+    "x": 0.01494,
+    "y": -0.10031,
+    "z": 10.10579
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 6380,
+    "x": 0.03372,
+    "y": 0.02064,
+    "z": 0.01018
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 6400,
+    "x": -0.01876,
+    "y": -0.09519,
+    "z": 10.05695
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 6400,
+    "x": 0.03474,
+    "y": 0.02511,
+    "z": 0.02158
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 6420,
+    "x": -0.05135,
+    "y": -0.08423,
+    "z": 10.10221
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 6420,
+    "x": 0.03452,
+    "y": 0.02825,
+    "z": 0.03154
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 6440,
+    "x": -0.08128,
+    "y": -0.06831,
+    "z": 10.16436
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 6440,
+    "x": 0.03315,
+    "y": 0.0297,
+    "z": 0.03911
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 6460,
+    "x": -0.10898,
+    "y": -0.04861,
+    "z": 10.21757
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 6460,
+    "x": 0.03011,
+    "y": 0.02994,
+    "z": 0.04354
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 6480,
+    "x": -0.1286,
+    "y": -0.02505,
+    "z": 10.1223
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 6480,
+    "x": 0.02603,
+    "y": 0.02796,
+    "z": 0.04481
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 6500,
+    "x": -0.14275,
+    "y": -0.0,
+    "z": 10.05353
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 6500,
+    "x": 0.02039,
+    "y": 0.02429,
+    "z": 0.04295
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 6520,
+    "x": -0.14961,
+    "y": 0.02468,
+    "z": 10.10221
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 6520,
+    "x": 0.01446,
+    "y": 0.0195,
+    "z": 0.03758
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 6540,
+    "x": -0.1494,
+    "y": 0.04785,
+    "z": 10.00774
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 6540,
+    "x": 0.00786,
+    "y": 0.01357,
+    "z": 0.02909
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 6560,
+    "x": -0.14153,
+    "y": 0.06797,
+    "z": 9.81304
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 6560,
+    "x": 0.00088,
+    "y": 0.00669,
+    "z": 0.01847
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 6580,
+    "x": -0.1255,
+    "y": 0.08518,
+    "z": 9.74185
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 6580,
+    "x": -0.00618,
+    "y": -0.00038,
+    "z": 0.00672
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 6600,
+    "x": -0.10238,
+    "y": 0.09597,
+    "z": 9.61734
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 6600,
+    "x": -0.0129,
+    "y": -0.00753,
+    "z": -0.00567
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 6620,
+    "x": -0.07605,
+    "y": 0.09949,
+    "z": 9.55188
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 6620,
+    "x": -0.01897,
+    "y": -0.01412,
+    "z": -0.01777
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 6640,
+    "x": -0.04414,
+    "y": 0.09809,
+    "z": 9.57774
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 6640,
+    "x": -0.02439,
+    "y": -0.01997,
+    "z": -0.02831
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 6660,
+    "x": -0.01128,
+    "y": 0.09069,
+    "z": 9.51249
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 6660,
+    "x": -0.02924,
+    "y": -0.02455,
+    "z": -0.03691
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 6680,
+    "x": 0.0226,
+    "y": 0.07673,
+    "z": 9.49777
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 6680,
+    "x": -0.03266,
+    "y": -0.02789,
+    "z": -0.04245
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 6700,
+    "x": 0.05564,
+    "y": 0.05905,
+    "z": 9.45424
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 6700,
+    "x": -0.03435,
+    "y": -0.03001,
+    "z": -0.0451
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 6720,
+    "x": 0.0853,
+    "y": 0.03677,
+    "z": 9.44202
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 6720,
+    "x": -0.03493,
+    "y": -0.02975,
+    "z": -0.04378
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 6740,
+    "x": 0.11048,
+    "y": 0.01262,
+    "z": 9.38581
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 6740,
+    "x": -0.03408,
+    "y": -0.02838,
+    "z": -0.03981
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 6760,
+    "x": 0.13065,
+    "y": -0.01261,
+    "z": 9.55451
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 6760,
+    "x": -0.03218,
+    "y": -0.02508,
+    "z": -0.0324
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 6780,
+    "x": 0.14272,
+    "y": -0.03684,
+    "z": 9.49259
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 6780,
+    "x": -0.02883,
+    "y": -0.02016,
+    "z": -0.02256
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 6800,
+    "x": 0.14941,
+    "y": -0.0582,
+    "z": 9.56574
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 6800,
+    "x": -0.02385,
+    "y": -0.01439,
+    "z": -0.01125
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 6820,
+    "x": 0.14934,
+    "y": -0.07691,
+    "z": 9.77575
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 6820,
+    "x": -0.0183,
+    "y": -0.00777,
+    "z": 0.00112
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 6840,
+    "x": 0.13789,
+    "y": -0.09035,
+    "z": 9.82892
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 6840,
+    "x": -0.01198,
+    "y": -0.00076,
+    "z": 0.01348
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 6860,
+    "x": 0.12343,
+    "y": -0.09789,
+    "z": 9.79016
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 6860,
+    "x": -0.00522,
+    "y": 0.00634,
+    "z": 0.0246
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 6880,
+    "x": 0.10088,
+    "y": -0.09922,
+    "z": 9.93338
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 6880,
+    "x": 0.00175,
+    "y": 0.01324,
+    "z": 0.03427
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 6900,
+    "x": 0.07223,
+    "y": -0.09519,
+    "z": 9.92985
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 6900,
+    "x": 0.00863,
+    "y": 0.01906,
+    "z": 0.04034
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 6920,
+    "x": 0.04112,
+    "y": -0.08375,
+    "z": 10.14778
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 6920,
+    "x": 0.01538,
+    "y": 0.02416,
+    "z": 0.04483
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 6940,
+    "x": 0.00751,
+    "y": -0.06875,
+    "z": 10.13495
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 6940,
+    "x": 0.0212,
+    "y": 0.02778,
+    "z": 0.04485
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 6960,
+    "x": -0.02628,
+    "y": -0.04838,
+    "z": 10.24158
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 6960,
+    "x": 0.02624,
+    "y": 0.02978,
+    "z": 0.0413
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 6980,
+    "x": -0.05927,
+    "y": -0.02482,
+    "z": 10.20208
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 6980,
+    "x": 0.03058,
+    "y": 0.02993,
+    "z": 0.03528
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 7000,
+    "x": -0.08745,
+    "y": -0.0,
+    "z": 10.10992
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 7000,
+    "x": 0.03339,
+    "y": 0.02871,
+    "z": 0.02667
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 7020,
+    "x": -0.11323,
+    "y": 0.02509,
+    "z": 10.03148
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 7020,
+    "x": 0.03477,
+    "y": 0.02544,
+    "z": 0.01555
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 7040,
+    "x": -0.13298,
+    "y": 0.04818,
+    "z": 10.0107
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 7040,
+    "x": 0.0351,
+    "y": 0.02121,
+    "z": 0.0034
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 7060,
+    "x": -0.14384,
+    "y": 0.069,
+    "z": 9.97451
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 7060,
+    "x": 0.03361,
+    "y": 0.01537,
+    "z": -0.00906
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 7080,
+    "x": -0.14924,
+    "y": 0.085,
+    "z": 9.82264
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 7080,
+    "x": 0.03081,
+    "y": 0.00884,
+    "z": -0.0208
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 7100,
+    "x": -0.14823,
+    "y": 0.0954,
+    "z": 9.90277
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 7100,
+    "x": 0.02673,
+    "y": 0.00189,
+    "z": -0.03059
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 7120,
+    "x": -0.13725,
+    "y": 0.10003,
+    "z": 9.70757
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 7120,
+    "x": 0.02178,
+    "y": -0.00525,
+    "z": -0.03893
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 7140,
+    "x": -0.11967,
+    "y": 0.09757,
+    "z": 9.59036
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 7140,
+    "x": 0.0161,
+    "y": -0.01212,
+    "z": -0.04312
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 7160,
+    "x": -0.09653,
+    "y": 0.09083,
+    "z": 9.52628
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 7160,
+    "x": 0.00964,
+    "y": -0.01809,
+    "z": -0.04513
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 7180,
+    "x": -0.06895,
+    "y": 0.07655,
+    "z": 9.51889
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 7180,
+    "x": 0.00263,
+    "y": -0.02312,
+    "z": -0.04292
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 7200,
+    "x": -0.03715,
+    "y": 0.05852,
+    "z": 9.56534
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 7200,
+    "x": -0.00441,
+    "y": -0.02711,
+    "z": -0.03785
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 7220,
+    "x": -0.00379,
+    "y": 0.03691,
+    "z": 9.44659
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 7220,
+    "x": -0.01126,
+    "y": -0.02959,
+    "z": -0.02971
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 7240,
+    "x": 0.02966,
+    "y": 0.01252,
+    "z": 9.38828
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 7240,
+    "x": -0.01745,
+    "y": -0.02984,
+    "z": -0.01972
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 7260,
+    "x": 0.06164,
+    "y": -0.01252,
+    "z": 9.43271
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 7260,
+    "x": -0.02321,
+    "y": -0.0289,
+    "z": -0.00789
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 7280,
+    "x": 0.09075,
+    "y": -0.03649,
+    "z": 9.42637
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 7280,
+    "x": -0.02807,
+    "y": -0.02636,
+    "z": 0.00455
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 7300,
+    "x": 0.11667,
+    "y": -0.05936,
+    "z": 9.61932
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 7300,
+    "x": -0.03158,
+    "y": -0.02165,
+    "z": 0.01656
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 7320,
+    "x": 0.13473,
+    "y": -0.07673,
+    "z": 9.58728
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 7320,
+    "x": -0.03385,
+    "y": -0.01651,
+    "z": 0.0271
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 7340,
+    "x": 0.14503,
+    "y": -0.09078,
+    "z": 9.66588
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 7340,
+    "x": -0.03499,
+    "y": -0.01003,
+    "z": 0.03643
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 7360,
+    "x": 0.14858,
+    "y": -0.09824,
+    "z": 9.72932
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 7360,
+    "x": -0.03478,
+    "y": -0.003,
+    "z": 0.04206
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 7380,
+    "x": 0.14694,
+    "y": -0.09885,
+    "z": 9.88043
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 7380,
+    "x": -0.03294,
+    "y": 0.00411,
+    "z": 0.04489
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 7400,
+    "x": 0.13697,
+    "y": -0.09439,
+    "z": 10.01935
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 7400,
+    "x": -0.0297,
+    "y": 0.01098,
+    "z": 0.04431
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 7420,
+    "x": 0.11862,
+    "y": -0.08516,
+    "z": 9.99085
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 7420,
+    "x": -0.02498,
+    "y": 0.01734,
+    "z": 0.04023
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 7440,
+    "x": 0.09447,
+    "y": -0.06868,
+    "z": 10.0859
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 7440,
+    "x": -0.01976,
+    "y": 0.02276,
+    "z": 0.0332
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 7460,
+    "x": 0.06593,
+    "y": -0.04848,
+    "z": 10.04593
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 7460,
+    "x": -0.01358,
+    "y": 0.02677,
+    "z": 0.02384
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 7480,
+    "x": 0.0334,
+    "y": -0.02479,
+    "z": 10.09853
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 7480,
+    "x": -0.00697,
+    "y": 0.02939,
+    "z": 0.01228
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 7500,
+    "x": -0.0,
+    "y": -0.0,
+    "z": 10.1341
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 7500,
+    "x": -0.0,
+    "y": 0.0302,
+    "z": 0.0
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 7520,
+    "x": -0.03363,
+    "y": 0.02466,
+    "z": 10.22463
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 7520,
+    "x": 0.007,
+    "y": 0.0294,
+    "z": -0.01228
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 7540,
+    "x": -0.06573,
+    "y": 0.04781,
+    "z": 10.01548
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 7540,
+    "x": 0.01369,
+    "y": 0.02658,
+    "z": -0.02352
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 7560,
+    "x": -0.09465,
+    "y": 0.06788,
+    "z": 10.02083
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 7560,
+    "x": 0.01972,
+    "y": 0.02279,
+    "z": -0.03323
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 7580,
+    "x": -0.11728,
+    "y": 0.08478,
+    "z": 10.09241
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 7580,
+    "x": 0.02528,
+    "y": 0.01738,
+    "z": -0.04042
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 7600,
+    "x": -0.13511,
+    "y": 0.09466,
+    "z": 9.89464
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 7600,
+    "x": 0.02952,
+    "y": 0.01113,
+    "z": -0.04416
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 7620,
+    "x": -0.14635,
+    "y": 0.10006,
+    "z": 9.83554
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 7620,
+    "x": 0.03257,
+    "y": 0.00414,
+    "z": -0.04488
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 7640,
+    "x": -0.14967,
+    "y": 0.09806,
+    "z": 9.72998
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 7640,
+    "x": 0.03458,
+    "y": -0.003,
+    "z": -0.04211
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 7660,
+    "x": -0.14583,
+    "y": 0.08995,
+    "z": 9.6256
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 7660,
+    "x": 0.03486,
+    "y": -0.00989,
+    "z": -0.03612
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 7680,
+    "x": -0.13439,
+    "y": 0.07732,
+    "z": 9.67144
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 7680,
+    "x": 0.03381,
+    "y": -0.01645,
+    "z": -0.02727
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 7700,
+    "x": -0.11451,
+    "y": 0.0592,
+    "z": 9.46935
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 7700,
+    "x": 0.03194,
+    "y": -0.02178,
+    "z": -0.01652
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 7720,
+    "x": -0.09077,
+    "y": 0.03657,
+    "z": 9.51957
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 7720,
+    "x": 0.02778,
+    "y": -0.02603,
+    "z": -0.00454
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 7740,
+    "x": -0.06204,
+    "y": 0.01258,
+    "z": 9.4916
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 7740,
+    "x": 0.02326,
+    "y": -0.02889,
+    "z": 0.00791
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 7760,
+    "x": -0.02972,
+    "y": -0.01252,
+    "z": 9.4227
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 7760,
+    "x": 0.01766,
+    "y": -0.02997,
+    "z": 0.01955
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 7780,
+    "x": 0.00377,
+    "y": -0.03688,
+    "z": 9.46425
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 7780,
+    "x": 0.01119,
+    "y": -0.02939,
+    "z": 0.03023
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 7800,
+    "x": 0.03746,
+    "y": -0.05906,
+    "z": 9.42913
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 7800,
+    "x": 0.00436,
+    "y": -0.02735,
+    "z": 0.0381
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 7820,
+    "x": 0.06878,
+    "y": -0.07681,
+    "z": 9.5448
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 7820,
+    "x": -0.00262,
+    "y": -0.02325,
+    "z": 0.04353
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 7840,
+    "x": 0.09626,
+    "y": -0.09075,
+    "z": 9.66598
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 7840,
+    "x": -0.0095,
+    "y": -0.01828,
+    "z": 0.0454
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 7860,
+    "x": 0.11913,
+    "y": -0.0991,
+    "z": 9.65893
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 7860,
+    "x": -0.01613,
+    "y": -0.01198,
+    "z": 0.04382
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 7880,
+    "x": 0.13674,
+    "y": -0.09986,
+    "z": 9.64805
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 7880,
+    "x": -0.02214,
+    "y": -0.00521,
+    "z": 0.03864
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 7900,
+    "x": 0.14683,
+    "y": -0.095,
+    "z": 9.78367
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 7900,
+    "x": -0.02691,
+    "y": 0.00187,
+    "z": 0.03095
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 7920,
+    "x": 0.15072,
+    "y": -0.08462,
+    "z": 9.8781
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 7920,
+    "x": -0.03068,
+    "y": 0.00896,
+    "z": 0.02074
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 7940,
+    "x": 0.14516,
+    "y": -0.06867,
+    "z": 9.91985
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 7940,
+    "x": -0.03361,
+    "y": 0.01557,
+    "z": 0.00902
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 7960,
+    "x": 0.13275,
+    "y": -0.04835,
+    "z": 9.96992
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 7960,
+    "x": -0.03498,
+    "y": 0.02123,
+    "z": -0.00338
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 7980,
+    "x": 0.11384,
+    "y": -0.02474,
+    "z": 10.15993
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 7980,
+    "x": -0.03448,
+    "y": 0.0253,
+    "z": -0.01556
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 8000,
+    "x": 0.0875,
+    "y": -0.0,
+    "z": 10.05284
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 8000,
+    "x": -0.03358,
+    "y": 0.02853,
+    "z": -0.02641
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 8020,
+    "x": 0.05888,
+    "y": 0.02504,
+    "z": 10.2258
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 8020,
+    "x": -0.03053,
+    "y": 0.03007,
+    "z": -0.03539
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 8040,
+    "x": 0.02618,
+    "y": 0.0485,
+    "z": 10.17902
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 8040,
+    "x": -0.02615,
+    "y": 0.0299,
+    "z": -0.04183
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 8060,
+    "x": -0.00755,
+    "y": 0.06873,
+    "z": 10.05067
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 8060,
+    "x": -0.02114,
+    "y": 0.02768,
+    "z": -0.04484
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 8080,
+    "x": -0.04068,
+    "y": 0.08423,
+    "z": 10.10484
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 8080,
+    "x": -0.01519,
+    "y": 0.02426,
+    "z": -0.04449
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 8100,
+    "x": -0.0721,
+    "y": 0.09586,
+    "z": 10.00059
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 8100,
+    "x": -0.00863,
+    "y": 0.0192,
+    "z": -0.04079
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 8120,
+    "x": -0.09918,
+    "y": 0.09946,
+    "z": 10.00866
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 8120,
+    "x": -0.00177,
+    "y": 0.01308,
+    "z": -0.03402
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 8140,
+    "x": -0.12248,
+    "y": 0.099,
+    "z": 9.88394
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 8140,
+    "x": 0.00524,
+    "y": 0.00636,
+    "z": -0.02455
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 8160,
+    "x": -0.13968,
+    "y": 0.09106,
+    "z": 9.77372
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 8160,
+    "x": 0.01211,
+    "y": -0.00075,
+    "z": -0.01342
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 8180,
+    "x": -0.14926,
+    "y": 0.07641,
+    "z": 9.73269
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 8180,
+    "x": 0.01846,
+    "y": -0.00779,
+    "z": -0.00114
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 8200,
+    "x": -0.1502,
+    "y": 0.05903,
+    "z": 9.55602
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 8200,
+    "x": 0.02399,
+    "y": -0.01455,
+    "z": 0.01112
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 8220,
+    "x": -0.14252,
+    "y": 0.03664,
+    "z": 9.50702
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 8220,
+    "x": 0.02831,
+    "y": -0.02029,
+    "z": 0.02289
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 8240,
+    "x": -0.13144,
+    "y": 0.01248,
+    "z": 9.6001
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 8240,
+    "x": 0.03207,
+    "y": -0.025,
+    "z": 0.03264
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 8260,
+    "x": -0.10968,
+    "y": -0.01265,
+    "z": 9.52188
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 8260,
+    "x": 0.03446,
+    "y": -0.02825,
+    "z": 0.03999
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 8280,
+    "x": -0.08466,
+    "y": -0.03665,
+    "z": 9.51605
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 8280,
+    "x": 0.03524,
+    "y": -0.02993,
+    "z": 0.04373
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 8300,
+    "x": -0.05537,
+    "y": -0.05912,
+    "z": 9.39594
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 8300,
+    "x": 0.03458,
+    "y": -0.0299,
+    "z": 0.0452
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 8320,
+    "x": -0.02254,
+    "y": -0.07725,
+    "z": 9.44168
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 8320,
+    "x": 0.0326,
+    "y": -0.0281,
+    "z": 0.04253
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 8340,
+    "x": 0.01122,
+    "y": -0.09067,
+    "z": 9.57348
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 8340,
+    "x": 0.02919,
+    "y": -0.02465,
+    "z": 0.03661
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 8360,
+    "x": 0.04463,
+    "y": -0.09727,
+    "z": 9.51555
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 8360,
+    "x": 0.02456,
+    "y": -0.02014,
+    "z": 0.02834
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 8380,
+    "x": 0.07554,
+    "y": -0.1006,
+    "z": 9.55002
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 8380,
+    "x": 0.0193,
+    "y": -0.01404,
+    "z": 0.01744
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 8400,
+    "x": 0.10293,
+    "y": -0.09564,
+    "z": 9.67994
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 8400,
+    "x": 0.01288,
+    "y": -0.00749,
+    "z": 0.00565
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 8420,
+    "x": 0.12473,
+    "y": -0.08412,
+    "z": 9.88731
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 8420,
+    "x": 0.00611,
+    "y": -0.00037,
+    "z": -0.00674
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 8440,
+    "x": 0.14006,
+    "y": -0.06886,
+    "z": 9.82163
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 8440,
+    "x": -0.00087,
+    "y": 0.00669,
+    "z": -0.01873
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 8460,
+    "x": 0.14777,
+    "y": -0.0483,
+    "z": 9.95044
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 8460,
+    "x": -0.00782,
+    "y": 0.01333,
+    "z": -0.02921
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 8480,
+    "x": 0.15055,
+    "y": -0.02486,
+    "z": 9.93865
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 8480,
+    "x": -0.01444,
+    "y": 0.01947,
+    "z": -0.03707
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 8500,
+    "x": 0.14338,
+    "y": -0.0,
+    "z": 10.16975
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 8500,
+    "x": -0.02038,
+    "y": 0.02422,
+    "z": -0.04258
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 8520,
+    "x": 0.12933,
+    "y": 0.02478,
+    "z": 10.14423
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 8520,
+    "x": -0.02585,
+    "y": 0.02779,
+    "z": -0.04524
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 8540,
+    "x": 0.10858,
+    "y": 0.04786,
+    "z": 10.19779
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 8540,
+    "x": -0.03008,
+    "y": 0.0299,
+    "z": -0.04407
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 8560,
+    "x": 0.08195,
+    "y": 0.0688,
+    "z": 10.23684
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 8560,
+    "x": -0.03322,
+    "y": 0.0296,
+    "z": -0.03948
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 8580,
+    "x": 0.05183,
+    "y": 0.08375,
+    "z": 10.0328
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 8580,
+    "x": -0.0348,
+    "y": 0.02845,
+    "z": -0.03155
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 8600,
+    "x": 0.01867,
+    "y": 0.09513,
+    "z": 10.01985
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 8600,
+    "x": -0.03483,
+    "y": 0.02541,
+    "z": -0.02159
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 8620,
+    "x": -0.01515,
+    "y": 0.09943,
+    "z": 10.00867
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 8620,
+    "x": -0.03371,
+    "y": 0.02062,
+    "z": -0.01
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 8640,
+    "x": -0.04823,
+    "y": 0.09747,
+    "z": 9.89152
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 8640,
+    "x": -0.03118,
+    "y": 0.01496,
+    "z": 0.00228
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 8660,
+    "x": -0.07947,
+    "y": 0.09134,
+    "z": 9.93271
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 8660,
+    "x": -0.02727,
+    "y": 0.0086,
+    "z": 0.01439
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 8680,
+    "x": -0.10453,
+    "y": 0.07645,
+    "z": 9.80838
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 8680,
+    "x": -0.02246,
+    "y": 0.00151,
+    "z": 0.02551
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 8700,
+    "x": -0.12633,
+    "y": 0.05861,
+    "z": 9.65469
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 8700,
+    "x": -0.01677,
+    "y": -0.00559,
+    "z": 0.03438
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 8720,
+    "x": -0.14051,
+    "y": 0.03674,
+    "z": 9.74702
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 8720,
+    "x": -0.01038,
+    "y": -0.01237,
+    "z": 0.04109
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 8740,
+    "x": -0.14956,
+    "y": 0.0125,
+    "z": 9.62878
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 8740,
+    "x": -0.00354,
+    "y": -0.01855,
+    "z": 0.04481
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 8760,
+    "x": -0.14811,
+    "y": -0.01251,
+    "z": 9.60996
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 8760,
+    "x": 0.00354,
+    "y": -0.02339,
+    "z": 0.04441
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 8780,
+    "x": -0.14046,
+    "y": -0.03698,
+    "z": 9.45384
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 8780,
+    "x": 0.01041,
+    "y": -0.02731,
+    "z": 0.04115
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 8800,
+    "x": -0.1277,
+    "y": -0.05844,
+    "z": 9.51528
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 8800,
+    "x": 0.01695,
+    "y": -0.02941,
+    "z": 0.03482
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 8820,
+    "x": -0.10538,
+    "y": -0.07715,
+    "z": 9.40264
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 8820,
+    "x": 0.02253,
+    "y": -0.02995,
+    "z": 0.02567
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 8840,
+    "x": -0.07865,
+    "y": -0.09044,
+    "z": 9.5194
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 8840,
+    "x": 0.02763,
+    "y": -0.02864,
+    "z": 0.01432
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 8860,
+    "x": -0.04845,
+    "y": -0.09781,
+    "z": 9.496
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 8860,
+    "x": 0.03102,
+    "y": -0.0258,
+    "z": 0.00227
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 8880,
+    "x": -0.01519,
+    "y": -0.09983,
+    "z": 9.49322
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 8880,
+    "x": 0.03393,
+    "y": -0.02146,
+    "z": -0.01012
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 8900,
+    "x": 0.01866,
+    "y": -0.09472,
+    "z": 9.60848
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 8900,
+    "x": 0.03489,
+    "y": -0.01623,
+    "z": -0.0217
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 8920,
+    "x": 0.05207,
+    "y": -0.08437,
+    "z": 9.68748
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 8920,
+    "x": 0.03445,
+    "y": -0.00966,
+    "z": -0.03138
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 8940,
+    "x": 0.08181,
+    "y": -0.06794,
+    "z": 9.75322
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 8940,
+    "x": 0.03322,
+    "y": -0.00264,
+    "z": -0.03891
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 8960,
+    "x": 0.10911,
+    "y": -0.04791,
+    "z": 9.85755
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 8960,
+    "x": 0.02973,
+    "y": 0.00447,
+    "z": -0.04386
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 8980,
+    "x": 0.12984,
+    "y": -0.02483,
+    "z": 9.97974
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 8980,
+    "x": 0.02587,
+    "y": 0.01144,
+    "z": -0.04524
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 9000,
+    "x": 0.14393,
+    "y": -0.0,
+    "z": 10.07996
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 9000,
+    "x": 0.02037,
+    "y": 0.01777,
+    "z": -0.04268
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 9020,
+    "x": 0.14885,
+    "y": 0.02471,
+    "z": 10.07056
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 9020,
+    "x": 0.01461,
+    "y": 0.02302,
+    "z": -0.03726
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 9040,
+    "x": 0.1481,
+    "y": 0.04815,
+    "z": 10.11896
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 9040,
+    "x": 0.00786,
+    "y": 0.0266,
+    "z": -0.02891
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 9060,
+    "x": 0.13947,
+    "y": 0.06898,
+    "z": 10.12709
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 9060,
+    "x": 0.00089,
+    "y": 0.0295,
+    "z": -0.0187
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 9080,
+    "x": 0.12565,
+    "y": 0.08474,
+    "z": 10.21619
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 9080,
+    "x": -0.00607,
+    "y": 0.02974,
+    "z": -0.00671
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 9100,
+    "x": 0.10258,
+    "y": 0.09582,
+    "z": 10.13336
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 9100,
+    "x": -0.01298,
+    "y": 0.02886,
+    "z": 0.00562
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 9120,
+    "x": 0.07576,
+    "y": 0.09949,
+    "z": 10.07295
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 9120,
+    "x": -0.01928,
+    "y": 0.02627,
+    "z": 0.01756
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 9140,
+    "x": 0.04421,
+    "y": 0.09839,
+    "z": 9.97065
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 9140,
+    "x": -0.02451,
+    "y": 0.02249,
+    "z": 0.02839
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 9160,
+    "x": 0.01129,
+    "y": 0.09054,
+    "z": 10.00395
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 9160,
+    "x": -0.02918,
+    "y": 0.01708,
+    "z": 0.03693
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 9180,
+    "x": -0.02251,
+    "y": 0.07782,
+    "z": 9.88693
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 9180,
+    "x": -0.03235,
+    "y": 0.01069,
+    "z": 0.04215
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 9200,
+    "x": -0.05558,
+    "y": 0.05931,
+    "z": 9.83715
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 9200,
+    "x": -0.03426,
+    "y": 0.00378,
+    "z": 0.04496
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 9220,
+    "x": -0.08567,
+    "y": 0.03691,
+    "z": 9.79872
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 9220,
+    "x": -0.03532,
+    "y": -0.00337,
+    "z": 0.04411
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 9240,
+    "x": -0.11004,
+    "y": 0.01249,
+    "z": 9.73437
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 9240,
+    "x": -0.03406,
+    "y": -0.01028,
+    "z": 0.03986
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 9260,
+    "x": -0.13063,
+    "y": -0.01258,
+    "z": 9.51031
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 9260,
+    "x": -0.0322,
+    "y": -0.0167,
+    "z": 0.03233
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 9280,
+    "x": -0.14424,
+    "y": -0.03691,
+    "z": 9.56933
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 9280,
+    "x": -0.02871,
+    "y": -0.02199,
+    "z": 0.02249
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 9300,
+    "x": -0.15069,
+    "y": -0.05854,
+    "z": 9.49712
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 9300,
+    "x": -0.02393,
+    "y": -0.02642,
+    "z": 0.01112
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 9320,
+    "x": -0.14735,
+    "y": -0.07728,
+    "z": 9.40874
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 9320,
+    "x": -0.01855,
+    "y": -0.02903,
+    "z": -0.00112
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 9340,
+    "x": -0.1396,
+    "y": -0.09125,
+    "z": 9.45822
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 9340,
+    "x": -0.01201,
+    "y": -0.03013,
+    "z": -0.0134
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 9360,
+    "x": -0.1225,
+    "y": -0.09907,
+    "z": 9.48395
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 9360,
+    "x": -0.00524,
+    "y": -0.02933,
+    "z": -0.0248
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 9380,
+    "x": -0.09913,
+    "y": -0.09983,
+    "z": 9.39634
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 9380,
+    "x": 0.00176,
+    "y": -0.02704,
+    "z": -0.03415
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 9400,
+    "x": -0.07181,
+    "y": -0.09476,
+    "z": 9.51976
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 9400,
+    "x": 0.00871,
+    "y": -0.02314,
+    "z": -0.04054
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 9420,
+    "x": -0.04125,
+    "y": -0.08518,
+    "z": 9.53157
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 9420,
+    "x": 0.01522,
+    "y": -0.01796,
+    "z": -0.04476
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 9440,
+    "x": -0.00754,
+    "y": -0.06859,
+    "z": 9.69558
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 9440,
+    "x": 0.02144,
+    "y": -0.0117,
+    "z": -0.04436
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 9460,
+    "x": 0.02637,
+    "y": -0.04792,
+    "z": 9.82078
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 9460,
+    "x": 0.02641,
+    "y": -0.0049,
+    "z": -0.04144
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 9480,
+    "x": 0.05857,
+    "y": -0.02499,
+    "z": 9.79168
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 9480,
+    "x": 0.03015,
+    "y": 0.00225,
+    "z": -0.03504
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 9500,
+    "x": 0.08836,
+    "y": 0.0,
+    "z": 9.83838
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 9500,
+    "x": 0.03339,
+    "y": 0.00927,
+    "z": -0.02625
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 9520,
+    "x": 0.11422,
+    "y": 0.02488,
+    "z": 9.97192
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 9520,
+    "x": 0.03451,
+    "y": 0.01577,
+    "z": -0.01559
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 9540,
+    "x": 0.13112,
+    "y": 0.04841,
+    "z": 10.06122
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 9540,
+    "x": 0.03456,
+    "y": 0.02145,
+    "z": -0.0034
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 9560,
+    "x": 0.1435,
+    "y": 0.06826,
+    "z": 10.19333
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 9560,
+    "x": 0.03376,
+    "y": 0.02586,
+    "z": 0.00903
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 9580,
+    "x": 0.1496,
+    "y": 0.08464,
+    "z": 10.11829
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 9580,
+    "x": 0.03095,
+    "y": 0.02853,
+    "z": 0.02079
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 9600,
+    "x": 0.14659,
+    "y": 0.0947,
+    "z": 10.23782
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 9600,
+    "x": 0.0272,
+    "y": 0.03022,
+    "z": 0.03077
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 9620,
+    "x": 0.136,
+    "y": 0.09984,
+    "z": 10.13124
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 9620,
+    "x": 0.02215,
+    "y": 0.02932,
+    "z": 0.03884
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 9640,
+    "x": 0.11926,
+    "y": 0.09867,
+    "z": 10.15672
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 9640,
+    "x": 0.01622,
+    "y": 0.02723,
+    "z": 0.04324
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 9660,
+    "x": 0.09763,
+    "y": 0.09019,
+    "z": 10.1344
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 9660,
+    "x": 0.00963,
+    "y": 0.02392,
+    "z": 0.04491
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 9680,
+    "x": 0.06953,
+    "y": 0.07769,
+    "z": 9.97453
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 9680,
+    "x": 0.00264,
+    "y": 0.019,
+    "z": 0.04339
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 9700,
+    "x": 0.03711,
+    "y": 0.05927,
+    "z": 9.94216
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 9700,
+    "x": -0.00438,
+    "y": 0.0128,
+    "z": 0.0379
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 9720,
+    "x": 0.00378,
+    "y": 0.03694,
+    "z": 9.81728
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 9720,
+    "x": -0.01113,
+    "y": 0.00604,
+    "z": 0.02989
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 9740,
+    "x": -0.02993,
+    "y": 0.01255,
+    "z": 9.86954
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 9740,
+    "x": -0.01771,
+    "y": -0.00112,
+    "z": 0.01961
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 9760,
+    "x": -0.06262,
+    "y": -0.01253,
+    "z": 9.7783
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 9760,
+    "x": -0.02339,
+    "y": -0.00811,
+    "z": 0.00794
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 9780,
+    "x": -0.09193,
+    "y": -0.03696,
+    "z": 9.61596
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 9780,
+    "x": -0.02804,
+    "y": -0.01481,
+    "z": -0.00455
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 9800,
+    "x": -0.11638,
+    "y": -0.0583,
+    "z": 9.48488
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 9800,
+    "x": -0.03139,
+    "y": -0.02038,
+    "z": -0.01667
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 9820,
+    "x": -0.13484,
+    "y": -0.07646,
+    "z": 9.44375
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 9820,
+    "x": -0.03393,
+    "y": -0.02506,
+    "z": -0.02736
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 9840,
+    "x": -0.14542,
+    "y": -0.09023,
+    "z": 9.40034
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 9840,
+    "x": -0.03528,
+    "y": -0.02808,
+    "z": -0.03605
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 9860,
+    "x": -0.15116,
+    "y": -0.09775,
+    "z": 9.39922
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 9860,
+    "x": -0.03478,
+    "y": -0.02984,
+    "z": -0.04244
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 9880,
+    "x": -0.14706,
+    "y": -0.10022,
+    "z": 9.40833
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 9880,
+    "x": -0.03284,
+    "y": -0.02956,
+    "z": -0.0451
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 9900,
+    "x": -0.13523,
+    "y": -0.09575,
+    "z": 9.52033
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 9900,
+    "x": -0.02959,
+    "y": -0.02803,
+    "z": -0.04378
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 9920,
+    "x": -0.11831,
+    "y": -0.08428,
+    "z": 9.60459
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 9920,
+    "x": -0.02542,
+    "y": -0.02456,
+    "z": -0.04056
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 9940,
+    "x": -0.09374,
+    "y": -0.06868,
+    "z": 9.63068
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 9940,
+    "x": -0.01991,
+    "y": -0.01989,
+    "z": -0.0331
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 9960,
+    "x": -0.06594,
+    "y": -0.04822,
+    "z": 9.58165
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 9960,
+    "x": -0.01375,
+    "y": -0.01389,
+    "z": -0.02372
+  },
+  {
+    "sensorType": "accelerometer",
+    "timestamp": 9980,
+    "x": -0.0338,
+    "y": -0.0248,
+    "z": 9.73471
+  },
+  {
+    "sensorType": "gyroscope",
+    "timestamp": 9980,
+    "x": -0.007,
+    "y": -0.00705,
+    "z": -0.01228
+  }
+]

@@ -23,8 +23,6 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import com.airbnb.lottie.compose.LottieCompositionSpec
-import com.airbnb.lottie.compose.LottieConstants
-import com.airbnb.lottie.compose.animateLottieCompositionAsState
 import com.airbnb.lottie.compose.rememberLottieComposition
 import com.example.sensorsvr.R
 import com.example.sensorsvr.model.PredictionResultData
@@ -32,6 +30,7 @@ import com.example.sensorsvr.model.SensorData
 import com.example.sensorsvr.model.StatsData
 import com.example.sensorsvr.ui.navigation.BottomNavigationBar
 import com.example.sensorsvr.ui.navigation.TopNavBar
+import com.example.sensorsvr.utils.analyzeMovement
 import com.example.sensorsvr.utils.calculateAccuracy
 import com.example.sensorsvr.utils.calculateConfusionMatrix
 import com.example.sensorsvr.utils.calculatePrecision
@@ -69,10 +68,6 @@ fun AnalysisWidget(
         else -> R.raw.walk
     }
     val composition by rememberLottieComposition(LottieCompositionSpec.RawRes(animationRes))
-    val progress by animateLottieCompositionAsState(
-        composition = composition,
-        iterations = LottieConstants.IterateForever
-    )
 
     Scaffold(
         topBar = { TopNavBar(navController = navController, dataViewModel) },
@@ -256,27 +251,6 @@ private fun SensorStatsSection(accelData: List<SensorData>, gyroData: List<Senso
     }
 }
 
-fun analyzeMovement(data: List<SensorData>): String {
-    if (data.size < 20) return "Insufficient data for analysis"
-
-    val accelData = data.filter { it.sensorType == "accelerometer" }
-    val gyroData = data.filter { it.sensorType == "gyroscope" }
-
-    // Calculate accelerometer Z-axis statistics
-    val zValues = accelData.map { it.z }
-    val avgZ = zValues.average()
-    val stdDevZ = sqrt(zValues.map { (it - avgZ).pow(2) }.average())
-
-    // Calculate gyroscope magnitude statistics
-    val gyroMagnitude = gyroData.map { sqrt(it.x.pow(2) + it.y.pow(2) + it.z.pow(2)) }
-    val avgGyro = gyroMagnitude.average()
-
-    return when {
-        stdDevZ > 1.8 && avgGyro > 1.5 -> "Up"
-        stdDevZ > 1.2 && avgGyro > 1.0 -> "Down"
-        else -> "Straight"
-    }
-}
 
 fun computeStats(values: List<Double>): StatsData {
     if (values.isEmpty()) return StatsData(0.0, 0.0, 0.0, 0.0)
