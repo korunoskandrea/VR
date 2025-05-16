@@ -149,6 +149,14 @@ def plot_sensor_data(session, title="Sensor Data"):
     axs[0].legend()
     axs[0].grid(True)
 
+    # Za Z-os akcelerometra
+    axs[0].axhline(0.22, color='orange', linestyle='--', label='Z threshold (Down)')
+    axs[0].axhline(0.30, color='red', linestyle='--', label='Z threshold (Up)')
+
+    # Za žiroskop magnitudo
+    axs[1].axhline(0.035, color='orange', linestyle='--', label='Gyro threshold (Down)')
+    axs[1].axhline(0.045, color='red', linestyle='--', label='Gyro threshold (Up)')
+
     # Žiroskop
     axs[1].plot(gyro_time, [s["x"] for s in gyro_data], label="Gyro X")
     axs[1].plot(gyro_time, [s["y"] for s in gyro_data], label="Gyro Y")
