@@ -137,9 +137,9 @@ private fun AnalysisContent(
         item { Spacer(modifier = Modifier.height(16.dp)) }
         item { AccuracyCard(accuracy) }
         item { Spacer(modifier = Modifier.height(16.dp)) }
-        item { PrecisionCard(trueLabel, result) }  // New precision card
-        item { Spacer(modifier = Modifier.height(16.dp)) }
-        item { ConfusionMatrixCard(matrix) }
+//        item { PrecisionCard(trueLabel, result) }
+//        item { Spacer(modifier = Modifier.height(16.dp)) }
+//        item { ConfusionMatrixCard(matrix) }
         item { Spacer(modifier = Modifier.height(16.dp)) }
         item { SensorStatsSection(accelData, gyroData) }
     }
