@@ -1,0 +1,15 @@
+Ubuntu terminal 1
+start
+->  mosquitto -c /etc/mosquitto/conf.d/default.conf -v
+ali ce nocem gledat kaj se dogaja
+->  mosquitto -c /etc/mosquitto/conf.d/default.conf -v -d
+
+prikaz kaj se dogaja
+sudo lsof -i :1883
+
+kill mosquitto
+sudo killall mosquitto
+
+Ubuntu 2
+subscribe # mosquitto_sub -h <localhost> -t <topic>
+-> mosquitto_sub -h 10.104.1.143 -t sensors/accel
