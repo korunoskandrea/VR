@@ -11,9 +11,11 @@ import com.example.sensorsvr.model.SensorData
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 
-class SensorViewModel(application: Application) : AndroidViewModel(application), SensorEventListener {
-    private val sensorManager = application.getSystemService(Context.SENSOR_SERVICE) as SensorManager
-    private val accelerometer  = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER)
+class SensorViewModel(application: Application) : AndroidViewModel(application),
+    SensorEventListener {
+    private val sensorManager =
+        application.getSystemService(Context.SENSOR_SERVICE) as SensorManager
+    private val accelerometer = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER)
     private val gyroscope = sensorManager.getDefaultSensor(Sensor.TYPE_GYROSCOPE)
 
     private val _accelData = MutableStateFlow<List<SensorData>>(emptyList())
@@ -39,14 +41,14 @@ class SensorViewModel(application: Application) : AndroidViewModel(application),
         sensorManager.unregisterListener(this)
     }
 
-    fun clearData(){
+    fun clearData() {
         recordedData.clear()
         _data.value = emptyList()
     }
 
     override fun onSensorChanged(event: SensorEvent?) {
         event?.let {
-            val sensorName = when(it.sensor.type){
+            val sensorName = when (it.sensor.type) {
                 Sensor.TYPE_ACCELEROMETER -> "accelerometer"
                 Sensor.TYPE_GYROSCOPE -> "gyroscope"
                 else -> "unknown"
@@ -67,7 +69,12 @@ class SensorViewModel(application: Application) : AndroidViewModel(application),
 
     override fun onAccuracyChanged(sensor: Sensor?, accuracy: Int) {}
 
-    fun getRecordedSamples(): List<SensorData>{
+    fun getRecordedSamples(): List<SensorData> {
         return recordedData.toList()
     }
+
+    fun getLatestSample(sensorType: String): SensorData? {
+        return data.value.lastOrNull { it.sensorType == sensorType }
+    }
+
 }

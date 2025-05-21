@@ -41,9 +41,23 @@ android {
         kotlinCompilerExtensionVersion = "1.5.0"
     }
 
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+    packaging {
+        resources {
+            excludes += listOf("META-INF/INDEX.LIST", "META-INF/io.netty.versions.properties")
+        }
+    }
+
 }
 
 dependencies {
+    implementation(platform("com.hivemq:hivemq-mqtt-client-websocket:1.3.5"))
+    implementation(platform("com.hivemq:hivemq-mqtt-client-proxy:1.3.5"))
+    implementation(platform("com.hivemq:hivemq-mqtt-client-epoll:1.3.5"))
+    implementation("com.hivemq:hivemq-mqtt-client-reactor:1.3.5")
     implementation("androidx.activity:activity-compose:1.7.2")
     implementation("androidx.compose.ui:ui:1.5.0")
     implementation("androidx.compose.material3:material3:1.2.0")

@@ -26,6 +26,7 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
@@ -35,15 +36,22 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import com.example.sensorsvr.R
 import com.example.sensorsvr.model.SensorData
+import com.example.sensorsvr.mqtt.MqttClientManager
 import com.example.sensorsvr.ui.navigation.BottomNavigationBar
 import com.example.sensorsvr.ui.navigation.TopNavBar
 import com.example.sensorsvr.utils.getBottomNavigationTabs
 import com.example.sensorsvr.utils.saveToJson
 import com.example.sensorsvr.viewModel.DataViewModel
 import com.example.sensorsvr.viewModel.SensorViewModel
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.isActive
+import kotlinx.coroutines.launch
+import org.json.JSONObject
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
+
 
 @Composable
 fun RecordDataWidget(
@@ -70,6 +78,13 @@ fun RecordDataWidget(
     var selectedMovement by remember { mutableStateOf("Straight") }
     var expanded by remember { mutableStateOf(false) }
     val movementOptions = listOf("Straight", "Up", "Down")
+
+    val coroutineScope = rememberCoroutineScope()
+    var publishJob by remember { mutableStateOf<Job?>(null) }
+    val delayMillis = remember(sampleFrequency) {
+        (1000 / (sampleFrequency.toIntOrNull() ?: 10).coerceAtLeast(1))
+    }
+
 
     Scaffold(
         topBar = { TopNavBar(navController = navController) },
@@ -180,12 +195,50 @@ fun RecordDataWidget(
                     iconRes = R.drawable.play_arrow_24dp_000000_fill0_wght400_grad0_opsz24,
                     contentDescription = "Start",
                     onClick = {
-                        val hz = sampleFrequency.toIntOrNull() ?: 10
-                        val delayMicros = 1_000_000 / hz
-                        sensorViewModel.startListening(delayMicros)
-                        isRecording = true
-                        Toast.makeText(context, "Recording started", Toast.LENGTH_SHORT).show()
+                        coroutineScope.launch {
+                            try {
+                                MqttClientManager.connectSuspend()
+
+                                val hz = sampleFrequency.toIntOrNull() ?: 10
+                                val delayMillis = 1000L / hz
+                                sensorViewModel.startListening(delayMillis.toInt())
+                                isRecording = true
+
+                                publishJob = launch {
+                                    while (isActive) {
+                                        val latestAccel =
+                                            sensorViewModel.getLatestSample("accelerometer")
+                                        latestAccel?.let {
+                                            val json = JSONObject().apply {
+                                                put("x", it.x)
+                                                put("y", it.y)
+                                                put("z", it.z)
+                                                put("timestamp", it.timestamp)
+                                                put("movement", selectedMovement)
+                                                put("user", username)
+                                            }
+                                            MqttClientManager.publish(
+                                                "sensors/accel",
+                                                json.toString()
+                                            )
+                                        }
+                                        delay(delayMillis)
+                                    }
+                                }
+
+                                Toast.makeText(context, "Recording started", Toast.LENGTH_SHORT)
+                                    .show()
+
+                            } catch (e: Exception) {
+                                Toast.makeText(
+                                    context,
+                                    "MQTT povezava ni uspela: ${e.message}",
+                                    Toast.LENGTH_LONG
+                                ).show()
+                            }
+                        }
                     }
+
                 )
 
                 ControlButton(
@@ -194,6 +247,8 @@ fun RecordDataWidget(
                     onClick = {
                         sensorViewModel.stopListening()
                         isRecording = false
+                        publishJob?.cancel()
+                        publishJob = null
                         Toast.makeText(context, "Recording stopped", Toast.LENGTH_SHORT).show()
                     }
                 )
@@ -220,6 +275,9 @@ fun RecordDataWidget(
                     onClick = {
                         sensorViewModel.clearData()
                         isRecording = false
+                        publishJob?.cancel()
+                        publishJob = null
+                        MqttClientManager.disconnect()
                         Toast.makeText(context, "Recording cleared", Toast.LENGTH_SHORT).show()
                     }
                 )
