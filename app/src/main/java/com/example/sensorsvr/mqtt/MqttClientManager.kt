@@ -11,7 +11,7 @@ import kotlin.coroutines.suspendCoroutine
 
 object MqttClientManager {
     private const val TAG = "MQTT"
-    private const val BROKER_HOST = "10.104.1.143" // todo change
+    private const val BROKER_HOST = "192.168.92.109" // todo change
     private const val BROKER_PORT = 1883
     private const val CLIENT_ID = "AndroidClient_"
 

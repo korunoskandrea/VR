@@ -7,7 +7,6 @@ import numpy as np
 import seaborn as sns
 from typing import Dict, List, Tuple, Optional
 
-# Constants for thresholds
 THRESHOLDS = {
     "Straight": {"std_z": 0.20, "avg_gyro": 0.03},
     "Up": {"std_z": 0.30, "avg_gyro": 0.045},
@@ -16,29 +15,24 @@ THRESHOLDS = {
 
 
 def load_data(file_path: str) -> List[Dict]:
-    """Load JSON data from file."""
     with open(file_path, "r") as f:
         return json.load(f)
 
 
 def filter_sensor_data(session: List[Dict], sensor_type: str) -> List[Dict]:
-    """Filter session data by sensor type."""
     return [s for s in session if s["sensorType"] == sensor_type]
 
 
 def calculate_std_dev(values: List[float]) -> float:
-    """Calculate standard deviation of a list of values."""
     avg = sum(values) / len(values)
     return sqrt(sum((x - avg) ** 2 for x in values) / len(values))
 
 
 def calculate_gyro_magnitudes(gyro_data: List[Dict]) -> List[float]:
-    """Calculate magnitudes for gyroscope data."""
     return [sqrt(s["x"] ** 2 + s["y"] ** 2 + s["z"] ** 2) for s in gyro_data]
 
 
 def analyze_session(session: List[Dict], verbose: bool = False) -> str:
-    """Analyze sensor session and return movement classification."""
     accel_data = filter_sensor_data(session, "accelerometer")
     gyro_data = filter_sensor_data(session, "gyroscope")
 
@@ -59,14 +53,12 @@ def analyze_session(session: List[Dict], verbose: bool = False) -> str:
 
 
 def process_file(file_path: str, true_label: str, verbose: bool = False) -> List[Tuple[str, str]]:
-    """Process a single data file and return classification results."""
     session = load_data(file_path)
     predicted = analyze_session(session, verbose)
     return [(true_label, predicted)]
 
 
 def compute_session_metrics(session: List[Dict]) -> Tuple[float, float, List[float], List[float]]:
-    """Compute key metrics from session data."""
     accel_data = filter_sensor_data(session, "accelerometer")
     gyro_data = filter_sensor_data(session, "gyroscope")
 
@@ -80,7 +72,6 @@ def compute_session_metrics(session: List[Dict]) -> Tuple[float, float, List[flo
 
 
 def get_min_max_values(data: List[Dict], axes: List[str] = ["x", "y", "z"]) -> Dict[str, Dict[str, float]]:
-    """Get minimum and maximum values for each axis in sensor data."""
     return {
         "min": {axis: min(s[axis] for s in data) for axis in axes},
         "max": {axis: max(s[axis] for s in data) for axis in axes}
@@ -89,11 +80,9 @@ def get_min_max_values(data: List[Dict], axes: List[str] = ["x", "y", "z"]) -> D
 
 def plot_hypothesis(z_values: List[float], gyro_mags: List[float], std_z: float,
                     avg_gyro: float, label: str) -> None:
-    """Plot sensor data with hypothesis thresholds."""
     fig, axs = plt.subplots(2, 1, figsize=(12, 6), sharex=True)
     fig.suptitle(f"Hipotetična analiza – {label}", fontsize=14)
 
-    # Plot accelerometer data
     axs[0].plot(z_values, label="Accelerometer Z")
     threshold = THRESHOLDS[label]["std_z"]
     axs[0].axhline(threshold, color='red', linestyle='--', label=f"Meja STD Z = {threshold}")
@@ -101,7 +90,6 @@ def plot_hypothesis(z_values: List[float], gyro_mags: List[float], std_z: float,
     axs[0].legend()
     axs[0].grid(True)
 
-    # Plot gyroscope data
     axs[1].plot(gyro_mags, label="Gyro Magnituda")
     gyro_th = THRESHOLDS[label]["avg_gyro"]
     axs[1].axhline(gyro_th, color='purple', linestyle='--', label=f"Meja GYRO = {gyro_th}")
@@ -116,7 +104,6 @@ def plot_hypothesis(z_values: List[float], gyro_mags: List[float], std_z: float,
 
 def test_hypothesis(label: str, std_z: float, avg_gyro: float,
                     z_values: List[float], gyro_mags: List[float]) -> None:
-    """Test classification hypothesis and plot results."""
     print(f"\n--- {label.upper()} ---")
     print(f"STD Z = {std_z:.3f}, AVG GYRO = {avg_gyro:.3f}")
 
@@ -129,11 +116,9 @@ def test_hypothesis(label: str, std_z: float, avg_gyro: float,
 
 
 def calculate_metrics(results: List[Tuple[str, str]]) -> None:
-    """Calculate and display classification metrics."""
     labels = sorted({t for t, _ in results} | {p for _, p in results})
     label_to_index = {label: i for i, label in enumerate(labels)}
 
-    # Build confusion matrix
     matrix = np.zeros((len(labels), len(labels)), dtype=int)
     for true, pred in results:
         matrix[label_to_index[true]][label_to_index[pred]] += 1
@@ -143,7 +128,6 @@ def calculate_metrics(results: List[Tuple[str, str]]) -> None:
         row = "\t".join(str(matrix[i][j]) for j in range(len(labels)))
         print(f"{true_label:>7}: {row}")
 
-    # Plot confusion matrix
     plt.figure(figsize=(6, 5))
     sns.heatmap(matrix, annot=True, fmt="d", cmap="Blues",
                 xticklabels=labels, yticklabels=labels)
@@ -153,13 +137,11 @@ def calculate_metrics(results: List[Tuple[str, str]]) -> None:
     plt.tight_layout()
     plt.show()
 
-    # Calculate and display accuracy
     correct = np.trace(matrix)
     total = np.sum(matrix)
     accuracy = correct / total * 100
     print(f"\nSkupna točnost: {accuracy:.2f}% ({correct}/{total})")
 
-    # Calculate and display precision per class
     print("\n--- Preciznost po razredih ---")
     for i, label in enumerate(labels):
         tp = matrix[i][i]
@@ -169,13 +151,11 @@ def calculate_metrics(results: List[Tuple[str, str]]) -> None:
 
 
 def duration_in_seconds(session: List[Dict]) -> float:
-    """Calculate session duration in seconds."""
     timestamps = [s["timestamp"] for s in session]
     return (max(timestamps) - min(timestamps)) / 1000 if timestamps else 0
 
 
 def estimate_sampling_frequency(session: List[Dict], sensor_type: str = "accelerometer") -> float:
-    """Estimate sampling frequency for a given sensor type."""
     timestamps = [s["timestamp"] for s in session if s["sensorType"] == sensor_type]
     if len(timestamps) < 2:
         return 0
@@ -197,16 +177,13 @@ def main():
             print(f"Manjka datoteka za: {label}")
             continue
 
-        # Process file and collect results
         results = process_file(path, label, verbose=True)
         all_results.extend(results)
 
-        # Analyze session data
         session = load_data(path)
         std_z, avg_gyro, z_values, gyro_mags = compute_session_metrics(session)
         test_hypothesis(label, std_z, avg_gyro, z_values, gyro_mags)
 
-        # Display min/max values
         accel_data = filter_sensor_data(session, "accelerometer")
         gyro_data = filter_sensor_data(session, "gyroscope")
 
@@ -215,12 +192,10 @@ def main():
         print("Ziroskop MIN:", get_min_max_values(gyro_data)["min"])
         print("Ziroskop MAX:", get_min_max_values(gyro_data)["max"])
 
-    # Display classification results
     print("\n--- Rezultati klasifikacije ---")
     for true_label, predicted_label in all_results:
         print(f"True: {true_label}, Predicted: {predicted_label}")
 
-    # Calculate and display metrics if we have results
     if all_results:
         calculate_metrics(all_results)
 

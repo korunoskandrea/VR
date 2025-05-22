@@ -11,5 +11,6 @@ kill mosquitto
 sudo killall mosquitto
 
 Ubuntu 2
-subscribe # mosquitto_sub -h <localhost> -t <topic>
+subscribe # mosquitto_sub -h <localhost> -t <topic> # TODO
 -> mosquitto_sub -h 10.104.1.143 -t sensors/accel
+-> mosquitto_sub -h 192.168.92.109 -t sensors/accel

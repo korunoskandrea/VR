@@ -135,8 +135,8 @@ private fun AnalysisContent(
         item { Spacer(modifier = Modifier.height(16.dp)) }
         item { PredictionResultCard(trueLabel, result, isCorrect) }
         item { Spacer(modifier = Modifier.height(16.dp)) }
-        item { AccuracyCard(accuracy) }
-        item { Spacer(modifier = Modifier.height(16.dp)) }
+//        item { AccuracyCard(accuracy) }
+//        item { Spacer(modifier = Modifier.height(16.dp)) }
 //        item { PrecisionCard(trueLabel, result) }
 //        item { Spacer(modifier = Modifier.height(16.dp)) }
 //        item { ConfusionMatrixCard(matrix) }
@@ -234,7 +234,7 @@ private fun SensorStatsSection(accelData: List<SensorData>, gyroData: List<Senso
             )
             Spacer(modifier = Modifier.height(16.dp))
 
-            Text("Accelerometer (Z-axis)")
+            Text("Accelerometer")
             Text("Min: %.2f".format(accelStats.min))
             Text("Max: %.2f".format(accelStats.max))
             Text("Avg: %.2f".format(accelStats.avg))
@@ -242,7 +242,7 @@ private fun SensorStatsSection(accelData: List<SensorData>, gyroData: List<Senso
 
             Spacer(modifier = Modifier.height(16.dp))
 
-            Text("Gyroscope (Magnitude)")
+            Text("Gyroscope")
             Text("Min: %.2f".format(gyroStats.min))
             Text("Max: %.2f".format(gyroStats.max))
             Text("Avg: %.2f".format(gyroStats.avg))
